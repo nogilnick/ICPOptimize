@@ -161,7 +161,7 @@ class ICPRuleEnsemble:
       # Make order constraints on coefficients by univariate rule peformance
       bAr = aAr = None
       if self.cOrd in ('a', 'r'):
-         bAr, aAr = RuleOrder(fg, rs)
+         bAr, aAr = RuleOrder(fg, rs, m=self.cOrd)
       
       CV, b, _ = ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg,
                                maxIter=self.maxIter, mrg=self.mrg, b=self.ig, CO=CO,
