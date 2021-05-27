@@ -23,7 +23,7 @@ def ColOrder(CO, f, d, nsd, xsd):
    return CO
 
 #--------------------------------------------------------------------------------
-#    Desc: Feature index and directo to column number
+#    Desc: Feature index and direction to column number
 #--------------------------------------------------------------------------------
 #       f: Feature index
 #       d: Direction (-1/+1)
@@ -90,11 +90,20 @@ def DistSearch(A, eps0, eps1, eps2):
 #--------------------------------------------------------------------------------
 #   Return: Return maximum feasible distance along path
 #--------------------------------------------------------------------------------
-def ErrInc(CV, b, err, fMin, fMax, f, d, dMax):
-   return min((fMax[f] - CV[f]) if d > 0 else (CV[f] - fMin[f]), dMax)
+def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
+   # Order constraint; preserves relative order of coefficients
+   oBnd = np.inf
+   if (aAr is not None) and (d > 0) and (aAr[f] != -1):
+      oBnd = CV[aAr[f]] - CV[f]        # Coef approaching above boundary
+   if (bAr is not None) and (d < 0) and (bAr[f] != -1):
+      oBnd = CV[f] - CV[bAr[f]]        # Coef approaching below boundary
+   # Feasible region boundary
+   fBnd = (fMax[f] - CV[f]) if d > 0 else (CV[f] - fMin[f])
+   # Minimum satisfies all constraints
+   return min(oBnd, fBnd, dMax)
 
 #--------------------------------------------------------------------------------
-#     Desc: Iterative Constrained Pathways Solver
+#     Desc: Iterative Constrained Pathways Optimizer
 #--------------------------------------------------------------------------------
 #        A: Data matrix
 #        Y: Target values (boolean, 0/1, or -1/+1)
@@ -114,44 +123,49 @@ def ErrInc(CV, b, err, fMin, fMax, f, d, dMax):
 #           groups that have been already used. Negative groups are ignored
 #      CFx: Criteria function for abandoning path (if true, path is abandoned)
 #      tol: Solver error tolerance
+#     clip: True/False clip very small coefficients to exactly 0
+#      bAr: Below coefficient index constraints
+#      aAr: Above coefficient index constraints
+#    nPath: Number of paths to explore at each step (best found is used)
+#    nThrd: Number of threads to search for paths (should be <= nPath)
 #        v: Verbose mode (0 off; 1 low; 2 high)
 #--------------------------------------------------------------------------------
 #   Return: Coefficients, intercept
 #--------------------------------------------------------------------------------
 def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0.1, 
           nsd=1, xsd=0.5, CO=None, fg=None, maxGroup=0, CFx=None, tol=1e-2, 
-          clip=True, nThrd=1, nPath=1, v=1):
+          clip=True, bAr=None, aAr=None, nPath=1, nThrd=1, v=1):
    if np.issubdtype(A.dtype, np.bool):
       A = A.view(np.int8)
    n, m  = A.shape
 
    Y  = np.where(Y > 0, mrg, -mrg)            # Clipped log odds target
-   S  = SignInt8(Y)                        # Sample sign
+   S  = SignInt8(Y)                           # Sample sign
 
    if W is None:
-      W = np.full(Y.shape[0], 1 / Y.shape[0])   # Default to equal weights
+      W = np.full(Y.shape[0], 1 / Y.shape[0]) # Default to equal weights
    else:
-      W = W / W.sum()                     # Force sum==1 for weighted avg
+      W = W / W.sum()                         # Force sum==1 for weighted avg
 
-   CV = np.zeros(m)                        # Coefficient vector
-   if fMin is not None:                     # Max value feature constraints
+   CV = np.zeros(m)                           # Coefficient vector
+   if fMin is not None:                       # Max value feature constraints
       CV   = np.maximum(CV, fMin)
    else:
       fMin = np.full(m, -np.inf)
    
-   if fMax is not None:                     # Min value feature constraints
+   if fMax is not None:                       # Min value feature constraints
       CV   = np.minimum(CV, fMax)
    else:
       fMax = np.full(m,  np.inf)
    
    if b is None:
-      b = np.dot(Y, W)                     # Initial guess
+      b = np.dot(Y, W)                        # Initial guess
    if clip:
-      b  = b if (np.abs(b) >= EPS) else 0      # Clip small values to 0
+      b  = b if (np.abs(b) >= EPS) else 0     # Clip small values to 0
 
-   X  = b + A @ CV                        # Current solution
+   X  = b + A @ CV                            # Current solution
    
-   feaSet = set()                         # Used feature groups set
+   feaSet = set()                             # Used feature groups set
    
    CFx = ErrInc if CFx is None else CFx
    f   = -1
@@ -199,7 +213,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
                f, d = ColToFD(fd)
                
                # Find constraint along path
-               vMax = CFx(CV, b, err, fMin, fMax, f, d, dMax)
+               vMax = CFx(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
                if vMax <= 0:
                   continue
                # Manually round-robin search closures due to memory re-use
@@ -218,8 +232,8 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
             bErr, bDist    = sRes[pIdx]
             Af, f, d, _, _ = sArg[pIdx]
 
-            if (bDist < EPS) or (bErr >= -EPS):   # Check for reduction in error
-               continue
+            if (bDist < EPS) or (bErr >= -EPS):
+               continue             # Insufficient reduction in error
             
             fail = False
             break                   # Found a direction and magnitude that reduce error
@@ -235,7 +249,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
          u = d * bDist
          if clip and (np.abs(CV[f] + u) < EPS):
             u = -CV[f]              # Quantize coefficients that are very close to 0
-   
+
          CV[f] += u                 # Update coeficient vector
          X     += u * Af            # Update current solution
    
@@ -258,15 +272,15 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
 #--------------------------------------------------------------------------------
 def ICPSolveConst(A, Y, W, cCol=None, **kwargs):
    CV, b, err = ICPSolve(A, Y, W, **kwargs)
-   
+
    if cCol is None:
       return CV, b
-   
+
    if not hasattr(cCol, '__len__'):
       cCol = [cCol]
       
    b = b + CV[cCol].sum()
-   
+
    cIdx = np.ones(A.shape[1], np.bool)
    cIdx[cCol] = False
    cIdx = cIdx.nonzero()[0]
@@ -327,6 +341,30 @@ def RuleSign(A, Y, W=None, b=None):
       nhp[i] = Y @ Ai                 # Weight Y sum for samples with rule hits
    # Amount each rule changes average target versus the base rate
    return (nhp / nht) - b
+
+#--------------------------------------------------------------------------------
+#   Desc: Create rule order constraints
+#--------------------------------------------------------------------------------
+#     fg: Feature groups
+#     cs: Column score for ordering
+#      m: Order mode:
+#           a: Absolute; Order constraints irrespective of group
+#           r: Relative; Order constraint only within same group
+#--------------------------------------------------------------------------------
+# Return: Below constraints, Above constraints
+#--------------------------------------------------------------------------------
+def RuleOrder(fg, cs, m='r'):
+   if m == 'a':   # Use absolute ordering
+      fg = np.ones_like(fg)
+   BA = np.empty_like(fg)
+   AA = np.empty_like(fg)
+   for fi in set(fg):
+      sfi = (fg == fi).nonzero()[0]
+      rsi = sfi[cs[sfi].argsort()]
+      for i, si in enumerate(rsi):
+         BA[si] = rsi[i - 1] if i > 0                    else -1
+         AA[si] = rsi[i + 1] if ((i + 1) < rsi.shape[0]) else -1
+   return BA, AA
 
 #--------------------------------------------------------------------------------
 #   Desc: Sign function with buffer

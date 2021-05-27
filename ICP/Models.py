@@ -1,7 +1,7 @@
 from   .Consolidate     import ConsolidateRules, RuleStr, OP_LE, OP_GT
 import numpy            as     np
 from   scipy.special    import expit
-from   .Solver          import ICPSolveConst, RuleErr, RuleSign
+from   .Solver          import ICPSolveConst, RuleErr, RuleOrder, RuleSign
 
 # Default tree model parameters
 DEF_PAR = dict(n_estimators=50, min_impurity_decrease=1e-7, n_iter_no_change=3,
@@ -70,11 +70,12 @@ def ExtractSplits(tm):
 #    ESFx: Extract split functions
 #     tol: Solver error tolerance
 # maxFeat: Maximum number of original features that can be included in model
-#     CFx: Criteria function for abandoning path (if true, path is abandoned)
+#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
 #       c: Use constant (0/1)
 #   nPath: Number of paths to explore at each step (best found is used)
 #   nThrd: Number of threads to search for paths (should be <= nPath)
-#       v: Verbosity (0 off; 1 low; 2 high)
+#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+#       v: Verbosity (0: off; 1: low; 2: high)
 #--------------------------------------------------------------------------------
 class ICPRuleEnsemble:
    
@@ -88,7 +89,7 @@ class ICPRuleEnsemble:
    
    def __init__(self, lr=0.1, maxIter=200, mrg=1.0, ig=None, tm='gbc', tmPar=None,
                 nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=1e-2, maxFeat=0, CFx=None, c=1,
-                nPath=1, nThrd=1, v=0):
+                nPath=1, nThrd=1, cOrd='n', v=0):
       self.lr      = lr
       self.maxIter = maxIter
       self.mrg     = mrg
@@ -102,6 +103,7 @@ class ICPRuleEnsemble:
       self.c       = c
       self.nPath   = nPath
       self.nThrd   = nThrd
+      self.cOrd    = cOrd
       self.v       = v
       
       self.tm = tm
@@ -156,10 +158,15 @@ class ICPRuleEnsemble:
          fg       = np.concatenate((FA, FA))
          cCol     = None
       
+      # Make order constraints on coefficients by univariate rule peformance
+      bAr = aAr = None
+      if self.cOrd in ('a', 'r'):
+         bAr, aAr = RuleOrder(fg, rs)
+      
       CV, b, _ = ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg,
                                maxIter=self.maxIter, mrg=self.mrg, b=self.ig, CO=CO,
                                tol=self.tol, maxGroup=self.maxFeat, CFx=self.CFx,
-                               nsd=self.nsd, xsd=self.xsd, dMax=self.lr,
+                               nsd=self.nsd, xsd=self.xsd, dMax=self.lr, bAr=bAr, aAr=aAr,
                                nPath=self.nPath, nThrd=self.nThrd, v=self.v)
       
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
