@@ -27,3 +27,7 @@ from ICP.Models import ICPRuleEnsemble
 IRE = ICPRuleEnsemble().fit(A[trn], Y[trn])
 YP  = IRE.predict_proba(A)
 ```
+
+Further examples are available on the ICPExamples GitHub page:
+
+[https://github.com/nicholastoddsmith/ICPExamples](https://github.com/nicholastoddsmith/ICPExamples)
