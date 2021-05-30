@@ -12,6 +12,53 @@ DEF_PAR = {
    'xrt': dict(n_estimators=50, min_impurity_decrease=1e-8, max_depth=4)}
 
 #--------------------------------------------------------------------------------
+#   Desc: Construct problem constraints
+#--------------------------------------------------------------------------------
+#     RM: Data matrix
+#      Y: Target labels (0/1) or (-1, 1)
+#      W: Sample weights (must sum to 1)
+#     fg: Feature groups
+#      c: Include constant column (0/1)
+#   cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+#      b: Initial guess (weighted average margin target if None)
+#--------------------------------------------------------------------------------
+#    RET: Problem constraints
+#--------------------------------------------------------------------------------
+def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None):
+   if W is None:
+      W = np.full(Y.shape[0], 1 / Y.shape[0])      # Default to equal weights
+   else:
+      W = W / W.sum()                              # Force sum==1 for weighted avg
+
+   YS = np.where(Y > 0,  np.int8(+1),  np.int8(-1))
+   M  = np.where(Y > 0,          mrg,         -mrg)
+
+   if b is None:
+      b = np.dot(W, M)                             # Initial value
+
+   rs   = RuleSign(RM, YS, W, b=b)                 # Identify sign of rules
+   fMin = np.where(rs > 0,    0., -np.inf)         # Rule sign constraints lower bounds
+   fMax = np.where(rs > 0, np.inf,     0.)         # Rule sign constraints upper bounds
+
+   ren  = RuleErr(RM, M, W, b=b, d=-1)             # Order columns by error change
+   rep  = RuleErr(RM, M, W, b=b, d=+1)
+   CO   = np.c_[ren, rep].argsort(axis=None)
+
+   if c != 0:                                      # Use an intercept
+      fMin[-1] = -np.inf                           # Intercept is unconstrained
+      fMax[-1] =  np.inf
+      cCol     = [RM.shape[1] - 1]
+   else:
+      cCol     = None
+
+   # Make order constraints on coefficients by univariate rule performance
+   bAr = aAr = None
+   if cOrd in ('a', 'r'):
+      bAr, aAr = RuleOrder(fg, rs, m=cOrd)
+
+   return fMin, fMax, cCol, CO, bAr, aAr
+
+#--------------------------------------------------------------------------------
 #   Desc: Construct rule matrix
 #--------------------------------------------------------------------------------
 #      A: Data matrix
@@ -21,18 +68,28 @@ DEF_PAR = {
 #--------------------------------------------------------------------------------
 #    RET: Rule matrix
 #--------------------------------------------------------------------------------
-def ConstructRuleMatrix(A, FA, TA, c=0):
+def ConstructRuleMatrix(A, FA=None, TA=None, c=0):
    c  = int(c != 0)
-   nf = FA.shape[0]
+   nf = A.shape[1] if FA is None else len(FA)
    RM = np.empty((A.shape[0], c + 2 * nf), dtype=np.bool)
 
-   RM[:,   :   nf]  = A[:, FA] <= TA      # Rules
-   RM[:, nf:2 * nf] = 1 - RM[:, :nf]      # Inverted rules
+   if (FA is not None) and (TA is not None):
+      RM[:,   :    nf] = A[:, FA] <= TA      # Rules
+   else:
+      RM[:,   :    nf] = A                   # Rules
+
+   RM[:, nf:2 * nf] = 1 - RM[:, :nf]         # Inverted rules
+
+   if FA is None:
+      FA = np.arange(nf)
 
    if c != 0:
       RM[:, 2 * nf] = np.bool(c)
+      fg = np.concatenate((FA, FA, [-1]))    # Last column is intercept
+   else:
+      fg = np.concatenate((FA, FA))
 
-   return RM
+   return RM, fg
 
 #--------------------------------------------------------------------------------
 #   Desc: Extract splits from a scikit-learn tree model
@@ -121,7 +178,7 @@ def GetModelParams(tm, tmPar):
 #      lr: Learning rate
 # maxIter: Maximum number of solver iterations
 #     mrg: Target classification margin
-#      ig: Initial guess (calculated log-odds of class 1 if None)
+#      ig: Initial guess (weighted average margin target if None)
 #      tm: Tree model constructor
 #   tmPar: Extra parameters for tree model
 #     nsd: Minimum column swap distance
@@ -211,44 +268,19 @@ class ICPRuleEnsemble:
       if self.v > 1:
          print('Extracted {:d} Rules.'.format(FA.shape[0]))
 
-      M    = np.where(Y > 0, self.mrg, -self.mrg)
       # Construct rule matrix
-      RM   = ConstructRuleMatrix(A, FA, TA, c=self.c)
+      RM, fg = ConstructRuleMatrix(A, FA=FA, TA=TA, c=self.c)
 
-      W = np.full(Y.shape[0], 1 / Y.shape[0]) if W is None else (W.ravel() / W.sum())
+      # Obtain problem constraints
+      fMin, fMax, cCol, CO, bAr, aAr = \
+        Constrain(RM, Y, W=W, fg=fg, c=self.c, mrg=self.mrg, cOrd=self.cOrd, b=self.ig)
 
-      # Initial value
-      b = np.dot(W, M)
-
-      # Identify sign of rules and constraints
-      rs   = RuleSign(RM, M, W, b=b)
-      fMin = np.where(rs > 0,    0., -np.inf)         # Rule sign constraints
-      fMax = np.where(rs > 0, np.inf,     0.)
-
-      # Order columns by amount of error change in that direction
-      ren  = RuleErr(RM, M, W, b=b, d=-1)
-      rep  = RuleErr(RM, M, W, b=b, d=+1)
-      CO   = np.c_[ren, rep].argsort(axis=None)
-
-      if self.c != 0:                                 # Use an intercept
-         fMin[-1] = -np.inf                           # Intercept is unconstrained
-         fMax[-1] =  np.inf
-         fg       = np.concatenate((FA, FA, [-1]))    # Last column is intercept
-         cCol     = [RM.shape[1] - 1]
-      else:
-         fg       = np.concatenate((FA, FA))
-         cCol     = None
-
-      # Make order constraints on coefficients by univariate rule performance
-      bAr = aAr = None
-      if self.cOrd in ('a', 'r'):
-         bAr, aAr = RuleOrder(fg, rs, m=self.cOrd)
-
-      CV, b, _ = ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg,
-                               maxIter=self.maxIter, mrg=self.mrg, b=self.ig, CO=CO,
-                               tol=self.tol, maxGroup=self.maxFeat, CFx=self.CFx,
-                               nsd=self.nsd, xsd=self.xsd, dMax=self.lr, bAr=bAr, aAr=aAr,
-                               nPath=self.nPath, nThrd=self.nThrd, v=self.v)
+      # Obtain solution
+      CV, b, _ = \
+        ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
+                      maxIter=self.maxIter, b=self.ig, CO=CO, tol=self.tol, CFx=self.CFx,
+                      maxGroup=self.maxFeat, nsd=self.nsd, xsd=self.xsd, dMax=self.lr,
+                      bAr=bAr, aAr=aAr, nPath=self.nPath, nThrd=self.nThrd, v=self.v)
 
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
       self.FA = fg[nzi].copy()                        # Rule feature index array

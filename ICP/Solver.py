@@ -2,6 +2,7 @@ from    joblib      import Parallel, delayed
 from    random      import randint
 import  numpy       as     np
 from    .PathSearch import FindDist
+from    .Util       import GroupBy
 
 EPS      = 1e-12   # Errs < EPS are considered negligible and ignored in grad calculation
 DERR_MAX = 1e-5    # If rate of change of error exceeds DERR_MAX at least DEL from
@@ -292,7 +293,7 @@ def ICPSolveConst(A, Y, W, cCol=None, **kwargs):
 #   Desc: Get univariate rule error
 #--------------------------------------------------------------------------------
 #      A: The rule matrix
-#      Y: The target values {-1, 1}
+#      Y: The target margin values
 #      W: Sample weights
 #      d: The direction to move in
 #--------------------------------------------------------------------------------
@@ -358,8 +359,8 @@ def RuleOrder(fg, cs, m='r'):
       fg = np.ones_like(fg)
    BA = np.empty_like(fg)
    AA = np.empty_like(fg)
-   for fi in set(fg):
-      sfi = (fg == fi).nonzero()[0]
+   for fi, sfi in GroupBy(range(len(fg)), key=fg.__getitem__):
+      sfi = np.array(sfi)
       rsi = sfi[cs[sfi].argsort()]
       for i, si in enumerate(rsi):
          BA[si] = rsi[i - 1] if i > 0                    else -1

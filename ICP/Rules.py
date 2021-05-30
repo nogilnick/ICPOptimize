@@ -1,5 +1,5 @@
-from   itertools import groupby
 import numpy     as     np
+from   .Util     import GroupBy
 
 # Operator codes
 OP_LE = 0
@@ -45,73 +45,6 @@ def CheckRule(a, op, b, v):
 #--------------------------------------------------------------------------------
 def CheckRules(TV, OP, CV, v):
    return sum(CheckRule(v, OPi, TVi, CVi) for TVi, OPi, CVi in zip(TV, OP, CV))
-
-#--------------------------------------------------------------------------------
-# Checks consolidated rules
-#--------------------------------------------------------------------------------
-#    A: Data matrix
-#   rl: List of rule tuples provided by ConsolidateRules
-#--------------------------------------------------------------------------------
-#  RET: List of (boolean vector, coefficient) tuples
-#--------------------------------------------------------------------------------
-def EvaluateRules(A, rl):
-   rv = []
-   for ri in rl:  # Loop over unique column indices
-      cond, coef = ri
-
-      ri = np.zeros(A.shape[0], np.int)
-      for ci in cond:
-
-         if  len(ci) == 3:
-            fi, oi, ti = ci
-            ri += CheckRule(A[:, fi], oi, ti, True)
-         else:
-            lt, lo, fi, uo, ut = ci
-
-            Af = A[:, fi]
-            c1 = CheckRule(lt, lo, Af, True)
-            c2 = CheckRule(Af, uo, ut, True)
-
-            ri += (c1 & c2)
-      rv.append((ri > 0, coef))
-   return rv
-
-#--------------------------------------------------------------------------------
-# Creates strings from rule tuples
-#--------------------------------------------------------------------------------
-#   rl: List of rule tuples provided by ConsolidateRules
-#   FN: List of feature names
-# ffmt: Float format string
-#--------------------------------------------------------------------------------
-#  RET: List of (rule string, coefficient) tuples
-#--------------------------------------------------------------------------------
-def RuleStrings(rl, FN, ffmt='{:.5f}'):
-   rStr = []
-   for ri in rl:  # Loop over unique column indices
-      cond, coef = ri
-
-      rli = []
-      for ci in cond:
-         rlij = []
-         if  len(ci) == 3:
-            fi, oi, ti = ci
-            ti = ffmt.format(ti)
-            rlij.append('({0} {1} {2})'.format(FN[fi], OP_STR[oi], ti))
-         else:
-            lt, lo, fi, uo, ut = ci
-
-            if not np.isinf(lt):
-               lt = ffmt.format(lt)
-               rlij.append('({0} {1} {2})'.format(lt, OP_STR[lo], FN[fi]))
-
-            if not np.isinf(ut):
-               ut = ffmt.format(ut)
-               rlij.append('({0} {1} {2})'.format(FN[fi], OP_STR[uo], ut))
-
-         rli.append(' & '.join(rlij))
-      cfmt = '({0})' if len(rli) > 1 else '{0}'
-      rStr.append((' | '.join(cfmt.format(ci) for ci in rli), coef))
-   return rStr
 
 #--------------------------------------------------------------------------------
 # Consolidate into non-overlapping rules
@@ -161,11 +94,41 @@ def ConsolidateRules(CV, CI, TV, OP, g=True, eps=0.0):
       # If g is set, group rules with same pred val and OR together
       rli, coef = zip(*rli)
       key = coef if g else range(len(rli))
-      grp = groupby(range(len(rli)), key=key.__getitem__)
+      grp = GroupBy(range(len(rli)), key=key.__getitem__)
 
       rl.extend((tuple(rli[j] for j in g), k) for k, g in grp)
 
    return rl
+
+#--------------------------------------------------------------------------------
+# Checks consolidated rules
+#--------------------------------------------------------------------------------
+#    A: Data matrix
+#   rl: List of rule tuples provided by ConsolidateRules
+#--------------------------------------------------------------------------------
+#  RET: List of (boolean vector, coefficient) tuples
+#--------------------------------------------------------------------------------
+def EvaluateRules(A, rl):
+   rv = []
+   for ri in rl:  # Loop over unique column indices
+      cond, coef = ri
+
+      ri = np.zeros(A.shape[0], np.int)
+      for ci in cond:
+
+         if  len(ci) == 3:
+            fi, oi, ti = ci
+            ri += CheckRule(A[:, fi], oi, ti, True)
+         else:
+            lt, lo, fi, uo, ut = ci
+
+            Af = A[:, fi]
+            c1 = CheckRule(lt, lo, Af, True)
+            c2 = CheckRule(Af, uo, ut, True)
+
+            ri += (c1 & c2)
+      rv.append((ri > 0, coef))
+   return rv
 
 #--------------------------------------------------------------------------------
 # Get data defining 1-d feature-response curve
@@ -210,4 +173,41 @@ def ExtractCurve(CV, CI, TV, OP, f):
 # RET: String representation of rule
 #--------------------------------------------------------------------------------
 def RuleStr(f, o, v):
-   return '{0} {1} {2}'.format(f, OP_STR[o], v)            
+   return '{0} {1} {2}'.format(f, OP_STR[o], v)
+
+#--------------------------------------------------------------------------------
+# Creates strings from rule tuples
+#--------------------------------------------------------------------------------
+#   rl: List of rule tuples provided by ConsolidateRules
+#   FN: List of feature names
+# ffmt: Float format string
+#--------------------------------------------------------------------------------
+#  RET: List of (rule string, coefficient) tuples
+#--------------------------------------------------------------------------------
+def RuleStrings(rl, FN, ffmt='{:.5f}'):
+   rStr = []
+   for ri in rl:  # Loop over unique column indices
+      cond, coef = ri
+
+      rli = []
+      for ci in cond:
+         rlij = []
+         if  len(ci) == 3:
+            fi, oi, ti = ci
+            ti = ffmt.format(ti)
+            rlij.append('({0} {1} {2})'.format(FN[fi], OP_STR[oi], ti))
+         else:
+            lt, lo, fi, uo, ut = ci
+
+            if not np.isinf(lt):
+               lt = ffmt.format(lt)
+               rlij.append('({0} {1} {2})'.format(lt, OP_STR[lo], FN[fi]))
+
+            if not np.isinf(ut):
+               ut = ffmt.format(ut)
+               rlij.append('({0} {1} {2})'.format(FN[fi], OP_STR[uo], ut))
+
+         rli.append(' & '.join(rlij))
+      cfmt = '({0})' if len(rli) > 1 else '{0}'
+      rStr.append((' | '.join(cfmt.format(ci) for ci in rli), coef))
+   return rStr
