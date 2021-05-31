@@ -123,19 +123,21 @@ def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #           num groups is exhausted, algorithm is constrained to only use
 #           groups that have been already used. Negative groups are ignored
 #      CFx: Criteria function for abandoning path (if true, path is abandoned)
-#      tol: Solver error tolerance
-#     clip: True/False clip very small coefficients to exactly 0
+#      tol: Moving average error reduction tolerance
+#     clip: Clip coefs with magnitude less than this to exactly 0
 #      bAr: Below coefficient index constraints
 #      aAr: Above coefficient index constraints
 #    nPath: Number of paths to explore at each step (best found is used)
 #    nThrd: Number of threads to search for paths (should be <= nPath)
+#     eps0: Initial error reduction tolerance
+#     eps1: Minimum error reduction tolerance
 #        v: Verbose mode (0 off; 1 low; 2 high)
 #--------------------------------------------------------------------------------
 #      RET: Coefficients, intercept
 #--------------------------------------------------------------------------------
 def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0.1,
-          nsd=1, xsd=0.5, CO=None, fg=None, maxGroup=0, CFx=None, tol=1e-2,
-          clip=True, bAr=None, aAr=None, nPath=1, nThrd=1, v=1):
+          nsd=1, xsd=0.5, CO=None, fg=None, maxGroup=0, CFx=None, tol=-1e-5,
+          clip=1e-9, bAr=None, aAr=None, nPath=1, nThrd=1, eps0=-1e-5, eps1=-EPS, v=1):
    if np.issubdtype(A.dtype, np.bool):
       A = A.view(np.int8)
    n, m  = A.shape
@@ -168,15 +170,19 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
 
    feaSet = set()                             # Used feature groups set
 
-   CFx = ErrInc if CFx is None else CFx
+   if CFx is None:
+      CFx = ErrInc                            # Column constrain function
+
    f   = -1
-   c   =  0
-   d   =  0
-   err = np.inf
+   c   =  0                                   # Iteration count
+   u   =  0.0                                 # Current update
+   err =  np.inf                              # Current error
+   mar = -np.inf                              # Moving average of error reduction
 
    nd  = CV.shape[0] << 1
-   cp  = randint(0, nd - 1)
-   CO  = np.arange(nd) if (CO is None) else CO
+   cp  = 0                                    # Column order pointer
+   if CO is None:
+      CO = np.arange(nd)                      # Column order
 
    # Minimum and max swap distances
    nsd = round(nsd * nd) if isinstance(nsd, float) else nsd
@@ -185,7 +191,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
    xsd = max(nsd, xsd)
 
    # Create search closures
-   DSFx = [DistSearch(A, EPS,  DERR_MAX, DEL) for _ in range(nThrd)]
+   DSFx = [DistSearch(A, EPS, DERR_MAX, DEL) for _ in range(nThrd)]
    sArg = np.empty(nPath, dtype='object')
 
    with Parallel(n_jobs=nThrd, prefer='threads') as TP:
@@ -194,16 +200,14 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
          err = (np.maximum(B, 0) * W).sum()        # Mean hinge error
 
          if v > 0:
-            print('{:5d} {:10.7f} ({:5d}) [{:5d}] {:s}'.format(
-               c, err, f, (B > EPS).sum(), '+' if d > 0 else '-'))
+            print('{:5d} {:10.7f} {:10.7f} [{:5d}] {:+8.4f}'.format(c, err, mar, f, u))
          # Check if error within tolerance
-         if (err < tol) or (c > maxIter):
-            if v > 1:
-               print('Breaking')
+         if (mar > tol) or (c > maxIter):
+            if v > 1: print('Reached stopping criteria')
             break
          c   += 1
 
-         fail = True
+         bErr = np.inf
          nl   = 0
          while nl < nd:                            # Loop until a direction is found
             npf    = 0                             # Number of paths found
@@ -229,34 +233,44 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
             sRes = TP(delayed(SFxi)(Afi, Y, W, S, B, X, vMaxi, di)
                     for Afi, fi, di, vMaxi, SFxi in sArg[:npf])
             # Take path with lowest (pathErr, pathDist)
-            pIdx = min(range(npf), key=lambda i : sRes[i])
-            bErr, bDist    = sRes[pIdx]
-            Af, f, d, _, _ = sArg[pIdx]
+            cIdx = min(range(npf), key=lambda i : sRes[i])
+            cErr, cDst = sRes[cIdx]
 
-            if (bDist < EPS) or (bErr >= -EPS):
-               continue             # Insufficient reduction in error
+            if cErr < bErr:         # Record best column seen so far
+               Af, f, d, _, _ = sArg[cIdx]
+               bErr = cErr
+               bDst = cDst
+               bCol = Af
+               bFea = f
+               bDir = d
 
-            fail = False
-            break                   # Found a direction and magnitude that reduce error
+            if (bDst >= EPS) and (bErr <= eps0):
+               break                # Found a dir and dist that reduces error >= eps0
 
-         if fail:                   # Check if loop exhausted without success
-            if v > 1:
-               print('Algorithm Stalled')
-            break                   # Cannot find a way to reduce error; terminate
+         if bErr > eps1:
+            if v > 1: print('Algorithm Stalled')
+            break                   # Cannot reduce error more than eps1; break
 
-         if (maxGroup > 0) and (fg[f] > 0):
-            feaSet.add(fg[f])       # This col may use a new group; count towards limit
+         while bErr > eps0:
+            if v > 1: print('Lowering eps0: {:g} -> {:g}'.format(eps0, eps0 / 10.0))
+            eps0 /= 10.0            # Adjust eps0 if necessary
 
-         u = d * bDist
-         if clip and (np.abs(CV[f] + u) < EPS):
-            u = -CV[f]              # Quantize coefficients that are very close to 0
+         if (maxGroup > 0) and (fg[bFea] > 0):
+            feaSet.add(fg[bFea])    # This col may use a new group; count towards limit
 
-         CV[f] += u                 # Update coeficient vector
-         X     += u * Af            # Update current solution
+         u = bDir * bDst
+         if np.abs(CV[bFea] + u) < clip:
+            if v > 1: print('Clip: {:g} -> 0.0'.format(CV[bFea] + u))
+            u = -CV[bFea]           # Quantize coefficients that are very close to 0
+
+         CV[bFea] += u              # Update coeficient vector
+         X        += u * bCol       # Update current solution
+
+         mar = bErr if np.isinf(mar) else (0.01 * bErr + 0.99 * mar)
 
          # Update traversal plan by moving columns that reduce error ahead
          for (_, f, d, _, _), (pErr, _) in zip(sArg[:npf], sRes[:npf]):
-            if pErr < -EPS:
+            if pErr <= -eps0:
                ColOrder(CO, f, d, nsd, xsd)
 
    return CV, b, err

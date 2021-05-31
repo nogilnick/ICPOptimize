@@ -184,13 +184,16 @@ def GetModelParams(tm, tmPar):
 #     nsd: Minimum column swap distance
 #     xsd: Maximum column swap distance
 #    ESFx: Extract split functions
-#     tol: Solver error tolerance
+#     tol: Moving average error reduction tolerance
 # maxFeat: Maximum number of original features that can be included in model
 #     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
 #       c: Use constant (0/1)
+#    clip: Clip coefs with magnitude less than this to exactly 0
 #   nPath: Number of paths to explore at each step (best found is used)
 #   nThrd: Number of threads to search for paths (should be <= nPath)
 #    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+#    eps0: Initial error reduction tolerance
+#    eps1: Minimum error reduction tolerance
 #       v: Verbosity (0: off; 1: low; 2: high)
 #--------------------------------------------------------------------------------
 class ICPRuleEnsemble:
@@ -204,8 +207,8 @@ class ICPRuleEnsemble:
       return self.__repr__()
 
    def __init__(self, lr=0.1, maxIter=500, mrg=1.0, ig=None, tm='gbc', tmPar=None,
-                nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=1e-2, maxFeat=0, CFx=None, c=1,
-                nPath=1, nThrd=1, cOrd='n', v=0):
+                nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=-1e-5, maxFeat=0, CFx=None, c=1,
+                clip=1e-9, nPath=1, nThrd=1, cOrd='n', eps0=-1e-5, eps1=-EPS, v=0):
       self.lr      = lr
       self.maxIter = maxIter
       self.mrg     = mrg
@@ -219,9 +222,12 @@ class ICPRuleEnsemble:
       self.maxFeat = maxFeat
       self.CFx     = CFx
       self.c       = c
+      self.clip    = clip
       self.nPath   = nPath
       self.nThrd   = nThrd
       self.cOrd    = cOrd
+      self.eps0    = eps0
+      self.eps1    = eps1
       self.v       = v
 
    def decision_function(self, A):
@@ -280,7 +286,8 @@ class ICPRuleEnsemble:
         ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
                       maxIter=self.maxIter, b=self.ig, CO=CO, tol=self.tol, CFx=self.CFx,
                       maxGroup=self.maxFeat, nsd=self.nsd, xsd=self.xsd, dMax=self.lr,
-                      bAr=bAr, aAr=aAr, nPath=self.nPath, nThrd=self.nThrd, v=self.v)
+                      bAr=bAr, aAr=aAr, nPath=self.nPath, nThrd=self.nThrd,
+                      clip=self.clip, eps0=self.eps0, eps1=self.eps1, v=self.v)
 
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
       self.FA = fg[nzi].copy()                        # Rule feature index array
