@@ -11,16 +11,17 @@ DEL      = 1e-8    # the starting position, then further line search is abandone
 #--------------------------------------------------------------------------------
 #    Desc: date column traversal order indices
 #--------------------------------------------------------------------------------
-#     PLV: Path loss values
-#       o: Column order method
+#      CO: Column traversal order
+#      cp: Current traversal index
+#     nsd: Minimum swap distance
+#     xsd: Maximum swap distance
 #--------------------------------------------------------------------------------
 #   Return: Indices specifying order to traverse columns
 #--------------------------------------------------------------------------------
-def ColOrder(CO, f, d, nsd, xsd):
-   fd = ColFromFD(f, d)
-   p  = randint(nsd, xsd) if (xsd > nsd) else nsd
-   p  = (fd + p) % CO.shape[0]
-   CO[fd], CO[p] = CO[p], CO[fd]
+def ColOrder(CO, cp, nsd, xsd):
+   np = randint(nsd, xsd) if (xsd > nsd) else nsd
+   np = (cp + np) % CO.shape[0]
+   CO[cp], CO[np] = CO[np], CO[cp]
    return CO
 
 #--------------------------------------------------------------------------------
@@ -117,7 +118,7 @@ def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #     dMax: Maximum distance to move along path before retrying direction
 #      nsd: Min swap distance
 #      xsd: Max swap distance
-#       CO: Original column order
+#       CO: Column traversal order
 #       fg: Feature groups (for constraining maximum number of allowed groups)
 # maxGroup: Maximum number of allowed feature groups. No limit if <= 0. Once
 #           num groups is exhausted, algorithm is constrained to only use
@@ -164,7 +165,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
    if b is None:
       b = np.dot(Y, W)                        # Initial guess
    if clip:
-      b  = b if (np.abs(b) >= EPS) else 0     # Clip small values to 0
+      b  = b if (np.abs(b) >= clip) else 0    # Clip small values to 0
 
    X  = b + A @ CV                            # Current solution
 
@@ -180,7 +181,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
    mar = -np.inf                              # Moving average of error reduction
 
    nd  = CV.shape[0] << 1
-   cp  = 0                                    # Column order pointer
+   cp  = -1                                   # Column order pointer
    if CO is None:
       CO = np.arange(nd)                      # Column order
 
@@ -214,15 +215,14 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
             sArg[:] = None
             while (nl < nd) and (npf < nPath):     # Loop to find paths with slack
                cp   = (cp + 1) % nd
-               fd   = CO[cp]
-               f, d = ColToFD(fd)
+               f, d = ColToFD(CO[cp])
 
                # Find constraint along path
                vMax = CFx(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
                if vMax <= 0:
                   continue
                # Manually round-robin search closures due to memory re-use
-               sArg[npf] = (A[:, f].astype(np.double), f, d, vMax, DSFx[npf % nThrd])
+               sArg[npf] = (A[:, f].astype(np.double), f, d, cp, vMax, DSFx[npf % nThrd])
                npf += 1
                nl  += 1
 
@@ -231,13 +231,13 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
 
             # Try all paths in parallel
             sRes = TP(delayed(SFxi)(Afi, Y, W, S, B, X, vMaxi, di)
-                    for Afi, fi, di, vMaxi, SFxi in sArg[:npf])
+                       for Afi, _, di, _, vMaxi, SFxi in sArg[:npf])
             # Take path with lowest (pathErr, pathDist)
             cIdx = min(range(npf), key=lambda i : sRes[i])
             cErr, cDst = sRes[cIdx]
 
             if cErr < bErr:         # Record best column seen so far
-               Af, f, d, _, _ = sArg[cIdx]
+               Af, f, d, _, _, _ = sArg[cIdx]
                bErr = cErr
                bDst = cDst
                bCol = Af
@@ -269,9 +269,9 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
          mar = bErr if np.isinf(mar) else (0.01 * bErr + 0.99 * mar)
 
          # Update traversal plan by moving columns that reduce error ahead
-         for (_, f, d, _, _), (pErr, _) in zip(sArg[:npf], sRes[:npf]):
-            if pErr <= -eps0:
-               ColOrder(CO, f, d, nsd, xsd)
+         for (_, _, _, cpi, _, _), (pErr, _) in zip(sArg[:npf], sRes[:npf]):
+            if pErr <= eps0:
+               ColOrder(CO, cpi, nsd, xsd)
 
    return CV, b, err
 

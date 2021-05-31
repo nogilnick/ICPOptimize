@@ -42,7 +42,7 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None):
 
    ren  = RuleErr(RM, M, W, b=b, d=-1)             # Order columns by error change
    rep  = RuleErr(RM, M, W, b=b, d=+1)
-   CO   = np.c_[ren, rep].argsort(axis=None)
+   CO   = np.c_[ren, rep].argsort(axis=None)       # Even indices: d=-1, Odd: d=+1
 
    if c != 0:                                      # Use an intercept
       fMin[-1] = -np.inf                           # Intercept is unconstrained
