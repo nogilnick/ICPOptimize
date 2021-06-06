@@ -21,10 +21,11 @@ DEF_PAR = {
 #      c: Include constant column (0/1)
 #   cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
 #      b: Initial guess (weighted average margin target if None)
+#     cs: Chunk size for calculating dot products (lower values use less memory)
 #--------------------------------------------------------------------------------
 #    RET: Problem constraints
 #--------------------------------------------------------------------------------
-def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None):
+def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None, bs=16000000):
    if W is None:
       W = np.full(Y.shape[0], 1 / Y.shape[0])      # Default to equal weights
    else:
@@ -36,12 +37,12 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None):
    if b is None:
       b = np.dot(W, M)                             # Initial value
 
-   rs   = RuleSign(RM, YS, W, b=b)                 # Identify sign of rules
+   rs   = RuleSign(RM, YS, W, b=b, bs=bs)          # Identify sign of rules
    fMin = np.where(rs > 0,    0., -np.inf)         # Rule sign constraints lower bounds
    fMax = np.where(rs > 0, np.inf,     0.)         # Rule sign constraints upper bounds
 
-   ren  = RuleErr(RM, M, W, b=b, d=-1)             # Order columns by error change
-   rep  = RuleErr(RM, M, W, b=b, d=+1)
+   ren  = RuleErr(RM, M, W, b=b, d=-1, bs=bs)      # Order columns by error change
+   rep  = RuleErr(RM, M, W, b=b, d=+1, bs=bs)
    CO   = np.c_[ren, rep].argsort(axis=None)       # Even indices: d=-1, Odd: d=+1
 
    if c != 0:                                      # Use an intercept
@@ -68,10 +69,10 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None):
 #--------------------------------------------------------------------------------
 #    RET: Rule matrix
 #--------------------------------------------------------------------------------
-def ConstructRuleMatrix(A, FA=None, TA=None, c=0):
+def ConstructRuleMatrix(A, FA=None, TA=None, c=0, o='F'):
    c  = int(c != 0)
    nf = A.shape[1] if FA is None else len(FA)
-   RM = np.empty((A.shape[0], c + 2 * nf), dtype=np.bool)
+   RM = np.empty((A.shape[0], c + 2 * nf), dtype=np.bool, order=o)
 
    if (FA is not None) and (TA is not None):
       RM[:,   :    nf] = A[:, FA] <= TA      # Rules
@@ -96,7 +97,7 @@ def ConstructRuleMatrix(A, FA=None, TA=None, c=0):
 #--------------------------------------------------------------------------------
 #     tm: Tree model
 #--------------------------------------------------------------------------------
-#    RET: List of (feature, split)
+#    YLD: Iterable of (feature, split)
 #--------------------------------------------------------------------------------
 def ExtractSplits(tm):
    EL  = tm.estimators_
@@ -104,7 +105,6 @@ def ExtractSplits(tm):
       EL = EL.ravel()
 
    fSet = set()
-   FTA  = []
    for Ei in EL:
       for FAi, TAi in zip(Ei.tree_.feature, Ei.tree_.threshold):
          if FAi < 0:
@@ -112,31 +112,28 @@ def ExtractSplits(tm):
          ti = (int(FAi), float(TAi))
          if ti in fSet:
             continue
-         FTA.append(ti)
+         yield ti
          fSet.add(ti)
-   return FTA
 
 #--------------------------------------------------------------------------------
 #   Desc: Extract splits from an XGBoost tree model
 #--------------------------------------------------------------------------------
 #     tm: Tree model
 #--------------------------------------------------------------------------------
-#    RET: List of (feature, split)
+#    YLD: Iterable of (feature, split)
 #--------------------------------------------------------------------------------
 def ExtractSplitsXG(tm):
    DF = tm.get_booster().trees_to_dataframe()
 
    fSet = set()
-   FTA  = []
    for FAi, TAi in zip(DF.Feature, DF.Split):
       if TAi != TAi:
          continue
       ti = (int(FAi[1:]), float(TAi))
       if ti in fSet:
          continue
-      FTA.append(ti)
+      yield ti
       fSet.add(ti)
-   return FTA
 
 #--------------------------------------------------------------------------------
 #   Desc: Sets tree model parameters given input
@@ -181,6 +178,7 @@ def GetModelParams(tm, tmPar):
 #      ig: Initial guess (weighted average margin target if None)
 #      tm: Tree model constructor
 #   tmPar: Extra parameters for tree model
+#      bs: Block size for calculating dot products (lower values use less memory)
 #     nsd: Minimum column swap distance
 #     xsd: Maximum column swap distance
 #    ESFx: Extract split functions
@@ -189,9 +187,9 @@ def GetModelParams(tm, tmPar):
 #     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
 #       c: Use constant (0/1)
 #    clip: Clip coefs with magnitude less than this to exactly 0
-#   nPath: Number of paths to explore at each step (best found is used)
 #   nThrd: Number of threads to search for paths (should be <= nPath)
 #    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+#    gThr: Number of succesful iterations required to grow eps0
 #    eps0: Initial error reduction tolerance
 #    eps1: Minimum error reduction tolerance
 #       v: Verbosity (0: off; 1: low; 2: high)
@@ -207,8 +205,9 @@ class ICPRuleEnsemble:
       return self.__repr__()
 
    def __init__(self, lr=0.1, maxIter=500, mrg=1.0, ig=None, tm='gbc', tmPar=None,
-                nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=-1e-5, maxFeat=0, CFx=None, c=1,
-                clip=1e-9, nPath=1, nThrd=1, cOrd='n', eps0=-1e-5, eps1=-EPS, v=0):
+                bs=16000000, nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=-1e-5, maxFeat=0,
+                CFx=None, c=1, clip=1e-9, nThrd=1, cOrd='n', gThr=8, eps0=-1e-5,
+                eps1=-EPS, v=0):
       self.lr      = lr
       self.maxIter = maxIter
       self.mrg     = mrg
@@ -218,14 +217,15 @@ class ICPRuleEnsemble:
       self.ESFx    = ESFx
       self.tm      = tm
       self.tmPar   = tmPar
+      self.bs      = bs
       self.tol     = tol
       self.maxFeat = maxFeat
       self.CFx     = CFx
       self.c       = c
       self.clip    = clip
-      self.nPath   = nPath
       self.nThrd   = nThrd
       self.cOrd    = cOrd
+      self.gThr    = gThr
       self.eps0    = eps0
       self.eps1    = eps1
       self.v       = v
@@ -278,15 +278,15 @@ class ICPRuleEnsemble:
       RM, fg = ConstructRuleMatrix(A, FA=FA, TA=TA, c=self.c)
 
       # Obtain problem constraints
-      fMin, fMax, cCol, CO, bAr, aAr = \
-        Constrain(RM, Y, W=W, fg=fg, c=self.c, mrg=self.mrg, cOrd=self.cOrd, b=self.ig)
+      fMin, fMax, cCol, CO, bAr, aAr = Constrain(RM, Y, W=W, fg=fg, c=self.c,
+                                     mrg=self.mrg, cOrd=self.cOrd, b=self.ig, bs=self.bs)
 
       # Obtain solution
-      CV, b, _ = \
+      CV, b, _, self.nIter = \
         ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
                       maxIter=self.maxIter, b=self.ig, CO=CO, tol=self.tol, CFx=self.CFx,
                       maxGroup=self.maxFeat, nsd=self.nsd, xsd=self.xsd, dMax=self.lr,
-                      bAr=bAr, aAr=aAr, nPath=self.nPath, nThrd=self.nThrd,
+                      bAr=bAr, aAr=aAr, gThr=self.gThr, nThrd=self.nThrd, bs=self.bs,
                       clip=self.clip, eps0=self.eps0, eps1=self.eps1, v=self.v)
 
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
