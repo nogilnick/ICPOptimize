@@ -21,7 +21,7 @@ DEF_PAR = {
 #      c: Include constant column (0/1)
 #   cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
 #      b: Initial guess (weighted average margin target if None)
-#     cs: Chunk size for calculating dot products (lower values use less memory)
+#     bs: Block size for calculating dot products (lower values use less memory)
 #--------------------------------------------------------------------------------
 #    RET: Problem constraints
 #--------------------------------------------------------------------------------
@@ -204,9 +204,9 @@ class ICPRuleEnsemble:
    def __str__(self):
       return self.__repr__()
 
-   def __init__(self, lr=0.1, maxIter=500, mrg=1.0, ig=None, tm='gbc', tmPar=None,
-                bs=16000000, nsd=1, xsd=0.5, ESFx=ExtractSplits, tol=-1e-5, maxFeat=0,
-                CFx=None, c=1, clip=1e-9, nThrd=1, cOrd='n', gThr=8, eps0=-1e-5,
+   def __init__(self, lr=0.05, maxIter=1250, mrg=1.0, ig=None, tm='gbc', tmPar=None,
+                bs=16000000, nsd=0, xsd=0.25, ESFx=ExtractSplits, tol=-5e-7, maxFeat=0,
+                CFx=None, c=1, clip=1e-9, nThrd=1, cOrd='n', gThr=10, eps0=-1e-5,
                 eps1=-EPS, v=0):
       self.lr      = lr
       self.maxIter = maxIter

@@ -90,6 +90,8 @@ def DistSearch(A, Y, W, S, eps0, eps1, eps2):
 #     err: Current error
 #    fMin: Coefficient lower bounds
 #    fMax: Coefficient upper bounds
+#     bAr: Below coefficient index constraints
+#     aAr: Above coefficient index constraints
 #       f: Feature index
 #       d: Direction
 #    dMax: Maximum distance to move along path before retrying direction
@@ -189,10 +191,10 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
    err  =  np.inf                             # Current error
    mar  = -np.inf                             # Moving average of error reduction
 
-   nd  = CV.shape[0] << 1
+   nd  = CV.shape[0] << 1                     # 2 directions (+/-) for each column
    sp  = 0                                    # Column order start pointer
    if CO is None:
-      CO = np.arange(nd)                      # Column order
+      CO = np.arange(nd)                      # Default column order
 
    # Minimum and max swap distances
    nsd = round(nsd * nd) if isinstance(nsd, float) else nsd
@@ -227,13 +229,13 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
          cp    = (sp + nl) % nd
          f, d  = ColToFD(CO[cp])
 
-         key, rv = CP.Get(wait=CP.Full())
+         key, rv = CP.Get(wait=CP.Full())       # Try to get a finished search result
          if rv is not None:
-            cErr, cDst, cSla = rv
+            cErr, cDst, cSla = rv               # Error, distance moved, slack to constraint
             sRes[key, :] = rv
             sCol[key] = CO[key]
             if cErr <= eps0:
-               break
+               break                            # Error reduction down this path is good enough; break
 
          # Find constraint along path
          vMax = CFx(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
@@ -242,7 +244,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
 
          CP.Start(key=cp, args=(B, X, vMax, f, d))
 
-      # Join all remaining threads
+      # Join all remaining threads and get results
       for key, rv in CP.GetAll():
          sRes[key, :] = rv
          sCol[key]    = CO[key]
@@ -257,8 +259,8 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
             bDst = cDst
             bFea, bDir = ColToFD(sCol[cp])
 
-         # Update traversal plan by moving columns that reduce error ahead
-         if (cErr <= 0.0) and (cSla <= 0.0):
+         # Update traversal plan by moving columns that reduce error and have slack ahead
+         if (cErr < 0.0) and (cSla > 0.0):
             ColOrder(CO, cp, sp + nl, nsd, xsd)
 
       u = bDir * bDst            # The current proposed coefficient update
@@ -312,11 +314,12 @@ def ICPSolveConst(A, Y, W, cCol=None, **kwargs):
    if not hasattr(cCol, '__len__'):
       cCol = [cCol]
 
+   # Combine bias from original solution with all const columns
    b = b + CV[cCol].sum()
 
+   # Remove constant columns from coefficient vector
    cIdx = np.ones(A.shape[1], np.bool)
    cIdx[cCol] = False
-   cIdx = cIdx.nonzero()[0]
    CV = CV[cIdx].copy()
 
    return CV, b, err, c
@@ -374,7 +377,7 @@ def RuleErr(A, Y, W=None, b=None, d=1, bs=16000000):
 #      Y: The target values {-1, 1}
 #      W: Sample weights
 #      b: The base rate (mean of target if None)
-#     cs: Chunk size (larger values increase memory usage)
+#     bs: Block size (larger values increase memory usage)
 #--------------------------------------------------------------------------------
 #    RET: Sign indicating the direction of each rule
 #--------------------------------------------------------------------------------
@@ -424,3 +427,4 @@ def RuleOrder(fg, cs, m='r'):
 #--------------------------------------------------------------------------------
 def SignInt8(X, eps=EPS):
    return (X > EPS).astype(np.int8) - (X < -EPS).astype(np.int8)
+
