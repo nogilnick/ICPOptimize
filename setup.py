@@ -30,7 +30,7 @@ module = Extension(
 
 setup(
    name='ICPOptimize',
-   version='1.8',
+   version='1.9',
    description='Python 3 Implementation of ICP and ICPRE',
    author='Nicholas T. Smith',
    author_email='nicholastsmithblog@gmail.com',
