@@ -1,6 +1,7 @@
 import  numpy        as     np
 from    .PathSearch  import FindDist
 from    random       import randint
+from    scipy.sparse import issparse
 from    .Util        import ChunkedDotCol, ChunkedDotRow, GroupBy, ToColOrder
 from    .ClosurePool import ClosurePool
 
@@ -51,6 +52,8 @@ def ColToFD(fd):
 #    Desc: Closure wrapping path search functions along with temp buffers
 #--------------------------------------------------------------------------------
 #       A: Data matrix
+#       Y: Target values (boolean, 0/1, or -1/+1)
+#       W: Sample weights
 #    eps0: Movement must improve error by at least this much to count
 #    eps1: If gradient ever becomes larger than this value, stop searching
 #    eps2: If gradient is larger than eps1 and have moved at least eps2 from start; break
@@ -58,18 +61,22 @@ def ColToFD(fd):
 #     RET: Function that provides (best error along path, best distance to move)
 #--------------------------------------------------------------------------------
 def DistSearch(A, Y, W, S, eps0, eps1, eps2):
+   if issparse(A):
+      DistSearchSparse(A, Y, W, S, eps0, eps1, eps2)
+   return DistSearchDense(A, Y, W, S, eps0, eps1, eps2)
+
+# Closure for dense matrices
+def DistSearchDense(A, Y, W, S, eps0, eps1, eps2):
    n, _ = A.shape
    # Pre-allocate temporary vectors for search
    BVae = np.empty(n + 1)
    AWae = np.empty(n)
    AEsi = np.empty(n, np.intp)
-
    BVse = np.empty(n + 1)
    AWse = np.empty(n)
    SEsi = np.empty(n, np.intp)
 
    tmp = np.empty(n)
-
 
    def Fx(B, X, vMax, f, d):
       nonlocal n, eps0, eps1, eps2, BVae, AWae, AEsi, BVse, AWse, SEsi, tmp
@@ -77,6 +84,38 @@ def DistSearch(A, Y, W, S, eps0, eps1, eps2):
       rvs = np.empty(3)
       FindDist(A, n, Y, W, S, B, X, f, d, vMax, eps0, eps1, eps2, rvs,
                BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+
+      return rvs
+
+   return Fx
+
+# Closure for sparse matrices
+def DistSearchSparse(A, Y, W, S, eps0, eps1, eps2):
+   n, _ = A.shape
+   # Pre-allocate temporary vectors for search
+   BVae = np.empty(n + 1)
+   AWae = np.empty(n)
+   AEsi = np.empty(n, np.intp)
+   BVse = np.empty(n + 1)
+   AWse = np.empty(n)
+   SEsi = np.empty(n, np.intp)
+
+   tmp = np.empty(n)
+   Ac  = np.empty((n, 1))
+
+   def Fx(B, X, vMax, f, d):
+      nonlocal n, eps0, eps1, eps2, BVae, AWae, AEsi, BVse, AWse, SEsi, tmp
+      
+      Af   = A[:, f]       
+      r, _ = Af.nonzero()  # Only non-zero elements impact update
+      v    = Af.data
+      nf   = v.shape[0]
+      Ac[:nf] = v
+
+      rvs = np.empty(3)
+      FindDist(Ac, nf, Y[r], W[r], S[r], B[r], X[r], 0, d,
+               vMax, eps0, eps1, eps2, rvs, BVae, AWae,
+               AEsi, BVse, AWse, SEsi, tmp)
 
       return rvs
 
