@@ -15,11 +15,11 @@ try:
    compileFlags = compileFlags[0]
 except:  # Try cl flags
    compileFlags = compileFlags[1]
-   
+
 # Read in readme
 with open('README.md') as F:
    desc = F.read()
-   
+
 module = Extension(
    'ICP.PathSearch',
    include_dirs=[incdir, np.get_include()],
@@ -30,7 +30,7 @@ module = Extension(
 
 setup(
    name='ICPOptimize',
-   version='1.9',
+   version='2.0',
    description='Python 3 Implementation of ICP and ICPRE',
    author='Nicholas T. Smith',
    author_email='nicholastsmithblog@gmail.com',
