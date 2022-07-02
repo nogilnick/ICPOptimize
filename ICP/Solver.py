@@ -13,17 +13,17 @@ DEL      = 1e-8    # the starting position, then further line search is abandone
 #    Desc: date column traversal order indices
 #--------------------------------------------------------------------------------
 #      CO: Column traversal order
-#      ep: Element traversal index
+#      ep: End traversal index
 #      cp: Current traversal index
 #     nsd: Minimum swap distance
 #     xsd: Maximum swap distance
 #--------------------------------------------------------------------------------
 #   Return: Indices specifying order to traverse columns
 #--------------------------------------------------------------------------------
-def ColOrder(CO, ep, cp, nsd, xsd):
+def ColOrder(CO, cp, ep, nsd, xsd):
    np = randint(nsd, xsd) if (xsd > nsd) else nsd
-   np = (cp + np) % CO.shape[0]
-   CO[ep], CO[np] = CO[np], CO[ep]
+   np = (ep + np) % CO.shape[0]
+   CO[cp], CO[np] = CO[np], CO[cp]
    return CO
 
 #--------------------------------------------------------------------------------
@@ -105,8 +105,8 @@ def DistSearchSparse(A, Y, W, S, eps0, eps1, eps2):
 
    def Fx(B, X, vMax, f, d):
       nonlocal n, eps0, eps1, eps2, BVae, AWae, AEsi, BVse, AWse, SEsi, tmp
-      
-      Af   = A[:, f]       
+
+      Af   = A[:, f]
       r, _ = Af.nonzero()  # Only non-zero elements impact update
       v    = Af.data
       nf   = v.shape[0]
@@ -125,6 +125,7 @@ def DistSearchSparse(A, Y, W, S, eps0, eps1, eps2):
 #    Desc: Path constraint function
 #--------------------------------------------------------------------------------
 #      CV: Coefficient vector
+#      CN: Column norms
 #       b: Intercept
 #     err: Current error
 #    fMin: Coefficient lower bounds
@@ -137,7 +138,7 @@ def DistSearchSparse(A, Y, W, S, eps0, eps1, eps2):
 #--------------------------------------------------------------------------------
 #     RET: Return maximum feasible distance along path
 #--------------------------------------------------------------------------------
-def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
+def ErrInc(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
    # Order constraint; preserves relative order of coefficients
    oBnd = np.inf
    if (aAr is not None) and (d > 0) and (aAr[f] != -1):
@@ -146,8 +147,8 @@ def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
       oBnd = CV[f] - CV[bAr[f]]        # Coef approaching below boundary
    # Feasible region boundary
    fBnd = (fMax[f] - CV[f]) if d > 0 else (CV[f] - fMin[f])
-   # Minimum satisfies all constraints
-   return min(oBnd, fBnd, dMax)
+   # Min of order boundary, feasibility boundary, and normed dMax retry distance
+   return min(oBnd, fBnd, dMax / CN[f])
 
 #--------------------------------------------------------------------------------
 #     Desc: Iterative Constrained Pathways Optimizer
@@ -161,6 +162,7 @@ def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #      mrg: Classifier margin for hinge-loss
 #        b: Initial guess (calculated log-odds of class 1 if None)
 #     dMax: Maximum distance to move along path before retrying direction
+#     norm: Normalize dMax by column norm (T/F)
 #       bs: Block size for calculating initial dot product (lower values use less memory)
 #      nsd: Min swap distance
 #      xsd: Max swap distance
@@ -183,63 +185,63 @@ def ErrInc(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #--------------------------------------------------------------------------------
 #      RET: Coefficients, intercept
 #--------------------------------------------------------------------------------
-def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0.1,
-             bs=16000000, nsd=0, xsd=0.5, CO=None, fg=None, maxGroup=0, CFx=None,
-             tol=-1e-5, mOrd='F', clip=1e-9, bAr=None, aAr=None, nThrd=1, gThr=8,
-             eps0=-1e-5, eps1=-EPS, v=1):
+def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=1.234,
+             norm=True, bs=16000000, nsd=0, xsd=0.5, CO=None, fg=None, maxGroup=0,
+             CFx=ErrInc, tol=-1e-5, mOrd='F', clip=1e-9, bAr=None, aAr=None, nThrd=1,
+             gThr=8, eps0=-1e-5, eps1=-EPS, v=1):
    if mOrd is not None:
       A = ToColOrder(A)
    if np.issubdtype(A.dtype, np.bool):
       A = A.view(np.int8)
    n, m  = A.shape
 
-   Y  = np.where(Y > 0, mrg, -mrg)            # Clipped log odds target
-   S  = SignInt8(Y)                           # Sample sign
+   Y  = np.where(Y > 0, mrg, -mrg)              # Clipped log odds target
+   S  = SignInt8(Y)                             # Sample sign
 
    if W is None:
-      W = np.full(Y.shape[0], 1 / Y.shape[0]) # Default to equal weights
+      W = np.full(Y.shape[0], 1 / Y.shape[0])   # Default to equal weights
    else:
-      W = W / W.sum()                         # Force sum==1 for weighted avg
+      W = W / W.sum()                           # Force sum==1 for weighted avg
 
-   CV = np.zeros(m)                           # Coefficient vector
-   if fMin is not None:                       # Max value feature constraints
+   CV = np.zeros(m)                             # Coefficient vector
+   if fMin is not None:                         # Max value feature constraints
       CV   = np.maximum(CV, fMin)
    else:
       fMin = np.full(m, -np.inf)
 
-   if fMax is not None:                       # Min value feature constraints
+   if fMax is not None:                         # Min value feature constraints
       CV   = np.minimum(CV, fMax)
    else:
       fMax = np.full(m,  np.inf)
 
    if b is None:
-      b = np.dot(Y, W)                        # Initial guess
+      b = np.dot(Y, W)                          # Initial guess
    if clip:
-      b  = b if (np.abs(b) >= clip) else 0    # Clip small values to 0
+      b  = b if (np.abs(b) >= clip) else 0      # Clip small values to 0
 
-   X = ChunkedDotRow(A, CV, bs=bs) + b        # Current solution
+   X = ChunkedDotRow(A, CV, bs=bs) + b          # Current solution
 
-   feaSet = set()                             # Used feature groups set
-
-   if CFx is None:
-      CFx = ErrInc                            # Column constrain function
+   feaSet = set()                               # Used feature groups set
 
    bFea = -1
-   c    =  0                                  # Iteration count
-   u    =  0.0                                # Current update
-   err  =  np.inf                             # Current error
-   mar  = -np.inf                             # Moving average of error reduction
+   c    =  0                                    # Iteration count
+   u    =  0.0                                  # Current update
+   err  =  np.inf                               # Current error
+   mar  = -np.inf                               # Moving average of error reduction
 
-   nd  = CV.shape[0] << 1                     # 2 directions (+/-) for each column
-   sp  = 0                                    # Column order start pointer
+   nd  = CV.shape[0] << 1                       # 2 directions (+/-) for each column
+   sp  = 0                                      # Column order start pointer
    if CO is None:
-      CO = np.arange(nd)                      # Default column order
+      CO = np.arange(nd)                        # Default column order
 
    # Minimum and max swap distances
    nsd = round(nsd * nd) if isinstance(nsd, float) else nsd
    xsd = round(xsd * nd) if isinstance(xsd, float) else xsd
    nsd = min(nsd, xsd)
    xsd = max(nsd, xsd)
+
+   # Column norms; use to adjust vMax by column length for a more fair policy
+   CN = np.linalg.norm(A, axis=0, ord=2) if norm else np.ones(A.shape[0])
 
    # Create search closures
    CP = ClosurePool([DistSearch(A, Y, W, S, EPS, DERR_MAX, DEL) for _ in range(nThrd)])
@@ -277,7 +279,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
                break                            # Error reduction down this path is good enough; break
 
          # Find constraint along path
-         vMax = CFx(CV, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
+         vMax = CFx(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
          if vMax <= 0:
             continue
 
@@ -298,12 +300,14 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, dMax=0
             bDst = cDst
             bFea, bDir = ColToFD(sCol[cp])
 
-         # Update traversal plan by moving columns that reduce error and have slack ahead
-         if (cErr < 0.0) and (cSla > 0.0):
+         # Update traversal plan by moving columns that reduce error w/ no slack
+         if (cErr < 0.0) and (cSla <= 0.0):
             ColOrder(CO, cp, sp + nl, nsd, xsd)
 
       u = bDir * bDst            # The current proposed coefficient update
       if (bErr >= EPS) or ((bErr > -EPS) and not RedMag(CV[f], u)):
+         # If error increases >= EPS or error improves at most by -EPS and the magnitude
+         # of the coefficient is not shrinking, abort
          if v > 1: print('Algorithm Stalled: ({0}, {1}, {2})'.format(bErr, f, u))
          break                   # Cannot reduce error more than eps1; break
 
@@ -381,7 +385,7 @@ def RedMag(c, u):
 #      Y: The target margin values
 #      W: Sample weights
 #      d: The direction to move in
-#     cs: Chunk size (larger values increase memory usage)
+#     bs: Block size (larger values increase memory usage)
 #--------------------------------------------------------------------------------
 #    RET: Change in error in signed column direction
 #--------------------------------------------------------------------------------
@@ -466,4 +470,3 @@ def RuleOrder(fg, cs, m='r'):
 #--------------------------------------------------------------------------------
 def SignInt8(X, eps=EPS):
    return (X > EPS).astype(np.int8) - (X < -EPS).astype(np.int8)
-

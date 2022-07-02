@@ -2,7 +2,7 @@ from   .Rules        import (ConsolidateRules, EvaluateRules, ExtractCurve, Rule
                              OP_LE, OP_GT, RuleStrings)
 import numpy         as     np
 from   scipy.special import expit
-from   .Solver       import EPS, ICPSolveConst, RuleErr, RuleOrder, RuleSign
+from   .Solver       import EPS, ErrInc, ICPSolveConst, RuleErr, RuleOrder, RuleSign
 
 # Default tree model parameters
 DEF_PAR = {
@@ -204,11 +204,12 @@ class ICPRuleEnsemble:
    def __str__(self):
       return self.__repr__()
 
-   def __init__(self, lr=0.05, maxIter=1250, mrg=1.0, ig=None, tm='gbc', tmPar=None,
-                bs=16000000, nsd=0, xsd=0.25, ESFx=ExtractSplits, tol=-5e-7, maxFeat=0,
-                CFx=None, c=1, clip=1e-9, nThrd=1, cOrd='n', gThr=10, eps0=-1e-5,
-                eps1=-EPS, v=0):
+   def __init__(self, lr=1.23456, norm=True, maxIter=1250, mrg=1.0, ig=None, tm='gbc',
+                tmPar=None, bs=16000000, nsd=0, xsd=0.25, ESFx=ExtractSplits, tol=-5e-7,
+                maxFeat=0, CFx=ErrInc, c=1, clip=1e-9, nThrd=1, cOrd='n', gThr=10,
+                eps0=-1e-5, eps1=-EPS, v=0):
       self.lr      = lr
+      self.norm    = norm
       self.maxIter = maxIter
       self.mrg     = mrg
       self.ig      = ig
@@ -282,12 +283,12 @@ class ICPRuleEnsemble:
                                      mrg=self.mrg, cOrd=self.cOrd, b=self.ig, bs=self.bs)
 
       # Obtain solution
-      CV, b, _, self.nIter = \
-        ICPSolveConst(RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
-                      maxIter=self.maxIter, b=self.ig, CO=CO, tol=self.tol, CFx=self.CFx,
-                      maxGroup=self.maxFeat, nsd=self.nsd, xsd=self.xsd, dMax=self.lr,
-                      bAr=bAr, aAr=aAr, gThr=self.gThr, nThrd=self.nThrd, bs=self.bs,
-                      clip=self.clip, eps0=self.eps0, eps1=self.eps1, v=self.v)
+      CV, b, _, self.nIter = ICPSolveConst(
+         RM, Y, W, cCol=cCol, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
+         maxIter=self.maxIter, b=self.ig, CO=CO, tol=self.tol, CFx=self.CFx,
+         maxGroup=self.maxFeat, nsd=self.nsd, xsd=self.xsd, dMax=self.lr, norm=self.norm,
+         bAr=bAr, aAr=aAr, gThr=self.gThr, nThrd=self.nThrd, bs=self.bs, clip=self.clip,
+         eps0=self.eps0, eps1=self.eps1, v=self.v)
 
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
       self.FA = fg[nzi].copy()                        # Rule feature index array
