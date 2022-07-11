@@ -10,6 +10,12 @@ def RunAndEnqueue(Q, Fx, slot, args=(), kwargs={}):
 # in the form of a closure
 class ClosurePool:
 
+   def __str__(self):
+      return '{}({})'.format(type(self).__name__, self.nThrd)
+
+   def __repr__(self):
+      return self.__str__()
+
    # Init the ClosurePool. Expects an iterable of closures that will be used as workers
    def __init__(self, WL):
       self.WL    = list(WL)
@@ -60,4 +66,36 @@ class ClosurePool:
       self.thrd[self.slot].start()
       self.kArr[self.slot] = key
       self.nRun += 1
+      return True
+
+# Class with the same interface as ClosurePool but for single threaded behavior
+class DummyPool:
+
+   def __str__(self):
+      return '{}()'.format(type(self).__name__)
+
+   def __repr__(self):
+      return self.__str__()
+
+   # Expects a list of exactly 1 closure
+   def __init__(self, WL):
+      self.WL    = WL[0]
+      self.res   = None
+      self.key   = None
+
+   def Full(self):
+      return False
+
+   def Get(self, default=None, wait=False):
+      k, r = self.key, self.res
+      self.key = self.res = None
+      return k, r
+
+   def GetAll(self, n=inf, wait=True):
+      if False:   # Provide same unpacking behavior but never return anything
+         yield None, None
+
+   def Start(self, key=None, args=(), kwargs={}):
+      self.res = self.WL(*args, **kwargs)    # Run on same thread
+      self.key = key
       return True

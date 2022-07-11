@@ -1,5 +1,5 @@
 import numpy     as     np
-from   .Util     import GroupBy
+from   .Util     import ChunkedDotCol, GetCol, GroupBy, MakeWeights, ToArray
 
 # Operator codes
 OP_LE = 0
@@ -74,10 +74,10 @@ def ConsolidateRules(CV, CI, TV, OP, g=True, eps=0.0):
 
          lo = uo = OP_LT    # Try exclusive bounds by default
          if not (np.isinf(bndA[ei]) or orgA[ei]):
-            ei -= 1        # Endpoint not original, go backwards and use inclusive
+            ei -= 1         # Endpoint not original, go backwards and use inclusive
             uo  = OP_LE
          if not (np.isinf(bndA[si]) or orgA[si]):
-            si += 1        # Start point not original, go forwards and use inclusive
+            si += 1         # Start point not original, go forwards and use inclusive
             lo  = OP_LE
 
          if np.abs(cv) <= eps:        # Don't report ranges with coefficient 0
@@ -118,11 +118,11 @@ def EvaluateRules(A, rl):
 
          if  len(ci) == 3:
             fi, oi, ti = ci
-            ri += CheckRule(A[:, fi], oi, ti, True)
+            ri += CheckRule(GetCol(A, fi), oi, ti, True)
          else:
             lt, lo, fi, uo, ut = ci
 
-            Af = A[:, fi]
+            Af = ToArray(GetCol(A, fi))
             c1 = CheckRule(lt, lo, Af, True)
             c2 = CheckRule(Af, uo, ut, True)
 
@@ -162,6 +162,73 @@ def ExtractCurve(CV, CI, TV, OP, f):
       crvA.append((m, CheckRules(TVi, OPi, CVi, m), False))
    crvA.append((b, CheckRules(TVi, OPi, CVi, b), False))
    return crvA
+
+#--------------------------------------------------------------------------------
+# Desc: Given bin edges, finds points that cover all possible response values
+#--------------------------------------------------------------------------------
+#    x: Array with position of bin edges
+#--------------------------------------------------------------------------------
+#  RET: An array with values that fall in all possible response regions
+#--------------------------------------------------------------------------------
+def GetRegionPoints(x):
+   md    = np.median(np.diff(x[1:-1])) if (len(x) > 3) else 1
+   x     = x.copy()
+   x[ 0] = x[1]  - md               # Replace points at infinity
+   x[-1] = x[-2] + md
+   rv    = []
+   for i in range(len(x) - 1):
+      a     = x[i]
+      b     = x[i + 1]
+      rv.append(a)
+      rv.append((a + b) / 2)
+      rv.append(b)
+   return np.array(rv)
+
+#--------------------------------------------------------------------------------
+#   Desc: Get univariate rule orientation
+#--------------------------------------------------------------------------------
+#      A: The rule matrix
+#      Y: The target values {0, 1}
+#      W: Sample weights
+#      b: The base rate (mean of target if None)
+#     bs: Block size (larger values increase memory usage)
+#      c: Constant (0/1)
+#--------------------------------------------------------------------------------
+#    RET: Sign indicating the direction of each rule
+#--------------------------------------------------------------------------------
+def RuleSign(A, Y, W=None, b=None, bs=1.6e7, c=1):
+   m, n    = A.shape
+   W       = MakeWeights(W, m)
+   Y       = (2.0 * (Y > 0) - 1.0) * W     # Sign and weight Y
+   dot     = np.empty(n + (c != 0))        # Split up for low-memory
+   dot[:n] = ChunkedDotCol(A, Y, bs=bs)    # Dot each column with Y for sign
+   if c != 0:                              # Handle constant separately
+      dot[n] = c * Y.sum()
+   return dot
+
+#--------------------------------------------------------------------------------
+#   Desc: Create rule order constraints
+#--------------------------------------------------------------------------------
+#     fg: Feature groups
+#     cs: Column score for ordering
+#      m: Order mode:
+#           a: Absolute; Order constraints irrespective of group
+#           r: Relative; Order constraint only within same group
+#--------------------------------------------------------------------------------
+#    RET: Below constraints, Above constraints
+#--------------------------------------------------------------------------------
+def RuleOrder(fg, cs, m='r'):
+   if m == 'a':   # Use absolute ordering
+      fg = np.ones_like(fg)
+   BA = np.empty_like(fg)
+   AA = np.empty_like(fg)
+   for fi, sfi in GroupBy(range(len(fg)), key=fg.__getitem__):
+      sfi = np.array(sfi)
+      rsi = sfi[cs[sfi].argsort()]
+      for i, si in enumerate(rsi):
+         BA[si] = rsi[i - 1] if i > 0                    else -1
+         AA[si] = rsi[i + 1] if ((i + 1) < rsi.shape[0]) else -1
+   return BA, AA
 
 #--------------------------------------------------------------------------------
 # Rule to string

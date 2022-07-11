@@ -1,6 +1,8 @@
 # ICPOptimize
 The Iterative Constrained Pathways Optimizer
 
+ICP is a constrained linear model optimizer built with a focus on memory efficiency, flexibility, and solution interpretability.
+
 ## Description
 
 This repository contains implementations of both the Iterative Constrained Pathways (ICP) optimization method and the ICP Rule Ensemble (ICPRE). Further discussion about and motivation for the methods can be found on my blog: 
