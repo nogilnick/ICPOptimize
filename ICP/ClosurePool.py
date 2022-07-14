@@ -92,8 +92,10 @@ class DummyPool:
       return k, r
 
    def GetAll(self, n=inf, wait=True):
-      if False:   # Provide same unpacking behavior but never return anything
-         yield None, None
+      if self.key is not None:
+         k, r = self.key, self.res
+         self.key = self.res = None
+         yield k, r                          # Provide same unpacking behavior
 
    def Start(self, key=None, args=(), kwargs={}):
       self.res = self.WL(*args, **kwargs)    # Run on same thread
