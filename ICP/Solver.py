@@ -5,11 +5,15 @@ import  numpy        as     np
 from   .PathSearch   import FindDist, FindDistCg
 from    random       import random, gauss, randint
 from    scipy.sparse import issparse
-from   .Util         import Add, ChunkedColNorm, ToColOrder, MakeWeights, GetCol
+from   .Util         import Add, ChunkedColNorm, ToColOrder, MakeWeights, GetCol, WDot
 
 EPS      = 1e-12   # Errs < EPS are considered negligible and ignored in grad calculation
 DERR_MAX = 1e-5    # If rate of change of error exceeds DERR_MAX at least DEL from
 DEL      = 1e-8    # the starting position, then further line search is abandoned
+
+# Error modes
+HINGE = 0          # Hinge loss error
+LSTSQ = 1          # Least squares
 
 #--------------------------------------------------------------------------------
 #    Desc: Feature index and direction to column number
@@ -56,61 +60,6 @@ def ColumnGradients(Ai, Y, W, S, B, d):
                     Ai.multiply((DSi.multiply(S) > 0).multiply(B > 0)))
    return grad   # Error change in direction from this point
 
-#--------------------------------------------------------------------------------
-#    Desc: Closure wrapping path search functions along with temp buffers
-#--------------------------------------------------------------------------------
-#       A: Data matrix
-#       Y: Target values (boolean, 0/1, or -1/+1)
-#       W: Sample weights
-#       S: Target sign
-#       c: Constant value
-#    eps0: Movement must improve error by at least this much to count
-#    eps1: If gradient ever becomes larger than this value, stop searching
-#    eps2: If gradient is larger than eps1 and have moved at least eps2 from start; break
-#--------------------------------------------------------------------------------
-#     RET: Function that provides (best error along path, best distance to move)
-#--------------------------------------------------------------------------------
-def DistSearch(A, Y, W, S, c, eps0, eps1, eps2):
-   m, n = A.shape
-   # Pre-allocate temporary vectors for search
-   BVae = np.empty(m + 1)
-   AWae = np.empty(m)
-   AEsi = np.empty(m, np.intp)
-   BVse = np.empty(m + 1)
-   AWse = np.empty(m)
-   SEsi = np.empty(m, np.intp)
-
-   tmp = np.empty(m)
-   Ac  = np.empty(m, dtype=A.dtype)
-   rvs = np.empty(3)
-
-   # Search closure
-   def Fx(B, X, vMax, f, d):
-      if f < n:
-         Af = GetCol(A, f)
-      else:                      # Constant column == n
-         Ac.fill(c)
-         Af = Ac
-
-      if issparse(Af):
-         r  = Af.indices         # Only non-zero elements impact update
-         v  = Af.data            # N.b. that "data" may contain 0s if e.g. the
-         nf = v.shape[0]         # sparse-vector is multiplied by 0. If .data is used
-         Ac[:nf] = v             # then .indices should be used instead of .nonzero()
-
-         FindDist(Ac, nf, Y[r], W[r], S[r], B[r], X[r], d,
-                  vMax, eps0, eps1, eps2, rvs, BVae, AWae,
-                  AEsi, BVse, AWse, SEsi, tmp)
-      elif isinstance(Af, np.ndarray) and Af.data.contiguous:
-         FindDistCg(Af, m, Y, W, S, B, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
-      else:    # Dense non-contiguous; copy to contiguous array
-         Ac[:] = Af
-         FindDistCg(Ac, m, Y, W, S, B, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
-      return rvs
-
-   return Fx
 
 #--------------------------------------------------------------------------------
 #    Desc: Path constraint function
@@ -129,7 +78,7 @@ def DistSearch(A, Y, W, S, c, eps0, eps1, eps2):
 #--------------------------------------------------------------------------------
 #     RET: Return maximum feasible distance along path
 #--------------------------------------------------------------------------------
-def ErrInc(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
+def CnstPath(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
    if CN[f] == 0:
       return 0
    # Order constraint; preserves relative order of coefficients
@@ -142,6 +91,43 @@ def ErrInc(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
    fBnd = (fMax[f] - CV[f]) if d > 0 else (CV[f] - fMin[f])
    # Min of order boundary, feasibility boundary, and normed dMax retry distance
    return min(oBnd, fBnd, dMax / CN[f])
+
+#--------------------------------------------------------------------------------
+#     Desc: Error Function for Hinge Loss
+#--------------------------------------------------------------------------------
+#        X: Solution vector
+#        Y: Target values (boolean, 0/1, or -1/+1)
+#        W: Sample weights
+#--------------------------------------------------------------------------------
+#      RET: Hinge error
+#--------------------------------------------------------------------------------
+def ErrHinge(X, Y, W):
+   return np.dot(np.maximum(SignInt8(Y) * (Y - X) , 0), W)
+
+#--------------------------------------------------------------------------------
+#     Desc: Error Function for Least-Squares Loss
+#--------------------------------------------------------------------------------
+#        X: Solution vector
+#        Y: Target values
+#        W: Sample weights
+#--------------------------------------------------------------------------------
+#      RET: Least-squares error
+#--------------------------------------------------------------------------------
+def ErrLstSq(X, Y, W):
+   return np.dot(np.square(X - Y), W)
+
+#--------------------------------------------------------------------------------
+#     Desc: Error Function for Least-Squares Loss
+#--------------------------------------------------------------------------------
+#        X: Solution vector
+#--------------------------------------------------------------------------------
+#      RET: Search function, error function
+#--------------------------------------------------------------------------------
+def GetObjFx(obj):
+   if   obj == HINGE:
+      return SearchHinge, ErrHinge
+   elif obj == LSTSQ:
+      return SearchLstSq, ErrLstSq
 
 #--------------------------------------------------------------------------------
 #     Desc: Iterative Constrained Pathways Optimizer
@@ -164,6 +150,7 @@ def ErrInc(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #           groups that have been already used. Negative groups are ignored
 #      CFx: Criteria function for abandoning path (if true, path is abandoned)
 #      tol: Moving average error reduction tolerance
+#      obj: Error objective (HINGE, LSTSQ, etc.)
 #     mOrd: Convert matrix to this order (C or F) if not None
 #     clip: Clip coefs with magnitude less than this to exactly 0
 #      bAr: Below coefficient index constraints
@@ -175,15 +162,15 @@ def ErrInc(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
 #      RET: Coefficients, intercept
 #--------------------------------------------------------------------------------
 def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, dMax=1.234,
-             norm=True, CO=None, fg=None, maxGroup=0, CFx=ErrInc, tol=-1e-5,
+             norm=True, CO=None, fg=None, maxGroup=0, CFx=CnstPath, tol=-1e-5, obj=HINGE,
              mOrd='F', clip=1e-9, bAr=None, aAr=None, nJump=0, nThrd=1, v=1):
    if mOrd is not None:
       A = ToColOrder(A)
 
    m, n = A.shape
 
-   Y  = np.where(Y > 0, mrg, -mrg)              # Clipped log odds target
-   S  = SignInt8(Y)                             # Sample sign
+   if obj == HINGE:
+      Y  = np.where(Y > 0, mrg, -mrg)           # Signed margin values as targets
 
    W = MakeWeights(W, m)                        # Sample weights
 
@@ -227,9 +214,12 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
    # Column norms; use to adjust vMax by column length for a more fair policy
    CN = ChunkedColNorm(A, c=c) if norm else np.ones(n + hc)
 
+   srchFx, errFx = GetObjFx(obj)
+
    # Create search closures
    CP = (DummyPool if nThrd == 1 else ClosurePool)(
-      [DistSearch(A, Y, W, S, c, EPS, DERR_MAX, DEL) for _ in range(nThrd)])
+      [srchFx(A=A, Y=Y, W=W, c=c, eps0=EPS, eps1=DERR_MAX, eps2=DEL)
+       for _ in range(nThrd)])
 
    sRes = np.empty((nd, 3))                     # Keeps track of dir performance
 
@@ -240,10 +230,10 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
    notSet.update(CO[round(pch * nd):])
    runSet = ActiveSet(nd)                       # Temporary set
 
+   err = errFx(X, Y, W)                         # Initialize error value
+
    i = 0                                        # Iteration count
    while True:                                  # Loop for each algorithm iteration
-      B   = S * (Y - X)                         # Distance to margin; <0 if correct
-      err = np.dot(np.maximum(B, 0), W)         # Mean hinge error
 
       if v > 0:
          print('{:5d} {:10.7f} {:10.7f} [{:5d}] {:+8.5f} {:+8.5f} {:4d} {:s} {:s}'.format(
@@ -276,7 +266,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
             sRes[cp, :] = np.nan                # Mark this col for cold set
             continue                            # This direction is constrained; skip
 
-         CP.Start(key=cp, args=(B, X, vMax, f, d))
+         CP.Start(key=cp, args=(X, vMax, f, d))
 
       for key, rv in CP.GetAll():               # Join any running threads and get results
          sRes[key, :] = rv
@@ -296,11 +286,9 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
             notSet.add(cp)                      # Cool set; column isn't helping now
 
       j             = False                     # Jump flag
-      _, bDst, bSla = sRes[bCp]                 # Distance and slack; error from above
-      bFea, bDir    = ColToFD(bCp)              # coefficient index and direction
-      u             = bDir * bDst               # The current proposed coefficient update
+      bFea, bDir    = ColToFD(bCp)              # Coefficient index and direction
       # Stall when err > EPS or (-EPS <= err <= EPS) and coef magnitude increases
-      if (bErr >= -EPS) and ((bErr > EPS) or not RedMag(CV[bFea], u)):
+      if (bErr >= -EPS) and ((bErr > EPS) or not RedMag(CV[bFea], bDir)):
          if nJump > 0:                          # Try to jump out of stall a
             nJump -= 1                          # limited number of times
             bFea   = f = randint(0, n - 1 + hc)
@@ -315,25 +303,33 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
          if v > 1: print('Algorithm Stalled: ({0}, {1}, {2})'.format(bErr, f, u))
          break                                  # Algorithm stalled; break
 
-      if -clip < (CV[bFea] + u) < clip:
-         u  = -CV[bFea]                         # Quantize coefs that are very close to 0
+      _, bDst, bSla = sRes[bCp]                 # Distance and slack; error from above
+      u             = bDir * bDst               # The current proposed coefficient update
 
-         if (maxGroup > 0) and (fg[bFea] > 0):
-            feaSet[fg[bFea]] = cc = feaSet.get(fg[bFea], 0) - 1
-            if cc <= 0:                         # Coef is now 0; remove from feature set
-               del feaSet[fg[bFea]]             # All coef in group 0; delete group
-      elif (maxGroup > 0) and (CV[bFea] == 0) and (fg[bFea] > 0):
-         # This is a new non-zero coef
-         feaSet[fg[bFea]] = feaSet.get(fg[bFea], 0) + 1
+      if maxGroup > 0:
+         if -clip < (CV[bFea] + u) < clip:
+            if fg[bFea] > 0:
+               feaSet[fg[bFea]] = cc = feaSet.get(fg[bFea], 0) - 1
+               if cc <= 0:                      # Coef is now 0; remove from feature set
+                  del feaSet[fg[bFea]]          # All coef in group 0; delete group
+         elif CV[bFea] == 0:                    # This is a new non-zero coef
+            feaSet[fg[bFea]] = feaSet.get(fg[bFea], 0) + 1
 
-      CV[bFea] += u                             # Update coefficient vector
       if bFea < n:                              # Update via coef
-         X  = Add(X, u * GetCol(A, bFea))       # Column update; handle sparse
+         Cf = u * GetCol(A, bFea)               # Get column bFea
       else:                                     # Update via bias
-         X += u * c
+         Cf = u * c
 
+      X         = Add(X, Cf)                    # Column update; handle sparse
+      CV[bFea] += u                             # Update coefficient vector
       # Moving average error reduction for stopping criteria
-      mar = bErr if isinf(mar) else (0.05 * bErr + 0.95 * mar)
+      mar  = bErr if isinf(mar) else (0.05 * bErr + 0.95 * mar)
+      err += bErr
+
+   # Clip very small coef to exactly zero
+   for i in range(len(CV)):
+      if -clip < CV[i] < clip:
+         CV[i] = 0.
 
    return CV, b, err, i
 
@@ -409,6 +405,97 @@ def RuleErr(A, Y, W=None, b=None, d=1, bs=1.6e7, c=1):
    if c != 0:
       err[n] = ColumnGradients(np.full((m, 1), c), Y, W, S, B, d)
    return err
+
+#--------------------------------------------------------------------------------
+#    Desc: Closure wrapping path search functions along with temp buffers
+#--------------------------------------------------------------------------------
+#       A: Data matrix
+#       Y: Target values (boolean, 0/1, or -1/+1)
+#       W: Sample weights
+#       c: Constant value
+#    eps0: Movement must improve error by at least this much to count
+#    eps1: If gradient ever becomes larger than this value, stop searching
+#    eps2: If gradient is larger than eps1 and have moved at least eps2 from start; break
+#--------------------------------------------------------------------------------
+#     RET: Function that provides (best error along path, best distance to move)
+#--------------------------------------------------------------------------------
+def SearchHinge(A, Y, W, c, eps0, eps1, eps2, *args, **kwargs):
+   m, n = A.shape
+   # Pre-allocate temporary vectors for search
+   BVae = np.empty(m + 1)
+   AWae = np.empty(m)
+   AEsi = np.empty(m, np.intp)
+   BVse = np.empty(m + 1)
+   AWse = np.empty(m)
+   SEsi = np.empty(m, np.intp)
+
+   tmp = np.empty(m)
+   Ac  = np.empty(m, dtype=A.dtype)
+   rvs = np.empty(3)
+
+   # Search closure
+   #def Fx(B, X, vMax, f, d):
+   def Fx(X, vMax, f, d):
+      if f < n:
+         Af = GetCol(A, f)
+      else:                      # Constant column == n
+         Ac.fill(c)
+         Af = Ac
+
+      if issparse(Af):
+         r  = Af.indices         # Only non-zero elements impact update
+         v  = Af.data            # N.b. that "data" may contain 0s if e.g. the
+         nf = v.shape[0]         # sparse-vector is multiplied by 0. If .data is used
+         Ac[:nf] = v             # then .indices should be used instead of .nonzero()
+
+         FindDist(Ac, nf, Y[r], W[r], X[r], d, vMax, eps0, eps1, eps2,
+                  rvs, BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+      elif isinstance(Af, np.ndarray) and Af.data.contiguous:
+         FindDistCg(Af, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
+                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+      else:    # Dense non-contiguous; copy to contiguous array
+         Ac[:] = Af
+         FindDistCg(Ac, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
+                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+      return rvs
+
+   return Fx
+
+#--------------------------------------------------------------------------------
+#    Desc: Closure wrapping path search functions along with temp buffers
+#--------------------------------------------------------------------------------
+#       A: Data matrix
+#       Y: Target values (boolean, 0/1, or -1/+1)
+#       W: Sample weights
+#       c: Constant value
+#--------------------------------------------------------------------------------
+#     RET: Function that provides (best error along path, best distance to move)
+#--------------------------------------------------------------------------------
+def SearchLstSq(A, Y, W, c, *args, **kwargs):
+   m, n = A.shape
+   # Pre-allocate temporary vectors for search
+   Ac = np.empty(m, dtype=A.dtype)
+
+   # Search closure
+   #def Fx(B, X, vMax, f, d):
+   def Fx(X, vMax, f, d):
+      if f < n:
+         C = GetCol(A, f)
+      else:                                  # Constant column == n
+         Ac.fill(c)
+         C = Ac
+
+      R   = (Y - X)                          # Residual vector
+      CdC = WDot(C, C, W)                    # Weighted dot product
+      CdR = WDot(R, C, W) * d                # Signed & weighted dot product
+      u   = CdR / CdC                        # Proj of col onto residual vec
+      if u < 0:
+         return 0., 0., vMax                 # Wrong direction; abort
+      u  = min(u, vMax)                      # Only move up to contraint
+      e  = u * u * CdC - 2 * u * CdR         # Update to quadratic loss
+      return e, u, vMax - u
+
+   return Fx
 
 #--------------------------------------------------------------------------------
 #   Desc: Sign function with buffer

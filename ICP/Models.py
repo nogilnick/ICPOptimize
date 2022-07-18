@@ -3,9 +3,8 @@ from   .Rules        import (ConsolidateRules, EvaluateRules, ExtractCurve, Rule
                              OP_LE, OP_GT, RuleStrings, GetRegionPoints, RuleSign,
                              RuleOrder)
 import numpy         as     np
-from   scipy.sparse  import issparse
 from   scipy.special import expit
-from   .Solver       import (EPS, ErrInc, ICPSolveConst, RuleErr, SignInt8)
+from   .Solver       import EPS, CnstPath, GetObjFx, HINGE, LSTSQ, ICPSolveConst, RuleErr
 from   .Util         import ColCorr, GetCol, MakeWeights, ToArray
 
 # Default tree model parameters
@@ -160,6 +159,54 @@ def GetModelParams(tm, tmPar):
       return cf, ESFx, tmPar
 
 #--------------------------------------------------------------------------------
+#    Iterative Constrained Pathways Base Estimator
+#--------------------------------------------------------------------------------
+class ICPBase:
+
+   def __repr__(self):
+      return '{}({})'.format(self.__class__.__name__, len(self))
+
+   def __len__(self):
+      return len(getattr(self, 'CV', []))
+
+   def __str__(self):
+      return self.__repr__()
+
+   def decision_function(self, A):
+      return ToArray(self.transform(A) @ self.CV + self.b)
+
+   # Gets influence of each input feature on the final classification
+   def feature_activation(self, A):
+      return self.transform(A) * self.CV
+
+   def predict(self, A):
+      return ToArray(self.transform(A) @ self.CV + self.b)
+
+   def score(self, A, Y, W=None):  # Weighted error computation
+      Y = self.to_targets(Y)
+      return self.errFx(self.decision_function(A), Y, MakeWeights(W, A.shape[0]))
+
+   def transform(self, A):
+      return A
+
+   def to_targets(self, Y):
+      return Y
+
+#--------------------------------------------------------------------------------
+#    Iterative Constrained Pathways Base Classifier
+#--------------------------------------------------------------------------------
+class ICPBaseClassifier(ICPBase):
+
+   def predict(self, A):
+      return self.classes_[(self.decision_function(A) >= 0).astype(np.int)]
+
+   def predict_proba(self, A):
+      return expit(self.decision_function(A))
+
+   def to_targets(self, Y):
+      return np.where(Y > 0, self.mrg, -self.mrg)
+
+#--------------------------------------------------------------------------------
 #    Iterative Constrained Pathways Rule Ensemble (ICPRE)
 #    Desc: The approach of this algorithm is:
 #           1. Extract rules from the original data using tree methods
@@ -187,19 +234,11 @@ def GetModelParams(tm, tmPar):
 #    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
 #       v: Verbosity (0: off; 1: low; 2: high)
 #--------------------------------------------------------------------------------
-class ICPRuleEnsemble:
-
-   def __repr__(self):
-      if not hasattr(self, 'CV'):
-         return 'ICPRuleEnsemble()'
-      return 'ICPRuleEnsemble({:d})'.format(self.CV.shape[0])
-
-   def __str__(self):
-      return self.__repr__()
+class ICPRuleEnsemble(ICPBaseClassifier):
 
    def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, tm='gbc',
                 tmPar=None, bs=1.6e7, ESFx=ExtractSplits, tol=-5e-7, maxFeat=0, cnst=None,
-                CFx=ErrInc, c=1, clip=1e-9, nJump=0, nThrd=1, cOrd='n', v=0):
+                CFx=CnstPath, c=1, clip=1e-10, nJump=0, nThrd=1, cOrd='n', v=0):
       self.lr      = lr
       self.norm    = norm
       self.maxIter = maxIter
@@ -219,9 +258,6 @@ class ICPRuleEnsemble:
       self.nThrd   = nThrd
       self.cOrd    = cOrd
       self.v       = v
-
-   def decision_function(self, A):
-      return ToArray(self.transform(A) @ self.CV + self.b)
 
    # Given a data matrix and list of feature names, explain prediction for each sample
    def Explain(self, A, FN=None, ffmt='{:.5f}'):
@@ -275,7 +311,7 @@ class ICPRuleEnsemble:
       # Obtain solution
       CV, b, self.err, self.nIter = ICPSolveConst(
          RM, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
-         b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx,
+         b=self.ig, c=self.c, CO=CO, obj=HINGE, tol=self.tol, CFx=self.CFx,
          maxGroup=self.maxFeat, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr,
          nJump=self.nJump, nThrd=self.nThrd, clip=self.clip, v=self.v)
 
@@ -292,6 +328,9 @@ class ICPRuleEnsemble:
       self.feature_importances_ = np.zeros(A.shape[1])
       for fi, cvi in zip(self.FA, self.CV):
          self.feature_importances_[fi] += np.abs(cvi)
+
+      # Error function
+      _, self.errFx = GetObjFx(HINGE)
 
       return self
 
@@ -324,19 +363,8 @@ class ICPRuleEnsemble:
       RM[:, self.OP > 0] = 1 - RM[:, self.OP > 0]
       return RM
 
-   def predict_proba(self, A):
-      return expit(self.decision_function(A))
-
-   def predict(self, A):
-      return self.classes_[(self.decision_function(A) >= 0).astype(np.int)]
-
-   def score(self, A, Y, W=None):  # Weighted hinge loss error
-      W = np.full(A.shape[0], 1 / A.shape[0]) if W is None else W
-      Y = np.where(Y > 0, self.mrg, -self.mrg)
-      return np.dot(np.maximum((SignInt8(Y) * (Y - self.decision_function(A))), 0), W)
-
 #--------------------------------------------------------------------------------
-#    Iterative Constrained Pathways Classifier (ICPC): Linear Classifier
+#    Iterative Constrained Pathways Linear Classifier (ICPLC)
 #    Desc: The approach of this algorithm is:
 #           1. Identify the "intuitive" direction of each column
 #           2. Solve a sign constrained hinge loss problem
@@ -358,18 +386,10 @@ class ICPRuleEnsemble:
 #    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
 #       v: Verbosity (0: off; 1: low; 2: high)
 #--------------------------------------------------------------------------------
-class ICPClassifier:
-
-   def __repr__(self):
-      if not hasattr(self, 'CV'):
-         return 'ICPClassifier()'
-      return 'ICPClassifier({:d})'.format(self.CV.shape[0])
-
-   def __str__(self):
-      return self.__repr__()
+class ICPLinearClassifier(ICPBaseClassifier):
 
    def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, bs=1.6e7,
-                tol=-5e-7, maxFeat=0, CFx=ErrInc, c=1, clip=1e-9, cnst=None, nJump=0,
+                tol=-5e-7, maxFeat=0, CFx=CnstPath, c=1, clip=1e-10, cnst=None, nJump=0,
                 nThrd=1, cOrd='n', v=0):
       self.lr      = lr
       self.norm    = norm
@@ -387,13 +407,6 @@ class ICPClassifier:
       self.nThrd   = nThrd
       self.cOrd    = cOrd
       self.v       = v
-
-   def decision_function(self, A):
-      return ToArray(A @ self.CV + self.b)
-
-   # Gets influence of each input feature on the final classification
-   def feature_activation(self, A):
-      return A * self.CV
 
    # Fit the model on data matrix A, target values Y, and sample weights W
    def fit(self, A, Y, W=None):
@@ -413,24 +426,86 @@ class ICPClassifier:
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
          A, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
          b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
+         obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
          nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
       self.feature_importances_ = np.abs(self.CV)
 
+      # Error function
+      _, self.errFx = GetObjFx(HINGE)
+
       return self
 
-   def predict_proba(self, A):
-      return expit(self.decision_function(A))
+#--------------------------------------------------------------------------------
+#    Iterative Constrained Pathways Linear Regressor (ICPLR)
+#    Desc: The approach of this algorithm is:
+#           1. Identify the "intuitive" direction of each column
+#           2. Solve a sign constrained least-squares problem
+#--------------------------------------------------------------------------------
+#      lr: Learning rate
+#    norm: Normalize lr by column norms (T/F)
+# maxIter: Maximum number of solver iterations
+#      ig: Initial guess (weighted average margin target if None)
+#      bs: Block size for calculating dot products (lower values use less memory)
+#     tol: Moving average error reduction tolerance
+# maxFeat: Maximum number of original features that can be included in model
+#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
+#       c: Use constant (0/1)
+#    clip: Clip coefs with magnitude less than this to exactly 0
+#    cnst: Tuple for explicit specification of problem constraints
+#   nJump: Number of times to try and jump out of stall
+#   nThrd: Number of threads to search for paths (should be <= nPath)
+#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+#       v: Verbosity (0: off; 1: low; 2: high)
+#--------------------------------------------------------------------------------
+class ICPLinearRegressor(ICPBase):
 
-   def predict(self, A):
-      return self.classes_[(self.decision_function(A) >= 0).astype(np.int)]
+   def __init__(self, lr=0.5, norm=True, maxIter=3000, ig=None, bs=1.6e7, tol=-5e-7,
+                maxFeat=0, CFx=CnstPath, c=1, clip=1e-10, cnst=None, nJump=0, nThrd=1,
+                cOrd='n', v=0):
+      self.lr      = lr
+      self.norm    = norm
+      self.maxIter = maxIter
+      self.ig      = ig
+      self.bs      = bs
+      self.tol     = tol
+      self.maxFeat = maxFeat
+      self.cnst    = cnst
+      self.CFx     = CFx
+      self.c       = c
+      self.clip    = clip
+      self.nJump   = nJump
+      self.nThrd   = nThrd
+      self.cOrd    = cOrd
+      self.v       = v
 
-   def score(self, A, Y, W=None):  # Weighted hinge loss error
-      W = np.full(A.shape[0], 1 / A.shape[0]) if W is None else W
-      Y = np.where(Y > 0, self.mrg, -self.mrg)
-      return np.dot(np.maximum((SignInt8(Y) * (Y - self.decision_function(A))), 0), W)
+   # Fit the model on data matrix A, target values Y, and sample weights W
+   def fit(self, A, Y, W=None):
+      m, n = A.shape
+      W    = MakeWeights(W, m)
+
+      # Each column in unique group
+      fg = np.arange(n + (self.c != 0))
+
+      # Obtain problem constraints
+      fMin, fMax, CO, bAr, aAr = Constrain(A, Y, W=W, fg=fg, c=self.c, cOrd=self.cOrd,
+          b=self.ig, bs=self.bs, t='corr') if self.cnst is None else self.cnst
+
+      # Obtain solution
+      self.CV, self.b, self.err, self.nIter = ICPSolveConst(
+         A, Y, W, fMin=fMin, fMax=fMax, fg=fg, maxIter=self.maxIter,
+         b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
+         obj=LSTSQ, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
+         nThrd=self.nThrd, clip=self.clip, v=self.v)
+
+      # Feature importance as sum of magnitude of rule coefficients using feature
+      self.feature_importances_ = np.abs(self.CV)
+
+      # Error function
+      _, self.errFx = GetObjFx(LSTSQ)
+
+      return self
 
 #--------------------------------------------------------------------------------
 #    ICP Binning Classifier (ICPBC)
@@ -458,18 +533,10 @@ class ICPClassifier:
 #    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
 #       v: Verbosity (0: off; 1: low; 2: high)
 #--------------------------------------------------------------------------------
-class ICPBinningClassifier:
-
-   def __repr__(self):
-      if not hasattr(self, 'CV'):
-         return 'ICPBinningClassifier()'
-      return 'ICPBinningClassifier({:d})'.format(self.CV.shape[0])
-
-   def __str__(self):
-      return self.__repr__()
+class ICPBinningClassifier(ICPBaseClassifier):
 
    def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, kbPar=None,
-                bs=1.6e7, tol=-5e-7, maxFeat=0, CFx=ErrInc, c=1, cnst=None, clip=1e-9,
+                bs=1.6e7, tol=-5e-7, maxFeat=0, CFx=CnstPath, c=1, cnst=None, clip=1e-10,
                 nThrd=1, cOrd='n', nJump=0, v=0):
       self.lr      = lr
       self.norm    = norm
@@ -488,9 +555,6 @@ class ICPBinningClassifier:
       self.nThrd   = nThrd
       self.cOrd    = cOrd
       self.v       = v
-
-   def decision_function(self, A):
-      return ToArray(self.transform(A) @ self.CV + self.b)
 
    # Given a data matrix and list of feature names, explain prediction for each sample
    def Explain(self, A, FN=None, ffmt='{:.5f}'):
@@ -554,7 +618,7 @@ class ICPBinningClassifier:
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
          RM, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
          b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
+         obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
          nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
@@ -567,8 +631,8 @@ class ICPBinningClassifier:
       for f in range(n):
          self.LA.append(self.CV[self.FA == f])
 
-      # Remove constant from transformer if it exists since it is handled via b
-      self.KBD.RemoveConst()
+      # Error function
+      _, self.errFx = GetObjFx(HINGE)
 
       return self
 
@@ -592,14 +656,3 @@ class ICPBinningClassifier:
 
    def transform(self, A):
       return self.KBD.transform(A)
-
-   def predict_proba(self, A):
-      return expit(self.decision_function(A))
-
-   def predict(self, A):
-      return self.classes_[(self.decision_function(A) >= 0).astype(np.int)]
-
-   def score(self, A, Y, W=None):
-      W = np.full(A.shape[0], 1 / A.shape[0]) if W is None else W
-      Y = np.where(Y > 0, self.mrg, -self.mrg)
-      return np.dot(np.maximum((SignInt8(Y) * (Y - self.decision_function(A))), 0), W)

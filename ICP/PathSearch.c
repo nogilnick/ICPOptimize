@@ -2243,9 +2243,6 @@ static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dc_nn_
 /* ObjectToMemviewSlice.proto */
 static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(PyObject *, int writable_flag);
 
-/* ObjectToMemviewSlice.proto */
-static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(PyObject *, int writable_flag);
-
 /* RealImag.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -2455,20 +2452,20 @@ static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
 static int __pyx_f_10PathSearch_CmpIdxStruct(const void *, const void *); /*proto*/
-static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
 static void __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__Pyx_memviewslice, __Pyx_memviewslice, __pyx_t_10PathSearch_INT_t); /*proto*/
 static void __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __pyx_t_10PathSearch_INT_t); /*proto*/
-static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_BOOL_t, double); /*proto*/
-static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_CHAR_t, double); /*proto*/
-static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_DOUBLE_t, double); /*proto*/
-static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_INT_t, double); /*proto*/
+static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_BOOL_t, double); /*proto*/
+static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_CHAR_t, double); /*proto*/
+static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_DOUBLE_t, double); /*proto*/
+static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_INT_t, double); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -2522,9 +2519,7 @@ static PyObject *__pyx_builtin_id;
 static PyObject *__pyx_builtin_IndexError;
 static const char __pyx_k_[] = "()";
 static const char __pyx_k_A[] = "A";
-static const char __pyx_k_B[] = "B";
 static const char __pyx_k_O[] = "O";
-static const char __pyx_k_S[] = "S";
 static const char __pyx_k_W[] = "W";
 static const char __pyx_k_X[] = "X";
 static const char __pyx_k_Y[] = "Y";
@@ -2665,7 +2660,6 @@ static PyObject *__pyx_n_s_AEsi;
 static PyObject *__pyx_n_s_ASCII;
 static PyObject *__pyx_n_s_AWae;
 static PyObject *__pyx_n_s_AWse;
-static PyObject *__pyx_n_s_B;
 static PyObject *__pyx_n_s_BOOL_t;
 static PyObject *__pyx_n_s_BVae;
 static PyObject *__pyx_n_s_BVse;
@@ -2698,7 +2692,6 @@ static PyObject *__pyx_kp_s_Out_of_bounds_on_buffer_access_a;
 static PyObject *__pyx_n_s_PathSearch;
 static PyObject *__pyx_kp_s_PathSearch_pyx;
 static PyObject *__pyx_n_s_PickleError;
-static PyObject *__pyx_n_s_S;
 static PyObject *__pyx_n_s_SEsi;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_kp_s_Unable_to_convert_item_to_object;
@@ -2801,15 +2794,15 @@ static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_vMax;
 static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
 static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
-static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
+static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2858,7 +2851,7 @@ static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject 
 static PyObject *__pyx_tp_new__memoryviewslice(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
-static PyObject *__pyx_int_20;
+static PyObject *__pyx_int_18;
 static PyObject *__pyx_int_184977713;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_tuple__3;
@@ -3161,17 +3154,17 @@ static int __pyx_f_10PathSearch_CmpIdxStruct(const void *__pyx_v_a, const void *
 /* "PathSearch.pyx":63
  * 
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
  *    return (<int> (x > eps)) - (<int> (x < -eps))
  * 
  */
 
-static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_BOOL_t __pyx_v_x, double __pyx_v_eps) {
+static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_BOOL_t __pyx_v_x, double __pyx_v_eps) {
   int __pyx_r;
 
   /* "PathSearch.pyx":64
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:
  *    return (<int> (x > eps)) - (<int> (x < -eps))             # <<<<<<<<<<<<<<
  * 
  * #--------------------------------------------------------------------------------
@@ -3182,7 +3175,7 @@ static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_BOOL_t
   /* "PathSearch.pyx":63
  * 
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
  *    return (<int> (x > eps)) - (<int> (x < -eps))
  * 
  */
@@ -3192,12 +3185,12 @@ static int __pyx_fuse_0__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_BOOL_t
   return __pyx_r;
 }
 
-static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_CHAR_t __pyx_v_x, double __pyx_v_eps) {
+static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_CHAR_t __pyx_v_x, double __pyx_v_eps) {
   int __pyx_r;
 
   /* "PathSearch.pyx":64
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:
  *    return (<int> (x > eps)) - (<int> (x < -eps))             # <<<<<<<<<<<<<<
  * 
  * #--------------------------------------------------------------------------------
@@ -3208,7 +3201,7 @@ static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_CHAR_t
   /* "PathSearch.pyx":63
  * 
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
  *    return (<int> (x > eps)) - (<int> (x < -eps))
  * 
  */
@@ -3218,12 +3211,12 @@ static int __pyx_fuse_1__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_CHAR_t
   return __pyx_r;
 }
 
-static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_DOUBLE_t __pyx_v_x, double __pyx_v_eps) {
+static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_DOUBLE_t __pyx_v_x, double __pyx_v_eps) {
   int __pyx_r;
 
   /* "PathSearch.pyx":64
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:
  *    return (<int> (x > eps)) - (<int> (x < -eps))             # <<<<<<<<<<<<<<
  * 
  * #--------------------------------------------------------------------------------
@@ -3234,7 +3227,7 @@ static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_DOUBLE
   /* "PathSearch.pyx":63
  * 
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
  *    return (<int> (x > eps)) - (<int> (x < -eps))
  * 
  */
@@ -3244,12 +3237,12 @@ static int __pyx_fuse_2__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_DOUBLE
   return __pyx_r;
 }
 
-static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_INT_t __pyx_v_x, double __pyx_v_eps) {
+static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt(__pyx_t_10PathSearch_INT_t __pyx_v_x, double __pyx_v_eps) {
   int __pyx_r;
 
   /* "PathSearch.pyx":64
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:
  *    return (<int> (x > eps)) - (<int> (x < -eps))             # <<<<<<<<<<<<<<
  * 
  * #--------------------------------------------------------------------------------
@@ -3260,7 +3253,7 @@ static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_INT_t 
   /* "PathSearch.pyx":63
  * 
  * # Clipped sign function
- * cdef int SignInt8(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
+ * cdef int SignInt(DAT_TYPE_t x, double eps) nogil:             # <<<<<<<<<<<<<<
  *    return (<int> (x > eps)) - (<int> (x < -eps))
  * 
  */
@@ -3270,12 +3263,12 @@ static int __pyx_fuse_3__pyx_f_10PathSearch_SignInt8(__pyx_t_10PathSearch_INT_t 
   return __pyx_r;
 }
 
-/* "PathSearch.pyx":83
+/* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
 /* Python wrapper */
@@ -3319,23 +3312,23 @@ static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_args)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kwargs)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_defaults)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 82, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 83, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -3352,7 +3345,7 @@ static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3409,7 +3402,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("FindDist", 0);
   __Pyx_INCREF(__pyx_v_kwargs);
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -3423,7 +3416,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_t_2 = __pyx_t_4;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_t_3 = ((!__pyx_t_4) != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L4_bool_binop_done:;
@@ -3431,7 +3424,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(Py_None);
     __Pyx_DECREF_SET(__pyx_v_kwargs, Py_None);
   }
-  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ndarray = ((PyTypeObject*)__pyx_t_1);
   __pyx_t_1 = 0;
@@ -3441,14 +3434,14 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v____pyx_INT_t_is_signed = (!((((__pyx_t_10PathSearch_INT_t)-1L) > 0) != 0));
   if (unlikely(__pyx_v_args == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
-  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_t_2 = ((0 < __pyx_t_5) != 0);
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 83, __pyx_L1_error)
+      __PYX_ERR(0, 82, __pyx_L1_error)
     }
     __pyx_t_1 = PyTuple_GET_ITEM(((PyObject*)__pyx_v_args), 0);
     __Pyx_INCREF(__pyx_t_1);
@@ -3465,18 +3458,18 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
   }
   if (unlikely(__pyx_v_kwargs == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_A, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_A, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_kwargs == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 83, __pyx_L1_error)
+      __PYX_ERR(0, 82, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_A); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_A); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -3485,31 +3478,31 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
   /*else*/ {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 83, __pyx_L1_error)
+      __PYX_ERR(0, 82, __pyx_L1_error)
     }
-    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
-    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
+    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_INCREF(__pyx_int_20);
-    __Pyx_GIVEREF(__pyx_int_20);
-    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_int_20);
+    __Pyx_INCREF(__pyx_int_18);
+    __Pyx_GIVEREF(__pyx_int_18);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_int_18);
     __Pyx_INCREF(__pyx_n_s_s);
     __Pyx_GIVEREF(__pyx_n_s_s);
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_n_s_s);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
   __pyx_L6:;
   while (1) {
@@ -3519,7 +3512,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg, __pyx_v_ndarray); 
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_dtype = __pyx_t_6;
         __pyx_t_6 = 0;
@@ -3528,14 +3521,14 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_2 = __pyx_memoryview_check(__pyx_v_arg); 
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_arg_base = __pyx_t_6;
         __pyx_t_6 = 0;
         __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg_base, __pyx_v_ndarray); 
         __pyx_t_2 = (__pyx_t_3 != 0);
         if (__pyx_t_2) {
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           __pyx_v_dtype = __pyx_t_6;
           __pyx_t_6 = 0;
@@ -3557,14 +3550,14 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_2 = (__pyx_v_dtype != Py_None);
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_itemsize = __pyx_t_5;
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_kind = __pyx_t_7;
         __pyx_v_dtype_signed = (__pyx_v_kind == 'i');
@@ -3577,9 +3570,9 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L16_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -3591,7 +3584,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_3 = __pyx_t_2;
           __pyx_L16_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(__pyx_t_10PathSearch_CHAR_t)) == __pyx_v_itemsize) != 0);
@@ -3600,9 +3593,9 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L20_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -3614,7 +3607,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_3 = __pyx_t_2;
           __pyx_L20_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(__pyx_t_10PathSearch_INT_t)) == __pyx_v_itemsize) != 0);
@@ -3623,9 +3616,9 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L24_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -3637,7 +3630,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_3 = __pyx_t_2;
           __pyx_L24_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -3648,15 +3641,15 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L28_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           __pyx_t_3 = __pyx_t_2;
           __pyx_L28_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -3683,7 +3676,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -3705,7 +3698,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -3727,7 +3720,7 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -3749,27 +3742,27 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
         PyErr_Clear(); 
       }
     }
-    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
     goto __pyx_L10_break;
   }
   __pyx_L10_break:;
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_candidates = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
   __pyx_t_5 = 0;
   if (unlikely(__pyx_v_signatures == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_6);
   __pyx_t_6 = __pyx_t_1;
@@ -3777,12 +3770,12 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
   while (1) {
     __pyx_t_11 = __Pyx_dict_iter_next(__pyx_t_6, __pyx_t_9, &__pyx_t_5, &__pyx_t_1, NULL, NULL, __pyx_t_10);
     if (unlikely(__pyx_t_11 == 0)) break;
-    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_sig, __pyx_t_1);
     __pyx_t_1 = 0;
     __pyx_v_match_found = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_14 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_13))) {
@@ -3796,10 +3789,10 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
     }
     __pyx_t_12 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_14, __pyx_kp_s_) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s_);
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 83, __pyx_L1_error)
+    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_t_12 = NULL;
@@ -3814,12 +3807,12 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
     }
     __pyx_t_1 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_12, __pyx_kp_s__2) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s__2);
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_XDECREF_SET(__pyx_v_src_sig, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
     __pyx_t_16 = __pyx_t_15;
     for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
       __pyx_v_i = __pyx_t_17;
@@ -3830,11 +3823,11 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_3 = (__pyx_v_dst_type != Py_None);
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         if (__pyx_t_2) {
           __pyx_v_match_found = 1;
@@ -3850,35 +3843,35 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_L49_break:;
     __pyx_t_2 = (__pyx_v_match_found != 0);
     if (__pyx_t_2) {
-      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
     }
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_2 = (PyList_GET_SIZE(__pyx_v_candidates) != 0);
   __pyx_t_3 = ((!__pyx_t_2) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
-  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_t_3 = ((__pyx_t_9 > 1) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 82, __pyx_L1_error)
   }
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
     if (unlikely(__pyx_v_signatures == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 83, __pyx_L1_error)
+      __PYX_ERR(0, 82, __pyx_L1_error)
     }
-    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_r = __pyx_t_6;
     __pyx_t_6 = 0;
@@ -3912,76 +3905,78 @@ static PyObject *__pyx_pf_10PathSearch_FindDist(CYTHON_UNUSED PyObject *__pyx_se
 
 static PyObject *__pyx_pw_10PathSearch_5__pyx_fuse_0FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_BOOL_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_BOOL_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":92
+  /* "PathSearch.pyx":90
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":93
+  /* "PathSearch.pyx":91
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":95
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":93
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":96
+  /* "PathSearch.pyx":94
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
   /* "PathSearch.pyx":106
- *    cdef double BVi
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
@@ -3991,281 +3986,287 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     /* "PathSearch.pyx":107
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_0__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_0__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
     /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
       /* "PathSearch.pyx":109
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
       /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
     /* "PathSearch.pyx":111
- *          continue      # This sample does not affect error
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ (__pyx_v_S.data + __pyx_t_4 * __pyx_v_S.strides[0]) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":112
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":114
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":115
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_6 * __pyx_v_X.strides[0]) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 115, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":117
+      /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":118
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_7 * __pyx_v_X.strides[0]) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
 
         /* "PathSearch.pyx":119
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) ))));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":120
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+          /* "PathSearch.pyx":120
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-        /* "PathSearch.pyx":117
+          /* "PathSearch.pyx":121
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
+
+          /* "PathSearch.pyx":122
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":119
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
+
+        /* "PathSearch.pyx":123
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ */
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
+
+        /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":126
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) )))));
-
-        /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":126
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":130
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":127
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_7 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_4 * __pyx_v_X.strides[0]) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 130, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
 
-          /* "PathSearch.pyx":131
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":128
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":132
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":134
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":130
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
 
-        /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -4274,7 +4275,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":137
+    /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -4284,39 +4285,39 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":138
+      /* "PathSearch.pyx":134
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":139
+      /* "PathSearch.pyx":135
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":137
+      /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":141
+    /* "PathSearch.pyx":137
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -4324,32 +4325,32 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":142
+      /* "PathSearch.pyx":138
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":143
+      /* "PathSearch.pyx":139
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":144
+    /* "PathSearch.pyx":140
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -4358,8 +4359,8 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -4367,27 +4368,27 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   }
 
-  /* "PathSearch.pyx":146
+  /* "PathSearch.pyx":142
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":147
+  /* "PathSearch.pyx":143
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":150
+  /* "PathSearch.pyx":146
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -4396,7 +4397,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":151
+  /* "PathSearch.pyx":147
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -4405,7 +4406,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":152
+  /* "PathSearch.pyx":148
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -4414,7 +4415,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":155
+  /* "PathSearch.pyx":151
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -4423,7 +4424,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":156
+  /* "PathSearch.pyx":152
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -4432,7 +4433,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":157
+  /* "PathSearch.pyx":153
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -4441,229 +4442,229 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":160
+  /* "PathSearch.pyx":156
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":161
+  /* "PathSearch.pyx":157
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":162
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":158
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":163
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":159
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":164
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":160
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":165
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":161
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":166
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":162
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":167
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":163
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":170
+      /* "PathSearch.pyx":166
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
+
+    /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
+    if (__pyx_t_5) {
+
+      /* "PathSearch.pyx":168
+ *          break
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
+ * 
+ *       sd      = Bi - cp                     # Step distance
+ */
+      __pyx_v_Bi = __pyx_v_vMax;
+
+      /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    }
+
+    /* "PathSearch.pyx":170
+ *          Bi = vMax
+ * 
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
+ */
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
     /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
  * 
- */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
-    if (__pyx_t_5) {
-
-      /* "PathSearch.pyx":172
- *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
- * 
- *       sd      = BVi - cp                     # Step distance
- */
-      __pyx_v_BVi = __pyx_v_vMax;
-
-      /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
- * 
- */
-    }
-
-    /* "PathSearch.pyx":174
- *          BVi = vMax
- * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
- */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
-
-    /* "PathSearch.pyx":175
- * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":176
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":172
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":178
- *       cp      = BVi
+    /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":179
+      /* "PathSearch.pyx":175
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":180
+      /* "PathSearch.pyx":176
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":178
- *       cp      = BVi
+      /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":182
- *          bDist  = BVi
+    /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":183
+      /* "PathSearch.pyx":179
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":182
- *          bDist  = BVi
+      /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":185
+    /* "PathSearch.pyx":181
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -4671,21 +4672,21 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":186
+      /* "PathSearch.pyx":182
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":187
+      /* "PathSearch.pyx":183
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -4695,7 +4696,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":189
+    /* "PathSearch.pyx":185
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -4703,21 +4704,21 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":190
+      /* "PathSearch.pyx":186
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":191
+      /* "PathSearch.pyx":187
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -4727,34 +4728,34 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":193
+    /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":194
+      /* "PathSearch.pyx":190
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":193
+      /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -4763,39 +4764,39 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":196
+  /* "PathSearch.pyx":192
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":197
+  /* "PathSearch.pyx":193
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":198
+  /* "PathSearch.pyx":194
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  * 
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":199
+  /* "PathSearch.pyx":195
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
@@ -4804,12 +4805,12 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -4826,8 +4827,6 @@ static PyObject *__pyx_pw_10PathSearch_5__pyx_fuse_0FindDist(PyObject *__pyx_sel
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -4849,16 +4848,12 @@ static PyObject *__pyx_pw_10PathSearch_5__pyx_fuse_0FindDist(PyObject *__pyx_sel
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_0FindDist (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -4907,121 +4902,109 @@ static PyObject *__pyx_pw_10PathSearch_5__pyx_fuse_0FindDist(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 1); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 1); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 2); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 2); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 3); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 3); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 4); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 4); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 5); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 5); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 6); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 6); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 7); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 7); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 8); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 8); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 9); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 9); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 10); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 10); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 11); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 11); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 12); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 12); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 13); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 13); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 14); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 14); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 15); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 15); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 16); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 16); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 17); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 18); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, 19); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, 17); __PYX_ERR(0, 82, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_0FindDist") < 0)) __PYX_ERR(0, 83, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_0FindDist") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -5042,46 +5025,42 @@ static PyObject *__pyx_pw_10PathSearch_5__pyx_fuse_0FindDist(PyObject *__pyx_sel
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_BOOL_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 88, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_BOOL_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDist", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_0FindDist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5090,21 +5069,19 @@ static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_0FindDist", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_0__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_0__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5119,8 +5096,6 @@ static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObj
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -5137,76 +5112,78 @@ static PyObject *__pyx_pf_10PathSearch_4__pyx_fuse_0FindDist(CYTHON_UNUSED PyObj
 
 static PyObject *__pyx_pw_10PathSearch_7__pyx_fuse_1FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_CHAR_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_CHAR_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":92
+  /* "PathSearch.pyx":90
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":93
+  /* "PathSearch.pyx":91
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":95
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":93
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":96
+  /* "PathSearch.pyx":94
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
   /* "PathSearch.pyx":106
- *    cdef double BVi
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
@@ -5216,281 +5193,287 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     /* "PathSearch.pyx":107
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_1__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_1__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
     /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
       /* "PathSearch.pyx":109
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
       /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
     /* "PathSearch.pyx":111
- *          continue      # This sample does not affect error
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ (__pyx_v_S.data + __pyx_t_4 * __pyx_v_S.strides[0]) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":112
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":114
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":115
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_6 * __pyx_v_X.strides[0]) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 115, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":117
+      /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":118
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_7 * __pyx_v_X.strides[0]) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
 
         /* "PathSearch.pyx":119
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) ))));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":120
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+          /* "PathSearch.pyx":120
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-        /* "PathSearch.pyx":117
+          /* "PathSearch.pyx":121
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
+
+          /* "PathSearch.pyx":122
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":119
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
+
+        /* "PathSearch.pyx":123
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ */
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
+
+        /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":126
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) )))));
-
-        /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":126
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":130
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":127
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_7 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_4 * __pyx_v_X.strides[0]) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 130, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
 
-          /* "PathSearch.pyx":131
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":128
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":132
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":134
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":130
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
 
-        /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -5499,7 +5482,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":137
+    /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -5509,39 +5492,39 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":138
+      /* "PathSearch.pyx":134
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":139
+      /* "PathSearch.pyx":135
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":137
+      /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":141
+    /* "PathSearch.pyx":137
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -5549,32 +5532,32 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":142
+      /* "PathSearch.pyx":138
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":143
+      /* "PathSearch.pyx":139
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":144
+    /* "PathSearch.pyx":140
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -5583,8 +5566,8 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -5592,27 +5575,27 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   }
 
-  /* "PathSearch.pyx":146
+  /* "PathSearch.pyx":142
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":147
+  /* "PathSearch.pyx":143
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":150
+  /* "PathSearch.pyx":146
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -5621,7 +5604,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":151
+  /* "PathSearch.pyx":147
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -5630,7 +5613,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":152
+  /* "PathSearch.pyx":148
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -5639,7 +5622,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":155
+  /* "PathSearch.pyx":151
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -5648,7 +5631,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":156
+  /* "PathSearch.pyx":152
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -5657,7 +5640,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":157
+  /* "PathSearch.pyx":153
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -5666,229 +5649,229 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":160
+  /* "PathSearch.pyx":156
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":161
+  /* "PathSearch.pyx":157
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":162
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":158
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":163
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":159
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":164
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":160
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":165
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":161
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":166
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":162
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":167
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":163
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":170
+      /* "PathSearch.pyx":166
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
+
+    /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
+    if (__pyx_t_5) {
+
+      /* "PathSearch.pyx":168
+ *          break
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
+ * 
+ *       sd      = Bi - cp                     # Step distance
+ */
+      __pyx_v_Bi = __pyx_v_vMax;
+
+      /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    }
+
+    /* "PathSearch.pyx":170
+ *          Bi = vMax
+ * 
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
+ */
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
     /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
  * 
- */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
-    if (__pyx_t_5) {
-
-      /* "PathSearch.pyx":172
- *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
- * 
- *       sd      = BVi - cp                     # Step distance
- */
-      __pyx_v_BVi = __pyx_v_vMax;
-
-      /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
- * 
- */
-    }
-
-    /* "PathSearch.pyx":174
- *          BVi = vMax
- * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
- */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
-
-    /* "PathSearch.pyx":175
- * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":176
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":172
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":178
- *       cp      = BVi
+    /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":179
+      /* "PathSearch.pyx":175
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":180
+      /* "PathSearch.pyx":176
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":178
- *       cp      = BVi
+      /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":182
- *          bDist  = BVi
+    /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":183
+      /* "PathSearch.pyx":179
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":182
- *          bDist  = BVi
+      /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":185
+    /* "PathSearch.pyx":181
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -5896,21 +5879,21 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":186
+      /* "PathSearch.pyx":182
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":187
+      /* "PathSearch.pyx":183
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -5920,7 +5903,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":189
+    /* "PathSearch.pyx":185
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -5928,21 +5911,21 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":190
+      /* "PathSearch.pyx":186
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":191
+      /* "PathSearch.pyx":187
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -5952,34 +5935,34 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":193
+    /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":194
+      /* "PathSearch.pyx":190
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":193
+      /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -5988,39 +5971,39 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":196
+  /* "PathSearch.pyx":192
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":197
+  /* "PathSearch.pyx":193
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":198
+  /* "PathSearch.pyx":194
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  * 
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":199
+  /* "PathSearch.pyx":195
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
@@ -6029,12 +6012,12 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -6051,8 +6034,6 @@ static PyObject *__pyx_pw_10PathSearch_7__pyx_fuse_1FindDist(PyObject *__pyx_sel
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -6074,16 +6055,12 @@ static PyObject *__pyx_pw_10PathSearch_7__pyx_fuse_1FindDist(PyObject *__pyx_sel
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_1FindDist (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -6132,121 +6109,109 @@ static PyObject *__pyx_pw_10PathSearch_7__pyx_fuse_1FindDist(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 1); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 1); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 2); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 2); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 3); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 3); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 4); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 4); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 5); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 5); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 6); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 6); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 7); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 7); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 8); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 8); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 9); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 9); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 10); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 10); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 11); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 11); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 12); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 12); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 13); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 13); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 14); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 14); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 15); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 15); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 16); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 16); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 17); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 18); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, 19); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, 17); __PYX_ERR(0, 82, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_1FindDist") < 0)) __PYX_ERR(0, 83, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_1FindDist") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -6267,46 +6232,42 @@ static PyObject *__pyx_pw_10PathSearch_7__pyx_fuse_1FindDist(PyObject *__pyx_sel
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 88, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDist", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_1FindDist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6315,21 +6276,19 @@ static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_1FindDist", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_1__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_1__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6344,8 +6303,6 @@ static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObj
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -6362,76 +6319,78 @@ static PyObject *__pyx_pf_10PathSearch_6__pyx_fuse_1FindDist(CYTHON_UNUSED PyObj
 
 static PyObject *__pyx_pw_10PathSearch_9__pyx_fuse_2FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":92
+  /* "PathSearch.pyx":90
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":93
+  /* "PathSearch.pyx":91
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":95
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":93
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":96
+  /* "PathSearch.pyx":94
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
   /* "PathSearch.pyx":106
- *    cdef double BVi
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
@@ -6441,281 +6400,287 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     /* "PathSearch.pyx":107
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_2__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
     /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
       /* "PathSearch.pyx":109
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
       /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
     /* "PathSearch.pyx":111
- *          continue      # This sample does not affect error
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ (__pyx_v_S.data + __pyx_t_4 * __pyx_v_S.strides[0]) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":112
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":114
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":115
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_6 * __pyx_v_X.strides[0]) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 115, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / __pyx_t_8);
+
+    /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":117
+      /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":118
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_7 * __pyx_v_X.strides[0]) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / __pyx_t_9);
 
         /* "PathSearch.pyx":119
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) ))));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":120
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+          /* "PathSearch.pyx":120
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-        /* "PathSearch.pyx":117
+          /* "PathSearch.pyx":121
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
+
+          /* "PathSearch.pyx":122
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":119
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
+
+        /* "PathSearch.pyx":123
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ */
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
+
+        /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":126
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) )))));
-
-        /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":126
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":130
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":127
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_7 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_4 * __pyx_v_X.strides[0]) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_8 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 130, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_9 / __pyx_t_8);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
 
-          /* "PathSearch.pyx":131
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":128
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":132
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":134
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":130
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
 
-        /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -6724,7 +6689,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":137
+    /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -6734,39 +6699,39 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":138
+      /* "PathSearch.pyx":134
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":139
+      /* "PathSearch.pyx":135
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":137
+      /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":141
+    /* "PathSearch.pyx":137
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -6774,32 +6739,32 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":142
+      /* "PathSearch.pyx":138
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":143
+      /* "PathSearch.pyx":139
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":144
+    /* "PathSearch.pyx":140
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -6808,8 +6773,8 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -6817,27 +6782,27 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   }
 
-  /* "PathSearch.pyx":146
+  /* "PathSearch.pyx":142
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":147
+  /* "PathSearch.pyx":143
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":150
+  /* "PathSearch.pyx":146
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -6846,7 +6811,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":151
+  /* "PathSearch.pyx":147
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -6855,7 +6820,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":152
+  /* "PathSearch.pyx":148
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -6864,7 +6829,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":155
+  /* "PathSearch.pyx":151
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -6873,7 +6838,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":156
+  /* "PathSearch.pyx":152
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -6882,7 +6847,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":157
+  /* "PathSearch.pyx":153
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -6891,229 +6856,229 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":160
+  /* "PathSearch.pyx":156
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":161
+  /* "PathSearch.pyx":157
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":162
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":158
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":163
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":159
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":164
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":160
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":165
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":161
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":166
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":162
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":167
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":163
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":170
+      /* "PathSearch.pyx":166
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
+
+    /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
+    if (__pyx_t_5) {
+
+      /* "PathSearch.pyx":168
+ *          break
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
+ * 
+ *       sd      = Bi - cp                     # Step distance
+ */
+      __pyx_v_Bi = __pyx_v_vMax;
+
+      /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    }
+
+    /* "PathSearch.pyx":170
+ *          Bi = vMax
+ * 
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
+ */
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
     /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
  * 
- */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
-    if (__pyx_t_5) {
-
-      /* "PathSearch.pyx":172
- *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
- * 
- *       sd      = BVi - cp                     # Step distance
- */
-      __pyx_v_BVi = __pyx_v_vMax;
-
-      /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
- * 
- */
-    }
-
-    /* "PathSearch.pyx":174
- *          BVi = vMax
- * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
- */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
-
-    /* "PathSearch.pyx":175
- * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":176
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":172
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":178
- *       cp      = BVi
+    /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":179
+      /* "PathSearch.pyx":175
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":180
+      /* "PathSearch.pyx":176
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":178
- *       cp      = BVi
+      /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":182
- *          bDist  = BVi
+    /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":183
+      /* "PathSearch.pyx":179
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":182
- *          bDist  = BVi
+      /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":185
+    /* "PathSearch.pyx":181
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -7121,21 +7086,21 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":186
+      /* "PathSearch.pyx":182
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":187
+      /* "PathSearch.pyx":183
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -7145,7 +7110,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":189
+    /* "PathSearch.pyx":185
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -7153,21 +7118,21 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":190
+      /* "PathSearch.pyx":186
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":191
+      /* "PathSearch.pyx":187
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -7177,34 +7142,34 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":193
+    /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":194
+      /* "PathSearch.pyx":190
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":193
+      /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -7213,39 +7178,39 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":196
+  /* "PathSearch.pyx":192
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":197
+  /* "PathSearch.pyx":193
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":198
+  /* "PathSearch.pyx":194
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  * 
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":199
+  /* "PathSearch.pyx":195
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
@@ -7254,12 +7219,12 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -7276,8 +7241,6 @@ static PyObject *__pyx_pw_10PathSearch_9__pyx_fuse_2FindDist(PyObject *__pyx_sel
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -7299,16 +7262,12 @@ static PyObject *__pyx_pw_10PathSearch_9__pyx_fuse_2FindDist(PyObject *__pyx_sel
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_2FindDist (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -7357,121 +7316,109 @@ static PyObject *__pyx_pw_10PathSearch_9__pyx_fuse_2FindDist(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 1); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 1); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 2); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 2); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 3); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 3); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 4); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 4); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 5); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 5); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 6); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 6); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 7); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 7); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 8); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 8); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 9); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 9); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 10); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 10); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 11); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 11); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 12); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 12); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 13); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 13); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 14); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 14); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 15); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 15); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 16); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 16); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 17); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 18); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, 19); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, 17); __PYX_ERR(0, 82, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_2FindDist") < 0)) __PYX_ERR(0, 83, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_2FindDist") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -7492,46 +7439,42 @@ static PyObject *__pyx_pw_10PathSearch_9__pyx_fuse_2FindDist(PyObject *__pyx_sel
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 88, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDist", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_2FindDist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7540,21 +7483,19 @@ static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_2FindDist", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_2__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_2__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7569,8 +7510,6 @@ static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObj
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -7587,76 +7526,78 @@ static PyObject *__pyx_pf_10PathSearch_8__pyx_fuse_2FindDist(CYTHON_UNUSED PyObj
 
 static PyObject *__pyx_pw_10PathSearch_11__pyx_fuse_3FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_1FindDist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_INT_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_INT_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":92
+  /* "PathSearch.pyx":90
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":93
+  /* "PathSearch.pyx":91
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":95
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":93
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":96
+  /* "PathSearch.pyx":94
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
   /* "PathSearch.pyx":106
- *    cdef double BVi
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
@@ -7666,281 +7607,287 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     /* "PathSearch.pyx":107
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_3__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_3__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
     /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
       /* "PathSearch.pyx":109
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
       /* "PathSearch.pyx":108
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
     /* "PathSearch.pyx":111
- *          continue      # This sample does not affect error
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ (__pyx_v_S.data + __pyx_t_4 * __pyx_v_S.strides[0]) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":112
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":114
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":115
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_6 * __pyx_v_X.strides[0]) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 115, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":117
+      /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":118
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_4 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_7 * __pyx_v_X.strides[0]) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
 
         /* "PathSearch.pyx":119
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) ))));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":120
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+          /* "PathSearch.pyx":120
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-        /* "PathSearch.pyx":117
+          /* "PathSearch.pyx":121
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
+
+          /* "PathSearch.pyx":122
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":119
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
+
+        /* "PathSearch.pyx":123
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ */
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
+
+        /* "PathSearch.pyx":118
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":126
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) )))));
-
-        /* "PathSearch.pyx":125
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":116
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":117
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":126
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":130
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":127
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_Y.data + __pyx_t_7 * __pyx_v_Y.strides[0]) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_X.data + __pyx_t_4 * __pyx_v_X.strides[0]) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 130, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) ))));
 
-          /* "PathSearch.pyx":131
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":128
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_7 * __pyx_v_W.strides[0]) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":132
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":125
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":129
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":134
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":130
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_4 * __pyx_v_W.strides[0]) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ (__pyx_v_W.data + __pyx_t_6 * __pyx_v_W.strides[0]) )))));
 
-        /* "PathSearch.pyx":128
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":129
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -7949,7 +7896,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":137
+    /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -7959,39 +7906,39 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":138
+      /* "PathSearch.pyx":134
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":139
+      /* "PathSearch.pyx":135
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":137
+      /* "PathSearch.pyx":133
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":141
+    /* "PathSearch.pyx":137
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -7999,32 +7946,32 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":142
+      /* "PathSearch.pyx":138
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":143
+      /* "PathSearch.pyx":139
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":144
+    /* "PathSearch.pyx":140
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -8033,8 +7980,8 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":136
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":132
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -8042,27 +7989,27 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   }
 
-  /* "PathSearch.pyx":146
+  /* "PathSearch.pyx":142
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":147
+  /* "PathSearch.pyx":143
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":150
+  /* "PathSearch.pyx":146
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -8071,7 +8018,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":151
+  /* "PathSearch.pyx":147
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -8080,7 +8027,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":152
+  /* "PathSearch.pyx":148
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -8089,7 +8036,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":155
+  /* "PathSearch.pyx":151
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -8098,7 +8045,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":156
+  /* "PathSearch.pyx":152
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -8107,7 +8054,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":157
+  /* "PathSearch.pyx":153
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -8116,229 +8063,229 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":160
+  /* "PathSearch.pyx":156
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":161
+  /* "PathSearch.pyx":157
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":162
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":158
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":163
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":159
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":164
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":160
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":165
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":161
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":166
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":162
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":167
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":163
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":170
+      /* "PathSearch.pyx":166
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":169
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":165
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
+
+    /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
+    if (__pyx_t_5) {
+
+      /* "PathSearch.pyx":168
+ *          break
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
+ * 
+ *       sd      = Bi - cp                     # Step distance
+ */
+      __pyx_v_Bi = __pyx_v_vMax;
+
+      /* "PathSearch.pyx":167
+ *       if isinf(Bi):
+ *          break
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
+ * 
+ */
+    }
+
+    /* "PathSearch.pyx":170
+ *          Bi = vMax
+ * 
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
+ */
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
     /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
  * 
- */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
-    if (__pyx_t_5) {
-
-      /* "PathSearch.pyx":172
- *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
- * 
- *       sd      = BVi - cp                     # Step distance
- */
-      __pyx_v_BVi = __pyx_v_vMax;
-
-      /* "PathSearch.pyx":171
- *       if isinf(BVi):
- *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
- * 
- */
-    }
-
-    /* "PathSearch.pyx":174
- *          BVi = vMax
- * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
- */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
-
-    /* "PathSearch.pyx":175
- * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":176
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":172
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":178
- *       cp      = BVi
+    /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":179
+      /* "PathSearch.pyx":175
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":180
+      /* "PathSearch.pyx":176
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":178
- *       cp      = BVi
+      /* "PathSearch.pyx":174
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":182
- *          bDist  = BVi
+    /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":183
+      /* "PathSearch.pyx":179
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":182
- *          bDist  = BVi
+      /* "PathSearch.pyx":178
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":185
+    /* "PathSearch.pyx":181
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -8346,21 +8293,21 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":186
+      /* "PathSearch.pyx":182
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":187
+      /* "PathSearch.pyx":183
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -8370,7 +8317,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":189
+    /* "PathSearch.pyx":185
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -8378,21 +8325,21 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":190
+      /* "PathSearch.pyx":186
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":191
+      /* "PathSearch.pyx":187
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -8402,34 +8349,34 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":193
+    /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":194
+      /* "PathSearch.pyx":190
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":193
+      /* "PathSearch.pyx":189
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -8438,39 +8385,39 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":196
+  /* "PathSearch.pyx":192
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":197
+  /* "PathSearch.pyx":193
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":198
+  /* "PathSearch.pyx":194
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  * 
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":199
+  /* "PathSearch.pyx":195
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
@@ -8479,12 +8426,12 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDist(__Pyx_memviewslice __pyx_v
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -8501,8 +8448,6 @@ static PyObject *__pyx_pw_10PathSearch_11__pyx_fuse_3FindDist(PyObject *__pyx_se
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -8524,16 +8469,12 @@ static PyObject *__pyx_pw_10PathSearch_11__pyx_fuse_3FindDist(PyObject *__pyx_se
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_3FindDist (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -8582,121 +8523,109 @@ static PyObject *__pyx_pw_10PathSearch_11__pyx_fuse_3FindDist(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 1); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 1); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 2); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 2); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 3); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 3); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 4); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 4); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 5); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 5); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 6); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 6); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 7); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 7); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 8); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 8); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 9); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 9); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 10); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 10); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 11); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 11); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 12); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 12); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 13); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 13); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 14); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 14); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 15); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 15); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 16); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 16); __PYX_ERR(0, 82, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 17); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 18); __PYX_ERR(0, 83, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, 19); __PYX_ERR(0, 83, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, 17); __PYX_ERR(0, 82, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_3FindDist") < 0)) __PYX_ERR(0, 83, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_3FindDist") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -8717,46 +8646,42 @@ static PyObject *__pyx_pw_10PathSearch_11__pyx_fuse_3FindDist(PyObject *__pyx_se
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 87, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 88, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 86, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDist", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_3FindDist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8765,21 +8690,19 @@ static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_3FindDist", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 83, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_3__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 82, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_3__pyx_f_10PathSearch_FindDist(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8794,8 +8717,6 @@ static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyOb
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -8810,12 +8731,12 @@ static PyObject *__pyx_pf_10PathSearch_10__pyx_fuse_3FindDist(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "PathSearch.pyx":204
+/* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
 /* Python wrapper */
@@ -8859,23 +8780,23 @@ static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_args)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kwargs)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_defaults)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -8892,7 +8813,7 @@ static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 204, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8949,7 +8870,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("FindDistCg", 0);
   __Pyx_INCREF(__pyx_v_kwargs);
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -8963,7 +8884,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
     __pyx_t_2 = __pyx_t_4;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_t_3 = ((!__pyx_t_4) != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L4_bool_binop_done:;
@@ -8971,7 +8892,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
     __Pyx_INCREF(Py_None);
     __Pyx_DECREF_SET(__pyx_v_kwargs, Py_None);
   }
-  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ndarray = ((PyTypeObject*)__pyx_t_1);
   __pyx_t_1 = 0;
@@ -8981,14 +8902,14 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
   __pyx_v____pyx_INT_t_is_signed = (!((((__pyx_t_10PathSearch_INT_t)-1L) > 0) != 0));
   if (unlikely(__pyx_v_args == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
-  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_t_2 = ((0 < __pyx_t_5) != 0);
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 204, __pyx_L1_error)
+      __PYX_ERR(0, 200, __pyx_L1_error)
     }
     __pyx_t_1 = PyTuple_GET_ITEM(((PyObject*)__pyx_v_args), 0);
     __Pyx_INCREF(__pyx_t_1);
@@ -9005,18 +8926,18 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
   }
   if (unlikely(__pyx_v_kwargs == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_A, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_A, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_kwargs == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 204, __pyx_L1_error)
+      __PYX_ERR(0, 200, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_A); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_A); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -9025,31 +8946,31 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
   /*else*/ {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 204, __pyx_L1_error)
+      __PYX_ERR(0, 200, __pyx_L1_error)
     }
-    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
-    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
+    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_INCREF(__pyx_int_20);
-    __Pyx_GIVEREF(__pyx_int_20);
-    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_int_20);
+    __Pyx_INCREF(__pyx_int_18);
+    __Pyx_GIVEREF(__pyx_int_18);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_int_18);
     __Pyx_INCREF(__pyx_n_s_s);
     __Pyx_GIVEREF(__pyx_n_s_s);
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_n_s_s);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
   __pyx_L6:;
   while (1) {
@@ -9059,7 +8980,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg, __pyx_v_ndarray); 
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_dtype = __pyx_t_6;
         __pyx_t_6 = 0;
@@ -9068,14 +8989,14 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_2 = __pyx_memoryview_check(__pyx_v_arg); 
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_arg_base = __pyx_t_6;
         __pyx_t_6 = 0;
         __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg_base, __pyx_v_ndarray); 
         __pyx_t_2 = (__pyx_t_3 != 0);
         if (__pyx_t_2) {
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           __pyx_v_dtype = __pyx_t_6;
           __pyx_t_6 = 0;
@@ -9097,14 +9018,14 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_2 = (__pyx_v_dtype != Py_None);
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_itemsize = __pyx_t_5;
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_kind = __pyx_t_7;
         __pyx_v_dtype_signed = (__pyx_v_kind == 'i');
@@ -9117,9 +9038,9 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L16_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -9131,7 +9052,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
           __pyx_t_3 = __pyx_t_2;
           __pyx_L16_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(__pyx_t_10PathSearch_CHAR_t)) == __pyx_v_itemsize) != 0);
@@ -9140,9 +9061,9 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L20_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -9154,7 +9075,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
           __pyx_t_3 = __pyx_t_2;
           __pyx_L20_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(__pyx_t_10PathSearch_INT_t)) == __pyx_v_itemsize) != 0);
@@ -9163,9 +9084,9 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L24_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           if (__pyx_t_2) {
@@ -9177,7 +9098,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
           __pyx_t_3 = __pyx_t_2;
           __pyx_L24_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -9188,15 +9109,15 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L28_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 1) != 0);
           __pyx_t_3 = __pyx_t_2;
           __pyx_L28_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -9223,7 +9144,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_BOOL_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -9245,7 +9166,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_CHAR_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -9267,7 +9188,7 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_DOUBLE_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -9289,27 +9210,27 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_INT_t, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
         PyErr_Clear(); 
       }
     }
-    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
     goto __pyx_L10_break;
   }
   __pyx_L10_break:;
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_candidates = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
   __pyx_t_5 = 0;
   if (unlikely(__pyx_v_signatures == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_6);
   __pyx_t_6 = __pyx_t_1;
@@ -9317,12 +9238,12 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
   while (1) {
     __pyx_t_11 = __Pyx_dict_iter_next(__pyx_t_6, __pyx_t_9, &__pyx_t_5, &__pyx_t_1, NULL, NULL, __pyx_t_10);
     if (unlikely(__pyx_t_11 == 0)) break;
-    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_sig, __pyx_t_1);
     __pyx_t_1 = 0;
     __pyx_v_match_found = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_14 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_13))) {
@@ -9336,10 +9257,10 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
     }
     __pyx_t_12 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_14, __pyx_kp_s_) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s_);
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 204, __pyx_L1_error)
+    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_t_12 = NULL;
@@ -9354,12 +9275,12 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
     }
     __pyx_t_1 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_12, __pyx_kp_s__2) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s__2);
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_XDECREF_SET(__pyx_v_src_sig, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
     __pyx_t_16 = __pyx_t_15;
     for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
       __pyx_v_i = __pyx_t_17;
@@ -9370,11 +9291,11 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_3 = (__pyx_v_dst_type != Py_None);
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         if (__pyx_t_2) {
           __pyx_v_match_found = 1;
@@ -9390,35 +9311,35 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
     __pyx_L49_break:;
     __pyx_t_2 = (__pyx_v_match_found != 0);
     if (__pyx_t_2) {
-      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
     }
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_2 = (PyList_GET_SIZE(__pyx_v_candidates) != 0);
   __pyx_t_3 = ((!__pyx_t_2) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
-  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_t_3 = ((__pyx_t_9 > 1) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 204, __pyx_L1_error)
+    __PYX_ERR(0, 200, __pyx_L1_error)
   }
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
     if (unlikely(__pyx_v_signatures == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 204, __pyx_L1_error)
+      __PYX_ERR(0, 200, __pyx_L1_error)
     }
-    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_r = __pyx_t_6;
     __pyx_t_6 = 0;
@@ -9452,360 +9373,368 @@ static PyObject *__pyx_pf_10PathSearch_2FindDistCg(CYTHON_UNUSED PyObject *__pyx
 
 static PyObject *__pyx_pw_10PathSearch_15__pyx_fuse_0FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_BOOL_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_BOOL_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":213
+  /* "PathSearch.pyx":208
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":214
+  /* "PathSearch.pyx":209
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":216
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":211
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":217
+  /* "PathSearch.pyx":212
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
-  /* "PathSearch.pyx":227
- *    cdef double BVi
+  /* "PathSearch.pyx":224
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "PathSearch.pyx":228
+    /* "PathSearch.pyx":225
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_0__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_0__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
-    /* "PathSearch.pyx":229
+    /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":230
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+      /* "PathSearch.pyx":227
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
-      /* "PathSearch.pyx":229
+      /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
-    /* "PathSearch.pyx":232
- *          continue      # This sample does not affect error
+    /* "PathSearch.pyx":229
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_S.data) + __pyx_t_4)) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":230
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":232
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":233
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_6)) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 233, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":238
+      /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":239
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
+        /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_7)) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 239, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":240
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+          /* "PathSearch.pyx":238
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) ))));
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
+
+          /* "PathSearch.pyx":239
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
+
+          /* "PathSearch.pyx":240
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
 
         /* "PathSearch.pyx":241
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":238
+        /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":247
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) )))));
-
-        /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":244
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":251
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":245
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_7)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_4)) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 251, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
 
-          /* "PathSearch.pyx":252
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":246
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":253
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":255
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":248
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_BOOL_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_BOOL_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -9814,7 +9743,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":258
+    /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -9824,39 +9753,39 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":259
+      /* "PathSearch.pyx":252
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":260
+      /* "PathSearch.pyx":253
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":258
+      /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":262
+    /* "PathSearch.pyx":255
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -9864,32 +9793,32 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":263
+      /* "PathSearch.pyx":256
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":264
+      /* "PathSearch.pyx":257
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":265
+    /* "PathSearch.pyx":258
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -9898,8 +9827,8 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -9907,27 +9836,27 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   }
 
-  /* "PathSearch.pyx":267
+  /* "PathSearch.pyx":260
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":268
+  /* "PathSearch.pyx":261
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":271
+  /* "PathSearch.pyx":264
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -9936,7 +9865,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":272
+  /* "PathSearch.pyx":265
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -9945,7 +9874,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":273
+  /* "PathSearch.pyx":266
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -9954,7 +9883,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":276
+  /* "PathSearch.pyx":269
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -9963,7 +9892,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":277
+  /* "PathSearch.pyx":270
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -9972,7 +9901,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":278
+  /* "PathSearch.pyx":271
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -9981,229 +9910,229 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":281
+  /* "PathSearch.pyx":274
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":282
+  /* "PathSearch.pyx":275
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":283
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":276
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":284
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":277
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":285
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":278
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":286
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":279
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":287
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":280
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":288
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":281
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":291
+      /* "PathSearch.pyx":284
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
 
-    /* "PathSearch.pyx":292
- *       if isinf(BVi):
+    /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":293
+      /* "PathSearch.pyx":286
  *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
  * 
- *       sd      = BVi - cp                     # Step distance
+ *       sd      = Bi - cp                     # Step distance
  */
-      __pyx_v_BVi = __pyx_v_vMax;
+      __pyx_v_Bi = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":292
- *       if isinf(BVi):
+      /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
     }
 
-    /* "PathSearch.pyx":295
- *          BVi = vMax
+    /* "PathSearch.pyx":288
+ *          Bi = vMax
  * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
  */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
-    /* "PathSearch.pyx":296
+    /* "PathSearch.pyx":289
  * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":297
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":290
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":299
- *       cp      = BVi
+    /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":300
+      /* "PathSearch.pyx":293
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":301
+      /* "PathSearch.pyx":294
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":299
- *       cp      = BVi
+      /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":303
- *          bDist  = BVi
+    /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":304
+      /* "PathSearch.pyx":297
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":303
- *          bDist  = BVi
+      /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":306
+    /* "PathSearch.pyx":299
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -10211,21 +10140,21 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":307
+      /* "PathSearch.pyx":300
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":308
+      /* "PathSearch.pyx":301
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -10235,7 +10164,7 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":310
+    /* "PathSearch.pyx":303
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -10243,21 +10172,21 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":311
+      /* "PathSearch.pyx":304
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":312
+      /* "PathSearch.pyx":305
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -10267,34 +10196,34 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":314
+    /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":315
+      /* "PathSearch.pyx":308
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":314
+      /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -10303,50 +10232,50 @@ static void __pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":317
+  /* "PathSearch.pyx":310
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":318
+  /* "PathSearch.pyx":311
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":319
+  /* "PathSearch.pyx":312
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":320
+  /* "PathSearch.pyx":313
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -10363,8 +10292,6 @@ static PyObject *__pyx_pw_10PathSearch_15__pyx_fuse_0FindDistCg(PyObject *__pyx_
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -10386,16 +10313,12 @@ static PyObject *__pyx_pw_10PathSearch_15__pyx_fuse_0FindDistCg(PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_0FindDistCg (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -10444,121 +10367,109 @@ static PyObject *__pyx_pw_10PathSearch_15__pyx_fuse_0FindDistCg(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 1); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 2); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 2); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 3); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 3); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 4); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 4); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 5); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 5); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 6); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 6); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 7); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 7); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 8); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 8); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 9); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 9); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 10); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 10); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 11); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 11); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 12); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 12); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 13); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 13); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 14); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 14); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 15); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 15); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 16); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 16); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 17); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 18); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, 19); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, 17); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_0FindDistCg") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_0FindDistCg") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -10579,46 +10490,42 @@ static PyObject *__pyx_pw_10PathSearch_15__pyx_fuse_0FindDistCg(PyObject *__pyx_
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_BOOL_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 209, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_BOOL_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 204, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0FindDistCg", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_0FindDistCg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10627,21 +10534,19 @@ static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_0FindDistCg", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_0__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10656,8 +10561,6 @@ static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED Py
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -10674,360 +10577,368 @@ static PyObject *__pyx_pf_10PathSearch_14__pyx_fuse_0FindDistCg(CYTHON_UNUSED Py
 
 static PyObject *__pyx_pw_10PathSearch_17__pyx_fuse_1FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_CHAR_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_CHAR_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":213
+  /* "PathSearch.pyx":208
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":214
+  /* "PathSearch.pyx":209
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":216
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":211
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":217
+  /* "PathSearch.pyx":212
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
-  /* "PathSearch.pyx":227
- *    cdef double BVi
+  /* "PathSearch.pyx":224
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "PathSearch.pyx":228
+    /* "PathSearch.pyx":225
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_1__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_1__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
-    /* "PathSearch.pyx":229
+    /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":230
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+      /* "PathSearch.pyx":227
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
-      /* "PathSearch.pyx":229
+      /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
-    /* "PathSearch.pyx":232
- *          continue      # This sample does not affect error
+    /* "PathSearch.pyx":229
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_S.data) + __pyx_t_4)) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":230
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":232
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":233
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_6)) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 233, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":238
+      /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":239
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
+        /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_7)) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 239, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":240
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+          /* "PathSearch.pyx":238
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) ))));
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
+
+          /* "PathSearch.pyx":239
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
+
+          /* "PathSearch.pyx":240
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
 
         /* "PathSearch.pyx":241
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":238
+        /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":247
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) )))));
-
-        /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":244
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":251
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":245
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_7)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_4)) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 251, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
 
-          /* "PathSearch.pyx":252
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":246
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":253
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":255
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":248
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -11036,7 +10947,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":258
+    /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -11046,39 +10957,39 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":259
+      /* "PathSearch.pyx":252
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":260
+      /* "PathSearch.pyx":253
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":258
+      /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":262
+    /* "PathSearch.pyx":255
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -11086,32 +10997,32 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":263
+      /* "PathSearch.pyx":256
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":264
+      /* "PathSearch.pyx":257
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":265
+    /* "PathSearch.pyx":258
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -11120,8 +11031,8 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -11129,27 +11040,27 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   }
 
-  /* "PathSearch.pyx":267
+  /* "PathSearch.pyx":260
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":268
+  /* "PathSearch.pyx":261
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":271
+  /* "PathSearch.pyx":264
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -11158,7 +11069,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":272
+  /* "PathSearch.pyx":265
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -11167,7 +11078,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":273
+  /* "PathSearch.pyx":266
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -11176,7 +11087,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":276
+  /* "PathSearch.pyx":269
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -11185,7 +11096,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":277
+  /* "PathSearch.pyx":270
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -11194,7 +11105,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":278
+  /* "PathSearch.pyx":271
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -11203,229 +11114,229 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":281
+  /* "PathSearch.pyx":274
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":282
+  /* "PathSearch.pyx":275
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":283
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":276
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":284
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":277
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":285
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":278
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":286
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":279
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":287
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":280
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":288
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":281
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":291
+      /* "PathSearch.pyx":284
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
 
-    /* "PathSearch.pyx":292
- *       if isinf(BVi):
+    /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":293
+      /* "PathSearch.pyx":286
  *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
  * 
- *       sd      = BVi - cp                     # Step distance
+ *       sd      = Bi - cp                     # Step distance
  */
-      __pyx_v_BVi = __pyx_v_vMax;
+      __pyx_v_Bi = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":292
- *       if isinf(BVi):
+      /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
     }
 
-    /* "PathSearch.pyx":295
- *          BVi = vMax
+    /* "PathSearch.pyx":288
+ *          Bi = vMax
  * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
  */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
-    /* "PathSearch.pyx":296
+    /* "PathSearch.pyx":289
  * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":297
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":290
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":299
- *       cp      = BVi
+    /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":300
+      /* "PathSearch.pyx":293
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":301
+      /* "PathSearch.pyx":294
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":299
- *       cp      = BVi
+      /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":303
- *          bDist  = BVi
+    /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":304
+      /* "PathSearch.pyx":297
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":303
- *          bDist  = BVi
+      /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":306
+    /* "PathSearch.pyx":299
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -11433,21 +11344,21 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":307
+      /* "PathSearch.pyx":300
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":308
+      /* "PathSearch.pyx":301
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -11457,7 +11368,7 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":310
+    /* "PathSearch.pyx":303
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -11465,21 +11376,21 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":311
+      /* "PathSearch.pyx":304
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":312
+      /* "PathSearch.pyx":305
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -11489,34 +11400,34 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":314
+    /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":315
+      /* "PathSearch.pyx":308
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":314
+      /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -11525,50 +11436,50 @@ static void __pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":317
+  /* "PathSearch.pyx":310
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":318
+  /* "PathSearch.pyx":311
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":319
+  /* "PathSearch.pyx":312
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":320
+  /* "PathSearch.pyx":313
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -11585,8 +11496,6 @@ static PyObject *__pyx_pw_10PathSearch_17__pyx_fuse_1FindDistCg(PyObject *__pyx_
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -11608,16 +11517,12 @@ static PyObject *__pyx_pw_10PathSearch_17__pyx_fuse_1FindDistCg(PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_1FindDistCg (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -11666,121 +11571,109 @@ static PyObject *__pyx_pw_10PathSearch_17__pyx_fuse_1FindDistCg(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 1); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 2); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 2); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 3); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 3); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 4); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 4); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 5); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 5); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 6); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 6); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 7); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 7); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 8); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 8); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 9); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 9); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 10); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 10); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 11); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 11); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 12); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 12); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 13); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 13); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 14); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 14); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 15); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 15); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 16); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 16); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 17); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 18); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, 19); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, 17); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_1FindDistCg") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_1FindDistCg") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -11801,46 +11694,42 @@ static PyObject *__pyx_pw_10PathSearch_17__pyx_fuse_1FindDistCg(PyObject *__pyx_
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 209, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 204, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1FindDistCg", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_1FindDistCg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11849,21 +11738,19 @@ static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_1FindDistCg", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_1__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11878,8 +11765,6 @@ static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED Py
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -11896,360 +11781,368 @@ static PyObject *__pyx_pf_10PathSearch_16__pyx_fuse_1FindDistCg(CYTHON_UNUSED Py
 
 static PyObject *__pyx_pw_10PathSearch_19__pyx_fuse_2FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":213
+  /* "PathSearch.pyx":208
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":214
+  /* "PathSearch.pyx":209
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":216
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":211
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":217
+  /* "PathSearch.pyx":212
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
-  /* "PathSearch.pyx":227
- *    cdef double BVi
+  /* "PathSearch.pyx":224
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "PathSearch.pyx":228
+    /* "PathSearch.pyx":225
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_2__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
-    /* "PathSearch.pyx":229
+    /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":230
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+      /* "PathSearch.pyx":227
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
-      /* "PathSearch.pyx":229
+      /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
-    /* "PathSearch.pyx":232
- *          continue      # This sample does not affect error
+    /* "PathSearch.pyx":229
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_S.data) + __pyx_t_4)) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":230
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":232
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":233
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_6)) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 233, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / __pyx_t_8);
+
+    /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":238
+      /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":239
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
+        /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_7)) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 239, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / __pyx_t_9);
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":240
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+          /* "PathSearch.pyx":238
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) ))));
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
+
+          /* "PathSearch.pyx":239
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
+
+          /* "PathSearch.pyx":240
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
 
         /* "PathSearch.pyx":241
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":238
+        /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":247
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) )))));
-
-        /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":244
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":251
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":245
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_7)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_4)) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_8 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 251, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_9 / __pyx_t_8);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
 
-          /* "PathSearch.pyx":252
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":246
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":253
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":255
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":248
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -12258,7 +12151,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":258
+    /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -12268,39 +12161,39 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":259
+      /* "PathSearch.pyx":252
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":260
+      /* "PathSearch.pyx":253
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":258
+      /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":262
+    /* "PathSearch.pyx":255
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -12308,32 +12201,32 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":263
+      /* "PathSearch.pyx":256
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":264
+      /* "PathSearch.pyx":257
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":265
+    /* "PathSearch.pyx":258
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -12342,8 +12235,8 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -12351,27 +12244,27 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   }
 
-  /* "PathSearch.pyx":267
+  /* "PathSearch.pyx":260
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":268
+  /* "PathSearch.pyx":261
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":271
+  /* "PathSearch.pyx":264
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -12380,7 +12273,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":272
+  /* "PathSearch.pyx":265
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -12389,7 +12282,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":273
+  /* "PathSearch.pyx":266
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -12398,7 +12291,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":276
+  /* "PathSearch.pyx":269
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -12407,7 +12300,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":277
+  /* "PathSearch.pyx":270
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -12416,7 +12309,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":278
+  /* "PathSearch.pyx":271
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -12425,229 +12318,229 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":281
+  /* "PathSearch.pyx":274
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":282
+  /* "PathSearch.pyx":275
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":283
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":276
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":284
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":277
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":285
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":278
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":286
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":279
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":287
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":280
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":288
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":281
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":291
+      /* "PathSearch.pyx":284
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
 
-    /* "PathSearch.pyx":292
- *       if isinf(BVi):
+    /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":293
+      /* "PathSearch.pyx":286
  *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
  * 
- *       sd      = BVi - cp                     # Step distance
+ *       sd      = Bi - cp                     # Step distance
  */
-      __pyx_v_BVi = __pyx_v_vMax;
+      __pyx_v_Bi = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":292
- *       if isinf(BVi):
+      /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
     }
 
-    /* "PathSearch.pyx":295
- *          BVi = vMax
+    /* "PathSearch.pyx":288
+ *          Bi = vMax
  * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
  */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
-    /* "PathSearch.pyx":296
+    /* "PathSearch.pyx":289
  * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":297
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":290
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":299
- *       cp      = BVi
+    /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":300
+      /* "PathSearch.pyx":293
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":301
+      /* "PathSearch.pyx":294
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":299
- *       cp      = BVi
+      /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":303
- *          bDist  = BVi
+    /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":304
+      /* "PathSearch.pyx":297
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":303
- *          bDist  = BVi
+      /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":306
+    /* "PathSearch.pyx":299
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -12655,21 +12548,21 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":307
+      /* "PathSearch.pyx":300
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":308
+      /* "PathSearch.pyx":301
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -12679,7 +12572,7 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":310
+    /* "PathSearch.pyx":303
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -12687,21 +12580,21 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":311
+      /* "PathSearch.pyx":304
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":312
+      /* "PathSearch.pyx":305
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -12711,34 +12604,34 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":314
+    /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":315
+      /* "PathSearch.pyx":308
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":314
+      /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -12747,50 +12640,50 @@ static void __pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":317
+  /* "PathSearch.pyx":310
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":318
+  /* "PathSearch.pyx":311
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":319
+  /* "PathSearch.pyx":312
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":320
+  /* "PathSearch.pyx":313
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -12807,8 +12700,6 @@ static PyObject *__pyx_pw_10PathSearch_19__pyx_fuse_2FindDistCg(PyObject *__pyx_
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -12830,16 +12721,12 @@ static PyObject *__pyx_pw_10PathSearch_19__pyx_fuse_2FindDistCg(PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_2FindDistCg (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -12888,121 +12775,109 @@ static PyObject *__pyx_pw_10PathSearch_19__pyx_fuse_2FindDistCg(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 1); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 2); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 2); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 3); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 3); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 4); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 4); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 5); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 5); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 6); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 6); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 7); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 7); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 8); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 8); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 9); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 9); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 10); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 10); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 11); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 11); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 12); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 12); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 13); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 13); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 14); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 14); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 15); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 15); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 16); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 16); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 17); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 18); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, 19); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, 17); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_2FindDistCg") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_2FindDistCg") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -13023,46 +12898,42 @@ static PyObject *__pyx_pw_10PathSearch_19__pyx_fuse_2FindDistCg(PyObject *__pyx_
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 209, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 204, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2FindDistCg", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_2FindDistCg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13071,21 +12942,19 @@ static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_2FindDistCg", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_2__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13100,8 +12969,6 @@ static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED Py
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -13118,360 +12985,368 @@ static PyObject *__pyx_pf_10PathSearch_18__pyx_fuse_2FindDistCg(CYTHON_UNUSED Py
 
 static PyObject *__pyx_pw_10PathSearch_21__pyx_fuse_3FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_10PathSearch_3FindDistCg(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __pyx_t_10PathSearch_INT_t __pyx_v_i;
   __pyx_t_10PathSearch_INT_t __pyx_v_j;
   __pyx_t_10PathSearch_INT_t __pyx_v_ai;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mae;
   __pyx_t_10PathSearch_INT_t __pyx_v_si;
   __pyx_t_10PathSearch_DOUBLE_t __pyx_v_mse;
-  int __pyx_v_DSi;
   double __pyx_v_compErr;
   double __pyx_v_minErr;
   double __pyx_v_bDist;
   double __pyx_v_cp;
-  double __pyx_v_BVi;
+  double __pyx_v_Bi;
+  int __pyx_v_Si;
+  int __pyx_v_ASi;
+  double __pyx_v_Ai;
+  int __pyx_v_dc;
   double __pyx_v_sd;
   __pyx_t_10PathSearch_INT_t __pyx_t_1;
   __pyx_t_10PathSearch_INT_t __pyx_t_2;
   __pyx_t_10PathSearch_INT_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   int __pyx_t_5;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_8;
-  __pyx_t_10PathSearch_INT_t __pyx_t_9;
-  Py_ssize_t __pyx_t_10;
+  Py_ssize_t __pyx_t_6;
+  __pyx_t_10PathSearch_DOUBLE_t __pyx_t_7;
+  __pyx_t_10PathSearch_INT_t __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "PathSearch.pyx":213
+  /* "PathSearch.pyx":208
  *    cdef INT_t j
  * 
  *    cdef INT_t ai       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  */
   __pyx_v_ai = 0;
 
-  /* "PathSearch.pyx":214
+  /* "PathSearch.pyx":209
  * 
  *    cdef INT_t ai       = 0
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error             # <<<<<<<<<<<<<<
  * 
  *    cdef INT_t si       = 0
  */
   __pyx_v_mae = 0.0;
 
-  /* "PathSearch.pyx":216
- *    cdef DOUBLE_t  mae  = 0.0      # Magnitude adding error
+  /* "PathSearch.pyx":211
+ *    cdef DOUBLE_t  mae  = 0.0               # Magnitude adding error
  * 
  *    cdef INT_t si       = 0             # <<<<<<<<<<<<<<
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error
  * 
  */
   __pyx_v_si = 0;
 
-  /* "PathSearch.pyx":217
+  /* "PathSearch.pyx":212
  * 
  *    cdef INT_t si       = 0
- *    cdef DOUBLE_t  mse  = 0.0      # Magnitude subtracting error             # <<<<<<<<<<<<<<
+ *    cdef DOUBLE_t  mse  = 0.0               # Magnitude subtracting error             # <<<<<<<<<<<<<<
  * 
- *    cdef int DSi
+ *    cdef double compErr
  */
   __pyx_v_mse = 0.0;
 
-  /* "PathSearch.pyx":227
- *    cdef double BVi
+  /* "PathSearch.pyx":224
+ *    cdef int    dc                           # Direction correct
  * 
  *    for i in range(m):             # <<<<<<<<<<<<<<
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
  */
   __pyx_t_1 = __pyx_v_m;
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "PathSearch.pyx":228
+    /* "PathSearch.pyx":225
  * 
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)             # <<<<<<<<<<<<<<
- *       if DSi == 0:
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)             # <<<<<<<<<<<<<<
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_v_DSi = __pyx_fuse_3__pyx_f_10PathSearch_SignInt8((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+    __pyx_v_ASi = __pyx_fuse_3__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))), __pyx_v_eps0);
 
-    /* "PathSearch.pyx":229
+    /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
-    __pyx_t_5 = ((__pyx_v_DSi == 0) != 0);
+    __pyx_t_5 = ((__pyx_v_ASi == 0) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":230
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:
- *          continue      # This sample does not affect error             # <<<<<<<<<<<<<<
+      /* "PathSearch.pyx":227
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:
+ *          continue                           # This sample does not affect error             # <<<<<<<<<<<<<<
  * 
- *       DSi *= d
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
  */
       goto __pyx_L3_continue;
 
-      /* "PathSearch.pyx":229
+      /* "PathSearch.pyx":226
  *    for i in range(m):
- *       DSi = SignInt8(A[i], eps0)
- *       if DSi == 0:             # <<<<<<<<<<<<<<
- *          continue      # This sample does not affect error
+ *       ASi = SignInt(A[i], eps0)
+ *       if ASi == 0:             # <<<<<<<<<<<<<<
+ *          continue                           # This sample does not affect error
  * 
  */
     }
 
-    /* "PathSearch.pyx":232
- *          continue      # This sample does not affect error
+    /* "PathSearch.pyx":229
+ *          continue                           # This sample does not affect error
  * 
- *       DSi *= d             # <<<<<<<<<<<<<<
+ *       Ai = A[i] * ASi                       # Equivalent to fabs             # <<<<<<<<<<<<<<
+ *       Si = SignInt(Y[i], eps0)
  * 
- *       # If boundary_i (B[i]) is positive, the boundary lays ahead if moving in
- */
-    __pyx_v_DSi = (__pyx_v_DSi * __pyx_v_d);
-
-    /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
- * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
  */
     __pyx_t_4 = __pyx_v_i;
-    __pyx_t_5 = (((*((__pyx_t_10PathSearch_CHAR_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_CHAR_t *) __pyx_v_S.data) + __pyx_t_4)) ))) != __pyx_v_DSi) != 0);
+    __pyx_v_Ai = ((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) ))) * __pyx_v_ASi);
+
+    /* "PathSearch.pyx":230
+ * 
+ *       Ai = A[i] * ASi                       # Equivalent to fabs
+ *       Si = SignInt(Y[i], eps0)             # <<<<<<<<<<<<<<
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_v_Si = __pyx_fuse_2__pyx_f_10PathSearch_SignInt((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))), __pyx_v_eps0);
+
+    /* "PathSearch.pyx":232
+ *       Si = SignInt(Y[i], eps0)
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0             # <<<<<<<<<<<<<<
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ */
+    __pyx_v_dc = (((__pyx_v_d > 0) ^ (__pyx_v_ASi > 0)) ^ (__pyx_v_Si > 0));
+
+    /* "PathSearch.pyx":233
+ * 
+ *       dc = (d > 0) ^ (ASi > 0) ^ (Si > 0)   # Direction correct if prod (d*a*y) > 0
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai             # <<<<<<<<<<<<<<
+ * 
+ *       if dc:                                # Direction is correct
+ */
+    __pyx_t_4 = __pyx_v_i;
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_7 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_6)) )))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_8 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_6)) )));
+    if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
+      PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
+      __PYX_ERR(0, 233, __pyx_L1_error)
+    }
+    __pyx_v_Bi = (__pyx_t_7 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_8));
+
+    /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
+ * 
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ */
+    __pyx_t_5 = (__pyx_v_dc != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":238
+      /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) < 0.0) != 0);
-      if (__pyx_t_6) {
-      } else {
-        __pyx_t_5 = __pyx_t_6;
-        goto __pyx_L8_bool_binop_done;
-      }
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_6 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= (-__pyx_v_vMax)) != 0);
-      __pyx_t_5 = __pyx_t_6;
-      __pyx_L8_bool_binop_done:;
+      __pyx_t_5 = ((__pyx_v_Bi > 0.0) != 0);
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":239
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1
+        /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
  */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_4)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_7)) )))));
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_9 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )));
-        if (unlikely(__pyx_t_9 == 0)) {
-          #ifdef WITH_THREAD
-          PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-          #endif
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          #ifdef WITH_THREAD
-          __Pyx_PyGILState_Release(__pyx_gilstate_save);
-          #endif
-          __PYX_ERR(0, 239, __pyx_L1_error)
-        }
-        __pyx_t_7 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_5 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+        if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":240
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *             ai      += 1
- * 
+          /* "PathSearch.pyx":238
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi             # <<<<<<<<<<<<<<
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_10 = __pyx_v_ai;
-        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) ))));
+          __pyx_t_6 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = __pyx_v_Bi;
+
+          /* "PathSearch.pyx":239
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient             # <<<<<<<<<<<<<<
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ */
+          __pyx_t_6 = __pyx_v_i;
+          __pyx_t_4 = __pyx_v_si;
+          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
+
+          /* "PathSearch.pyx":240
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1             # <<<<<<<<<<<<<<
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ */
+          __pyx_v_si = (__pyx_v_si + 1);
+
+          /* "PathSearch.pyx":237
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax             # <<<<<<<<<<<<<<
+ *                BVse[si] = Bi
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ */
+        }
 
         /* "PathSearch.pyx":241
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
- *             ai      += 1             # <<<<<<<<<<<<<<
- * 
- *          # Assume distance moved d > eps for eps>=0, so we must
+ *                AWse[si] = Ai * W[i]         # keep track to adjust gradient
+ *                si      += 1
+ *             mse        += Ai * W[i]         # This sample subtracts from error             # <<<<<<<<<<<<<<
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
  */
-        __pyx_v_ai = (__pyx_v_ai + 1);
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mse = (__pyx_v_mse + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":238
+        /* "PathSearch.pyx":236
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax             # <<<<<<<<<<<<<<
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
- *             AWae[ai] = fabs(A[i]) * W[i]
+ *       if dc:                                # Direction is correct
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong             # <<<<<<<<<<<<<<
+ *             if Bi <= vMax:                  # Reachable within vMax
+ *                BVse[si] = Bi
  */
       }
 
-      /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      __pyx_t_4 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_4)) ))) >= 0.0) != 0);
-      if (__pyx_t_5) {
-
-        /* "PathSearch.pyx":247
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:
- *             mae += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- */
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_v_mae = (__pyx_v_mae + (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) )))));
-
-        /* "PathSearch.pyx":246
- *          # add any boundary points (B[i] == 0) where sign is wrong to
- *          # gradient as we move past them for any such eps
- *          if B[i] >= 0:             # <<<<<<<<<<<<<<
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- */
-      }
-
-      /* "PathSearch.pyx":237
- *       # correct direction. If B[i] is negative, it lays ahead if moving in wrong dir
+      /* "PathSearch.pyx":235
+ *       Bi = d * (Y[i] - X[i]) / A[i]         # Bi>0 --> boundary ahead in direction d*Ai
  * 
- *       if S[i] != DSi:                       # Direction d is wrong for this sample             # <<<<<<<<<<<<<<
- *          if (B[i] < 0) and (B[i] >= -vMax): # Correct now; becomes incorrect within vMax
- *             BVae[ai] = d * (Y[i] - X[i]) / A[i]
+ *       if dc:                                # Direction is correct             # <<<<<<<<<<<<<<
+ *          if Bi > 0:                         # Boundary ahead; sample must be wrong
+ *             if Bi <= vMax:                  # Reachable within vMax
  */
       goto __pyx_L6;
     }
 
-    /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+    /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
     /*else*/ {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) > 0.0) != 0);
+      __pyx_t_9 = ((0.0 < __pyx_v_Bi) != 0);
+      if (__pyx_t_9) {
+      } else {
+        __pyx_t_5 = __pyx_t_9;
+        goto __pyx_L10_bool_binop_done;
+      }
+      __pyx_t_9 = ((__pyx_v_Bi <= __pyx_v_vMax) != 0);
+      __pyx_t_5 = __pyx_t_9;
+      __pyx_L10_bool_binop_done:;
       if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":244
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi             # <<<<<<<<<<<<<<
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_B.data) + __pyx_t_7)) ))) <= __pyx_v_vMax) != 0);
-        if (__pyx_t_5) {
+        __pyx_t_6 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = __pyx_v_Bi;
 
-          /* "PathSearch.pyx":251
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]             # <<<<<<<<<<<<<<
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1
+        /* "PathSearch.pyx":245
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]             # <<<<<<<<<<<<<<
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
  */
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_8 = (__pyx_v_d * ((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_Y.data) + __pyx_t_7)) ))) - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_X.data) + __pyx_t_4)) )))));
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_9 = (*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )));
-          if (unlikely(__pyx_t_9 == 0)) {
-            #ifdef WITH_THREAD
-            PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-            #endif
-            PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            #ifdef WITH_THREAD
-            __Pyx_PyGILState_Release(__pyx_gilstate_save);
-            #endif
-            __PYX_ERR(0, 251, __pyx_L1_error)
-          }
-          __pyx_t_4 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = (__pyx_t_8 / ((__pyx_t_10PathSearch_DOUBLE_t)__pyx_t_9));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_t_4 = __pyx_v_ai;
+        *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) )) = (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) ))));
 
-          /* "PathSearch.pyx":252
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
+        /* "PathSearch.pyx":246
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1             # <<<<<<<<<<<<<<
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  */
-          __pyx_t_4 = __pyx_v_i;
-          __pyx_t_7 = __pyx_v_i;
-          __pyx_t_10 = __pyx_v_si;
-          *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_10)) )) = (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_4)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_7)) ))));
+        __pyx_v_ai = (__pyx_v_ai + 1);
 
-          /* "PathSearch.pyx":253
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
- *                si      += 1             # <<<<<<<<<<<<<<
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]
+        /* "PathSearch.pyx":243
+ *             mse        += Ai * W[i]         # This sample subtracts from error
+ *       else:                                 # Else; direction is wrong
+ *          if (0 < Bi) and (Bi <= vMax):      # Reachable within vMax; sample is right             # <<<<<<<<<<<<<<
+ *             BVae[ai] = Bi
+ *             AWae[ai] = Ai * W[i]
  */
-          __pyx_v_si = (__pyx_v_si + 1);
+        goto __pyx_L9;
+      }
 
-          /* "PathSearch.pyx":250
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax
- *             if B[i] <= vMax:             # <<<<<<<<<<<<<<
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
- *                AWse[si] = fabs(A[i]) * W[i]
+      /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
-        }
+      __pyx_t_5 = ((__pyx_v_Bi <= 0.0) != 0);
+      if (__pyx_t_5) {
 
-        /* "PathSearch.pyx":255
- *                si      += 1
- *             # N.B. If B[i]==0, no error reduction occurs moving in this direction
- *             mse += fabs(A[i]) * W[i]             # <<<<<<<<<<<<<<
+        /* "PathSearch.pyx":248
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached
+ *             mae     += Ai * W[i]            # Adds to error in this direction             # <<<<<<<<<<<<<<
  * 
  *    if (ai + si) <= 0:   # No boundaries
  */
-        __pyx_t_7 = __pyx_v_i;
-        __pyx_t_4 = __pyx_v_i;
-        __pyx_v_mse = (__pyx_v_mse + (fabs((*((__pyx_t_10PathSearch_INT_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_INT_t *) __pyx_v_A.data) + __pyx_t_7)) )))) * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_4)) )))));
+        __pyx_t_6 = __pyx_v_i;
+        __pyx_v_mae = (__pyx_v_mae + (__pyx_v_Ai * (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_W.data) + __pyx_t_6)) )))));
 
-        /* "PathSearch.pyx":249
- *             mae += fabs(A[i]) * W[i]
- *       else:            # Direction d is correct for this sample
- *          if B[i] > 0:  # Incorrect now; becomes correct within vMax             # <<<<<<<<<<<<<<
- *             if B[i] <= vMax:
- *                BVse[si] = d * (Y[i] - X[i]) / A[i]
+        /* "PathSearch.pyx":247
+ *             AWae[ai] = Ai * W[i]
+ *             ai      += 1
+ *          elif Bi <= 0:                      # Sample already reached             # <<<<<<<<<<<<<<
+ *             mae     += Ai * W[i]            # Adds to error in this direction
+ * 
  */
       }
+      __pyx_L9:;
     }
     __pyx_L6:;
     __pyx_L3_continue:;
   }
 
-  /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+  /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -13480,7 +13355,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
   __pyx_t_5 = (((__pyx_v_ai + __pyx_v_si) <= 0) != 0);
   if (__pyx_t_5) {
 
-    /* "PathSearch.pyx":258
+    /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
@@ -13490,39 +13365,39 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
     __pyx_t_5 = ((__pyx_v_mae >= __pyx_v_mse) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":259
+      /* "PathSearch.pyx":252
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0             # <<<<<<<<<<<<<<
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  */
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
 
-      /* "PathSearch.pyx":260
+      /* "PathSearch.pyx":253
  *       if mae >= mse:    # Error only increases
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax             # <<<<<<<<<<<<<<
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":258
+      /* "PathSearch.pyx":251
  * 
  *    if (ai + si) <= 0:   # No boundaries
  *       if mae >= mse:    # Error only increases             # <<<<<<<<<<<<<<
  *          out[0] = out[1] = 0.0
  *          out[2] = vMax
  */
-      goto __pyx_L14;
+      goto __pyx_L13;
     }
 
-    /* "PathSearch.pyx":262
+    /* "PathSearch.pyx":255
  *          out[2] = vMax
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)             # <<<<<<<<<<<<<<
@@ -13530,32 +13405,32 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          out[2] = 0.0
  */
     /*else*/ {
-      __pyx_t_4 = 0;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
+      __pyx_t_6 = 0;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = (__pyx_v_vMax * (__pyx_v_mae - __pyx_v_mse));
 
-      /* "PathSearch.pyx":263
+      /* "PathSearch.pyx":256
  *       else:             # Unbounded in this direction; move max distance allowed
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax             # <<<<<<<<<<<<<<
  *          out[2] = 0.0
  *       return
  */
-      __pyx_t_4 = 1;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_vMax;
+      __pyx_t_6 = 1;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":264
+      /* "PathSearch.pyx":257
  *          out[0] = vMax * (mae - mse)
  *          out[1] = vMax
  *          out[2] = 0.0             # <<<<<<<<<<<<<<
  *       return
  *    # Sentinel values at end of array
  */
-      __pyx_t_4 = 2;
-      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = 0.0;
+      __pyx_t_6 = 2;
+      *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_6)) )) = 0.0;
     }
-    __pyx_L14:;
+    __pyx_L13:;
 
-    /* "PathSearch.pyx":265
+    /* "PathSearch.pyx":258
  *          out[1] = vMax
  *          out[2] = 0.0
  *       return             # <<<<<<<<<<<<<<
@@ -13564,8 +13439,8 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     goto __pyx_L0;
 
-    /* "PathSearch.pyx":257
- *             mse += fabs(A[i]) * W[i]
+    /* "PathSearch.pyx":250
+ *             mae     += Ai * W[i]            # Adds to error in this direction
  * 
  *    if (ai + si) <= 0:   # No boundaries             # <<<<<<<<<<<<<<
  *       if mae >= mse:    # Error only increases
@@ -13573,27 +13448,27 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   }
 
-  /* "PathSearch.pyx":267
+  /* "PathSearch.pyx":260
  *       return
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY             # <<<<<<<<<<<<<<
  *    BVse[si] = INFINITY
  * 
  */
-  __pyx_t_4 = __pyx_v_ai;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_ai;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":268
+  /* "PathSearch.pyx":261
  *    # Sentinel values at end of array
  *    BVae[ai] = INFINITY
  *    BVse[si] = INFINITY             # <<<<<<<<<<<<<<
  * 
  *    # Sort critical values that add error
  */
-  __pyx_t_4 = __pyx_v_si;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) )) = INFINITY;
+  __pyx_t_6 = __pyx_v_si;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_6)) )) = INFINITY;
 
-  /* "PathSearch.pyx":271
+  /* "PathSearch.pyx":264
  * 
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)             # <<<<<<<<<<<<<<
@@ -13602,7 +13477,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_ai);
 
-  /* "PathSearch.pyx":272
+  /* "PathSearch.pyx":265
  *    # Sort critical values that add error
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -13611,7 +13486,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":273
+  /* "PathSearch.pyx":266
  *    Argsort(BVae, AEsi, ai)
  *    Arrange(BVae, AEsi, tmp, ai)
  *    Arrange(AWae, AEsi, tmp, ai)             # <<<<<<<<<<<<<<
@@ -13620,7 +13495,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWae, __pyx_v_AEsi, __pyx_v_tmp, __pyx_v_ai);
 
-  /* "PathSearch.pyx":276
+  /* "PathSearch.pyx":269
  * 
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)             # <<<<<<<<<<<<<<
@@ -13629,7 +13504,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Argsort(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_si);
 
-  /* "PathSearch.pyx":277
+  /* "PathSearch.pyx":270
  *    # Sort critical values that subtract error
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -13638,7 +13513,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_BVse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":278
+  /* "PathSearch.pyx":271
  *    Argsort(BVse, SEsi, si)
  *    Arrange(BVse, SEsi, tmp, si)
  *    Arrange(AWse, SEsi, tmp, si)             # <<<<<<<<<<<<<<
@@ -13647,229 +13522,229 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
   __pyx_fuse_2__pyx_f_10PathSearch_Arrange(__pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, __pyx_v_si);
 
-  /* "PathSearch.pyx":281
+  /* "PathSearch.pyx":274
  * 
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error             # <<<<<<<<<<<<<<
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
+ *    compErr = 0.0                            # Cur change in error             # <<<<<<<<<<<<<<
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
  */
   __pyx_v_compErr = 0.0;
 
-  /* "PathSearch.pyx":282
+  /* "PathSearch.pyx":275
  *    # Find optimal distance to move along direction vector up to vMax
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far             # <<<<<<<<<<<<<<
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far             # <<<<<<<<<<<<<<
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
  */
   __pyx_v_minErr = INFINITY;
 
-  /* "PathSearch.pyx":283
- *    compErr = 0.0                             # Cur change in error
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance             # <<<<<<<<<<<<<<
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
+  /* "PathSearch.pyx":276
+ *    compErr = 0.0                            # Cur change in error
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance             # <<<<<<<<<<<<<<
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
  */
   __pyx_v_bDist = 0.0;
 
-  /* "PathSearch.pyx":284
- *    minErr  = INFINITY                        # Min error delta seen so far
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position             # <<<<<<<<<<<<<<
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":277
+ *    minErr  = INFINITY                       # Min error delta seen so far
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position             # <<<<<<<<<<<<<<
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  */
   __pyx_v_cp = 0.0;
 
-  /* "PathSearch.pyx":285
- *    bDist   = 0.0                             # Best distance
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae             # <<<<<<<<<<<<<<
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":278
+ *    bDist   = 0.0                            # Best distance
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae             # <<<<<<<<<<<<<<
+ *    j       = 0                              # Current index into BVse
  *    while True:
  */
   __pyx_v_i = 0;
 
-  /* "PathSearch.pyx":286
- *    cp      = 0                               # Current position
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse             # <<<<<<<<<<<<<<
+  /* "PathSearch.pyx":279
+ *    cp      = 0                              # Current position
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse             # <<<<<<<<<<<<<<
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  */
   __pyx_v_j = 0;
 
-  /* "PathSearch.pyx":287
- *    i       = 0                               # Current index into BVae
- *    j       = 0                               # Current index into BVse
+  /* "PathSearch.pyx":280
+ *    i       = 0                              # Current index into BVae
+ *    j       = 0                              # Current index into BVse
  *    while True:             # <<<<<<<<<<<<<<
- *       BVi = fmin(BVae[i], BVse[j])
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
  */
   while (1) {
 
-    /* "PathSearch.pyx":288
- *    j       = 0                               # Current index into BVse
+    /* "PathSearch.pyx":281
+ *    j       = 0                              # Current index into BVse
  *    while True:
- *       BVi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
+ *       Bi = fmin(BVae[i], BVse[j])             # <<<<<<<<<<<<<<
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  */
-    __pyx_t_4 = __pyx_v_i;
-    __pyx_t_7 = __pyx_v_j;
-    __pyx_v_BVi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))));
+    __pyx_t_6 = __pyx_v_i;
+    __pyx_t_4 = __pyx_v_j;
+    __pyx_v_Bi = fmin((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_6)) ))), (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))));
 
-    /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+    /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
-    __pyx_t_5 = (isinf(__pyx_v_BVi) != 0);
+    __pyx_t_5 = (isinf(__pyx_v_Bi) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":291
+      /* "PathSearch.pyx":284
  * 
- *       if isinf(BVi):
+ *       if isinf(Bi):
  *          break             # <<<<<<<<<<<<<<
- *       if BVi > vMax:
- *          BVi = vMax
+ *       if Bi > vMax:
+ *          Bi = vMax
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":290
- *       BVi = fmin(BVae[i], BVse[j])
+      /* "PathSearch.pyx":283
+ *       Bi = fmin(BVae[i], BVse[j])
  * 
- *       if isinf(BVi):             # <<<<<<<<<<<<<<
+ *       if isinf(Bi):             # <<<<<<<<<<<<<<
  *          break
- *       if BVi > vMax:
+ *       if Bi > vMax:
  */
     }
 
-    /* "PathSearch.pyx":292
- *       if isinf(BVi):
+    /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi > __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi > __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":293
+      /* "PathSearch.pyx":286
  *          break
- *       if BVi > vMax:
- *          BVi = vMax             # <<<<<<<<<<<<<<
+ *       if Bi > vMax:
+ *          Bi = vMax             # <<<<<<<<<<<<<<
  * 
- *       sd      = BVi - cp                     # Step distance
+ *       sd      = Bi - cp                     # Step distance
  */
-      __pyx_v_BVi = __pyx_v_vMax;
+      __pyx_v_Bi = __pyx_v_vMax;
 
-      /* "PathSearch.pyx":292
- *       if isinf(BVi):
+      /* "PathSearch.pyx":285
+ *       if isinf(Bi):
  *          break
- *       if BVi > vMax:             # <<<<<<<<<<<<<<
- *          BVi = vMax
+ *       if Bi > vMax:             # <<<<<<<<<<<<<<
+ *          Bi = vMax
  * 
  */
     }
 
-    /* "PathSearch.pyx":295
- *          BVi = vMax
+    /* "PathSearch.pyx":288
+ *          Bi = vMax
  * 
- *       sd      = BVi - cp                     # Step distance             # <<<<<<<<<<<<<<
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance             # <<<<<<<<<<<<<<
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi
  */
-    __pyx_v_sd = (__pyx_v_BVi - __pyx_v_cp);
+    __pyx_v_sd = (__pyx_v_Bi - __pyx_v_cp);
 
-    /* "PathSearch.pyx":296
+    /* "PathSearch.pyx":289
  * 
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step             # <<<<<<<<<<<<<<
- *       cp      = BVi
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step             # <<<<<<<<<<<<<<
+ *       cp      = Bi
  * 
  */
     __pyx_v_compErr = (__pyx_v_compErr + (__pyx_v_sd * (__pyx_v_mae - __pyx_v_mse)));
 
-    /* "PathSearch.pyx":297
- *       sd      = BVi - cp                     # Step distance
- *       compErr = compErr + sd * (mae - mse)   # Error change for this step
- *       cp      = BVi             # <<<<<<<<<<<<<<
+    /* "PathSearch.pyx":290
+ *       sd      = Bi - cp                     # Step distance
+ *       compErr = compErr + sd * (mae - mse)  # Error change for this step
+ *       cp      = Bi             # <<<<<<<<<<<<<<
  * 
  *       if compErr < minErr:
  */
-    __pyx_v_cp = __pyx_v_BVi;
+    __pyx_v_cp = __pyx_v_Bi;
 
-    /* "PathSearch.pyx":299
- *       cp      = BVi
+    /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     __pyx_t_5 = ((__pyx_v_compErr < __pyx_v_minErr) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":300
+      /* "PathSearch.pyx":293
  * 
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far             # <<<<<<<<<<<<<<
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far             # <<<<<<<<<<<<<<
+ *          bDist  = Bi
  * 
  */
       __pyx_v_minErr = __pyx_v_compErr;
 
-      /* "PathSearch.pyx":301
+      /* "PathSearch.pyx":294
  *       if compErr < minErr:
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi             # <<<<<<<<<<<<<<
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi             # <<<<<<<<<<<<<<
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  */
-      __pyx_v_bDist = __pyx_v_BVi;
+      __pyx_v_bDist = __pyx_v_Bi;
 
-      /* "PathSearch.pyx":299
- *       cp      = BVi
+      /* "PathSearch.pyx":292
+ *       cp      = Bi
  * 
  *       if compErr < minErr:             # <<<<<<<<<<<<<<
- *          minErr = compErr                    # Lowest error seen so far
- *          bDist  = BVi
+ *          minErr = compErr                   # Lowest error seen so far
+ *          bDist  = Bi
  */
     }
 
-    /* "PathSearch.pyx":303
- *          bDist  = BVi
+    /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
-    __pyx_t_5 = ((__pyx_v_BVi >= __pyx_v_vMax) != 0);
+    __pyx_t_5 = ((__pyx_v_Bi >= __pyx_v_vMax) != 0);
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":304
+      /* "PathSearch.pyx":297
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval
+ *       if Bi >= vMax:                        # Path is constrained by interval
  *          break             # <<<<<<<<<<<<<<
  * 
  *       while BVae[i] == cp:
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":303
- *          bDist  = BVi
+      /* "PathSearch.pyx":296
+ *          bDist  = Bi
  * 
- *       if BVi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
+ *       if Bi >= vMax:                        # Path is constrained by interval             # <<<<<<<<<<<<<<
  *          break
  * 
  */
     }
 
-    /* "PathSearch.pyx":306
+    /* "PathSearch.pyx":299
  *          break
  * 
  *       while BVae[i] == cp:             # <<<<<<<<<<<<<<
@@ -13877,21 +13752,21 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          i   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVae.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":307
+      /* "PathSearch.pyx":300
  * 
  *       while BVae[i] == cp:
  *          mae += AWae[i]             # <<<<<<<<<<<<<<
  *          i   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_i;
+      __pyx_v_mae = (__pyx_v_mae + (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWae.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":308
+      /* "PathSearch.pyx":301
  *       while BVae[i] == cp:
  *          mae += AWae[i]
  *          i   += 1             # <<<<<<<<<<<<<<
@@ -13901,7 +13776,7 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "PathSearch.pyx":310
+    /* "PathSearch.pyx":303
  *          i   += 1
  * 
  *       while BVse[j] == cp:             # <<<<<<<<<<<<<<
@@ -13909,21 +13784,21 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  *          j   += 1
  */
     while (1) {
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_7)) ))) == __pyx_v_cp) != 0);
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_t_5 = (((*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_BVse.data) + __pyx_t_4)) ))) == __pyx_v_cp) != 0);
       if (!__pyx_t_5) break;
 
-      /* "PathSearch.pyx":311
+      /* "PathSearch.pyx":304
  * 
  *       while BVse[j] == cp:
  *          mse -= AWse[j]             # <<<<<<<<<<<<<<
  *          j   += 1
  * 
  */
-      __pyx_t_7 = __pyx_v_j;
-      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_7)) ))));
+      __pyx_t_4 = __pyx_v_j;
+      __pyx_v_mse = (__pyx_v_mse - (*((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_AWse.data) + __pyx_t_4)) ))));
 
-      /* "PathSearch.pyx":312
+      /* "PathSearch.pyx":305
  *       while BVse[j] == cp:
  *          mse -= AWse[j]
  *          j   += 1             # <<<<<<<<<<<<<<
@@ -13933,34 +13808,34 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
       __pyx_v_j = (__pyx_v_j + 1);
     }
 
-    /* "PathSearch.pyx":314
+    /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
  *          break           # Gradient is significantly increasing error; stop
  * 
  */
-    __pyx_t_6 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_9 = (((__pyx_v_mae - __pyx_v_mse) > __pyx_v_eps1) != 0);
+    if (__pyx_t_9) {
     } else {
-      __pyx_t_5 = __pyx_t_6;
-      goto __pyx_L26_bool_binop_done;
+      __pyx_t_5 = __pyx_t_9;
+      goto __pyx_L25_bool_binop_done;
     }
-    __pyx_t_6 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
-    __pyx_t_5 = __pyx_t_6;
-    __pyx_L26_bool_binop_done:;
+    __pyx_t_9 = ((__pyx_v_cp > __pyx_v_eps2) != 0);
+    __pyx_t_5 = __pyx_t_9;
+    __pyx_L25_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "PathSearch.pyx":315
+      /* "PathSearch.pyx":308
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):
  *          break           # Gradient is significantly increasing error; stop             # <<<<<<<<<<<<<<
  * 
  *    out[0] = minErr
  */
-      goto __pyx_L16_break;
+      goto __pyx_L15_break;
 
-      /* "PathSearch.pyx":314
+      /* "PathSearch.pyx":307
  *          j   += 1
  * 
  *       if ((mae - mse) > eps1) and (cp > eps2):             # <<<<<<<<<<<<<<
@@ -13969,50 +13844,50 @@ static void __pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__Pyx_memviewslice __pyx
  */
     }
   }
-  __pyx_L16_break:;
+  __pyx_L15_break:;
 
-  /* "PathSearch.pyx":317
+  /* "PathSearch.pyx":310
  *          break           # Gradient is significantly increasing error; stop
  * 
  *    out[0] = minErr             # <<<<<<<<<<<<<<
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  */
-  __pyx_t_7 = 0;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_minErr;
+  __pyx_t_4 = 0;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_minErr;
 
-  /* "PathSearch.pyx":318
+  /* "PathSearch.pyx":311
  * 
  *    out[0] = minErr
  *    out[1] = bDist             # <<<<<<<<<<<<<<
  *    out[2] = vMax - bDist
  *    return
  */
-  __pyx_t_7 = 1;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = __pyx_v_bDist;
+  __pyx_t_4 = 1;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = __pyx_v_bDist;
 
-  /* "PathSearch.pyx":319
+  /* "PathSearch.pyx":312
  *    out[0] = minErr
  *    out[1] = bDist
  *    out[2] = vMax - bDist             # <<<<<<<<<<<<<<
  *    return
  */
-  __pyx_t_7 = 2;
-  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_7)) )) = (__pyx_v_vMax - __pyx_v_bDist);
+  __pyx_t_4 = 2;
+  *((__pyx_t_10PathSearch_DOUBLE_t *) ( /* dim=0 */ ((char *) (((__pyx_t_10PathSearch_DOUBLE_t *) __pyx_v_out.data) + __pyx_t_4)) )) = (__pyx_v_vMax - __pyx_v_bDist);
 
-  /* "PathSearch.pyx":320
+  /* "PathSearch.pyx":313
  *    out[1] = bDist
  *    out[2] = vMax - bDist
  *    return             # <<<<<<<<<<<<<<
  */
   goto __pyx_L0;
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
 
   /* function exit code */
@@ -14029,8 +13904,6 @@ static PyObject *__pyx_pw_10PathSearch_21__pyx_fuse_3FindDistCg(PyObject *__pyx_
   __pyx_t_10PathSearch_INT_t __pyx_v_m;
   __Pyx_memviewslice __pyx_v_Y = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_W = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_S = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_B = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_d;
   double __pyx_v_vMax;
@@ -14052,16 +13925,12 @@ static PyObject *__pyx_pw_10PathSearch_21__pyx_fuse_3FindDistCg(PyObject *__pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__pyx_fuse_3FindDistCg (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_S,&__pyx_n_s_B,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
-    PyObject* values[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_A,&__pyx_n_s_m,&__pyx_n_s_Y,&__pyx_n_s_W,&__pyx_n_s_X,&__pyx_n_s_d,&__pyx_n_s_vMax,&__pyx_n_s_eps0,&__pyx_n_s_eps1,&__pyx_n_s_eps2,&__pyx_n_s_out,&__pyx_n_s_BVae,&__pyx_n_s_AWae,&__pyx_n_s_AEsi,&__pyx_n_s_BVse,&__pyx_n_s_AWse,&__pyx_n_s_SEsi,&__pyx_n_s_tmp,0};
+    PyObject* values[18] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
-        case 20: values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
-        CYTHON_FALLTHROUGH;
-        case 19: values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-        CYTHON_FALLTHROUGH;
         case 18: values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
         CYTHON_FALLTHROUGH;
         case 17: values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
@@ -14110,121 +13979,109 @@ static PyObject *__pyx_pw_10PathSearch_21__pyx_fuse_3FindDistCg(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 1); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Y)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 2); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 2); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_W)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 3); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 3); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_S)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 4); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 4); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_B)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 5); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 5); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_X)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 6); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 6); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 7); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 7); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
-        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_vMax)) != 0)) kw_args--;
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 8); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 8); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
-        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps0)) != 0)) kw_args--;
+        if (likely((values[9] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 9); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 9); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
-        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps1)) != 0)) kw_args--;
+        if (likely((values[10] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 10); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 10); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
-        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_eps2)) != 0)) kw_args--;
+        if (likely((values[11] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 11); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 11); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
-        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_out)) != 0)) kw_args--;
+        if (likely((values[12] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 12); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 12); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
-        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVae)) != 0)) kw_args--;
+        if (likely((values[13] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 13); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 13); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
-        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWae)) != 0)) kw_args--;
+        if (likely((values[14] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 14); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 14); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
-        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AEsi)) != 0)) kw_args--;
+        if (likely((values[15] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 15); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 15); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 16:
-        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_BVse)) != 0)) kw_args--;
+        if (likely((values[16] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 16); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 16); __PYX_ERR(0, 200, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 17:
-        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_AWse)) != 0)) kw_args--;
+        if (likely((values[17] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 17); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 18:
-        if (likely((values[18] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_SEsi)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 18); __PYX_ERR(0, 204, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case 19:
-        if (likely((values[19] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tmp)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, 19); __PYX_ERR(0, 204, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, 17); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_3FindDistCg") < 0)) __PYX_ERR(0, 204, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fuse_3FindDistCg") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 20) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 18) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -14245,46 +14102,42 @@ static PyObject *__pyx_pw_10PathSearch_21__pyx_fuse_3FindDistCg(PyObject *__pyx_
       values[15] = PyTuple_GET_ITEM(__pyx_args, 15);
       values[16] = PyTuple_GET_ITEM(__pyx_args, 16);
       values[17] = PyTuple_GET_ITEM(__pyx_args, 17);
-      values[18] = PyTuple_GET_ITEM(__pyx_args, 18);
-      values[19] = PyTuple_GET_ITEM(__pyx_args, 19);
     }
-    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
-    __pyx_v_S = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_CHAR_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_S.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_B = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[5], PyBUF_WRITABLE); if (unlikely(!__pyx_v_B.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[6], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_d = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
-    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 206, __pyx_L3_error)
-    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 207, __pyx_L3_error)
-    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[18], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 208, __pyx_L3_error)
-    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[19], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 209, __pyx_L3_error)
+    __pyx_v_A = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_A.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_m = __Pyx_PyInt_As_Py_intptr_t(values[1]); if (unlikely((__pyx_v_m == ((npy_intp)-1)) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_Y = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_Y.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_W = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_W.memview)) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_X = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[4], PyBUF_WRITABLE); if (unlikely(!__pyx_v_X.memview)) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_d = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_d == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_vMax = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_vMax == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps0 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_eps0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps1 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_eps1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_eps2 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_eps2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[10], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_BVae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[11], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVae.memview)) __PYX_ERR(0, 202, __pyx_L3_error)
+    __pyx_v_AWae = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[12], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWae.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[13], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AEsi.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_BVse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[14], PyBUF_WRITABLE); if (unlikely(!__pyx_v_BVse.memview)) __PYX_ERR(0, 203, __pyx_L3_error)
+    __pyx_v_AWse = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[15], PyBUF_WRITABLE); if (unlikely(!__pyx_v_AWse.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_SEsi = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_INT_t(values[16], PyBUF_WRITABLE); if (unlikely(!__pyx_v_SEsi.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_tmp = __Pyx_PyObject_to_MemoryviewSlice_dc_nn___pyx_t_10PathSearch_DOUBLE_t(values[17], PyBUF_WRITABLE); if (unlikely(!__pyx_v_tmp.memview)) __PYX_ERR(0, 204, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 20, 20, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 204, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3FindDistCg", 1, 18, 18, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PathSearch.__pyx_fuse_3FindDistCg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
+  __pyx_r = __pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(__pyx_self, __pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_S, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
+static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_A, __pyx_t_10PathSearch_INT_t __pyx_v_m, __Pyx_memviewslice __pyx_v_Y, __Pyx_memviewslice __pyx_v_W, __Pyx_memviewslice __pyx_v_X, int __pyx_v_d, double __pyx_v_vMax, double __pyx_v_eps0, double __pyx_v_eps1, double __pyx_v_eps2, __Pyx_memviewslice __pyx_v_out, __Pyx_memviewslice __pyx_v_BVae, __Pyx_memviewslice __pyx_v_AWae, __Pyx_memviewslice __pyx_v_AEsi, __Pyx_memviewslice __pyx_v_BVse, __Pyx_memviewslice __pyx_v_AWse, __Pyx_memviewslice __pyx_v_SEsi, __Pyx_memviewslice __pyx_v_tmp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -14293,21 +14146,19 @@ static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_3FindDistCg", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_S.memview)) { __Pyx_RaiseUnboundLocalError("S"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_B.memview)) { __Pyx_RaiseUnboundLocalError("B"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 204, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_S, __pyx_v_B, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (unlikely(!__pyx_v_A.memview)) { __Pyx_RaiseUnboundLocalError("A"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_Y.memview)) { __Pyx_RaiseUnboundLocalError("Y"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_W.memview)) { __Pyx_RaiseUnboundLocalError("W"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_X.memview)) { __Pyx_RaiseUnboundLocalError("X"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_out.memview)) { __Pyx_RaiseUnboundLocalError("out"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVae.memview)) { __Pyx_RaiseUnboundLocalError("BVae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWae.memview)) { __Pyx_RaiseUnboundLocalError("AWae"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AEsi.memview)) { __Pyx_RaiseUnboundLocalError("AEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_BVse.memview)) { __Pyx_RaiseUnboundLocalError("BVse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_AWse.memview)) { __Pyx_RaiseUnboundLocalError("AWse"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_SEsi.memview)) { __Pyx_RaiseUnboundLocalError("SEsi"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_tmp.memview)) { __Pyx_RaiseUnboundLocalError("tmp"); __PYX_ERR(0, 200, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_fuse_3__pyx_f_10PathSearch_FindDistCg(__pyx_v_A, __pyx_v_m, __pyx_v_Y, __pyx_v_W, __pyx_v_X, __pyx_v_d, __pyx_v_vMax, __pyx_v_eps0, __pyx_v_eps1, __pyx_v_eps2, __pyx_v_out, __pyx_v_BVae, __pyx_v_AWae, __pyx_v_AEsi, __pyx_v_BVse, __pyx_v_AWse, __pyx_v_SEsi, __pyx_v_tmp, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14322,8 +14173,6 @@ static PyObject *__pyx_pf_10PathSearch_20__pyx_fuse_3FindDistCg(CYTHON_UNUSED Py
   __PYX_XDEC_MEMVIEW(&__pyx_v_A, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_Y, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_W, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_S, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_B, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_X, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_out, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_BVae, 1);
@@ -29152,7 +29001,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ASCII, __pyx_k_ASCII, sizeof(__pyx_k_ASCII), 0, 0, 1, 1},
   {&__pyx_n_s_AWae, __pyx_k_AWae, sizeof(__pyx_k_AWae), 0, 0, 1, 1},
   {&__pyx_n_s_AWse, __pyx_k_AWse, sizeof(__pyx_k_AWse), 0, 0, 1, 1},
-  {&__pyx_n_s_B, __pyx_k_B, sizeof(__pyx_k_B), 0, 0, 1, 1},
   {&__pyx_n_s_BOOL_t, __pyx_k_BOOL_t, sizeof(__pyx_k_BOOL_t), 0, 0, 1, 1},
   {&__pyx_n_s_BVae, __pyx_k_BVae, sizeof(__pyx_k_BVae), 0, 0, 1, 1},
   {&__pyx_n_s_BVse, __pyx_k_BVse, sizeof(__pyx_k_BVse), 0, 0, 1, 1},
@@ -29185,7 +29033,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_PathSearch, __pyx_k_PathSearch, sizeof(__pyx_k_PathSearch), 0, 0, 1, 1},
   {&__pyx_kp_s_PathSearch_pyx, __pyx_k_PathSearch_pyx, sizeof(__pyx_k_PathSearch_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
-  {&__pyx_n_s_S, __pyx_k_S, sizeof(__pyx_k_S), 0, 0, 1, 1},
   {&__pyx_n_s_SEsi, __pyx_k_SEsi, sizeof(__pyx_k_SEsi), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_kp_s_Unable_to_convert_item_to_object, __pyx_k_Unable_to_convert_item_to_object, sizeof(__pyx_k_Unable_to_convert_item_to_object), 0, 0, 1, 0},
@@ -29291,7 +29138,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 38, __pyx_L1_error)
-  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 945, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(2, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(2, 148, __pyx_L1_error)
@@ -29308,17 +29155,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_No_matching_signature_found); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_No_matching_signature_found); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_Function_call_with_ambiguous_arg); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_Function_call_with_ambiguous_arg); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
@@ -29536,29 +29383,29 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
-  __pyx_tuple__25 = PyTuple_Pack(20, __pyx_n_s_A, __pyx_n_s_m, __pyx_n_s_Y, __pyx_n_s_W, __pyx_n_s_S, __pyx_n_s_B, __pyx_n_s_X, __pyx_n_s_d, __pyx_n_s_vMax, __pyx_n_s_eps0, __pyx_n_s_eps1, __pyx_n_s_eps2, __pyx_n_s_out, __pyx_n_s_BVae, __pyx_n_s_AWae, __pyx_n_s_AEsi, __pyx_n_s_BVse, __pyx_n_s_AWse, __pyx_n_s_SEsi, __pyx_n_s_tmp); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_tuple__25 = PyTuple_Pack(18, __pyx_n_s_A, __pyx_n_s_m, __pyx_n_s_Y, __pyx_n_s_W, __pyx_n_s_X, __pyx_n_s_d, __pyx_n_s_vMax, __pyx_n_s_eps0, __pyx_n_s_eps1, __pyx_n_s_eps2, __pyx_n_s_out, __pyx_n_s_BVae, __pyx_n_s_AWae, __pyx_n_s_AEsi, __pyx_n_s_BVse, __pyx_n_s_AWse, __pyx_n_s_SEsi, __pyx_n_s_tmp); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(20, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_PathSearch_pyx, __pyx_n_s_pyx_fuse_0FindDist, 83, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(18, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_PathSearch_pyx, __pyx_n_s_pyx_fuse_0FindDist, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 82, __pyx_L1_error)
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
-  __pyx_tuple__27 = PyTuple_Pack(20, __pyx_n_s_A, __pyx_n_s_m, __pyx_n_s_Y, __pyx_n_s_W, __pyx_n_s_S, __pyx_n_s_B, __pyx_n_s_X, __pyx_n_s_d, __pyx_n_s_vMax, __pyx_n_s_eps0, __pyx_n_s_eps1, __pyx_n_s_eps2, __pyx_n_s_out, __pyx_n_s_BVae, __pyx_n_s_AWae, __pyx_n_s_AEsi, __pyx_n_s_BVse, __pyx_n_s_AWse, __pyx_n_s_SEsi, __pyx_n_s_tmp); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(18, __pyx_n_s_A, __pyx_n_s_m, __pyx_n_s_Y, __pyx_n_s_W, __pyx_n_s_X, __pyx_n_s_d, __pyx_n_s_vMax, __pyx_n_s_eps0, __pyx_n_s_eps1, __pyx_n_s_eps2, __pyx_n_s_out, __pyx_n_s_BVae, __pyx_n_s_AWae, __pyx_n_s_AEsi, __pyx_n_s_BVse, __pyx_n_s_AWse, __pyx_n_s_SEsi, __pyx_n_s_tmp); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(20, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_PathSearch_pyx, __pyx_n_s_pyx_fuse_0FindDistCg, 204, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(18, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_PathSearch_pyx, __pyx_n_s_pyx_fuse_0FindDistCg, 200, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 200, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -29635,7 +29482,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_20 = PyInt_FromLong(20); if (unlikely(!__pyx_int_20)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_18 = PyInt_FromLong(18); if (unlikely(!__pyx_int_18)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_184977713 = PyInt_FromLong(184977713L); if (unlikely(!__pyx_int_184977713)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_neg_1 = PyInt_FromLong(-1); if (unlikely(!__pyx_int_neg_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
@@ -29679,14 +29526,14 @@ static int __Pyx_modinit_function_export_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_function_export_code", 0);
   /*--- Function export code ---*/
-  if (__Pyx_ExportFunction("__pyx_fuse_0FindDist", (void (*)(void))__pyx_fuse_0__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_1FindDist", (void (*)(void))__pyx_fuse_1__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_2FindDist", (void (*)(void))__pyx_fuse_2__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_3FindDist", (void (*)(void))__pyx_fuse_3__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_0FindDistCg", (void (*)(void))__pyx_fuse_0__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_1FindDistCg", (void (*)(void))__pyx_fuse_1__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_2FindDistCg", (void (*)(void))__pyx_fuse_2__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("__pyx_fuse_3FindDistCg", (void (*)(void))__pyx_fuse_3__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_0FindDist", (void (*)(void))__pyx_fuse_0__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_1FindDist", (void (*)(void))__pyx_fuse_1__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_2FindDist", (void (*)(void))__pyx_fuse_2__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_3FindDist", (void (*)(void))__pyx_fuse_3__pyx_f_10PathSearch_FindDist, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_0FindDistCg", (void (*)(void))__pyx_fuse_0__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_1FindDistCg", (void (*)(void))__pyx_fuse_1__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_2FindDistCg", (void (*)(void))__pyx_fuse_2__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("__pyx_fuse_3FindDistCg", (void (*)(void))__pyx_fuse_3__pyx_f_10PathSearch_FindDistCg, "void (__Pyx_memviewslice, __pyx_t_10PathSearch_INT_t, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -30055,84 +29902,84 @@ if (!__Pyx_RefNanny) {
  * cimport numpy as np
  * np.import_array()             # <<<<<<<<<<<<<<
  * 
- * from libc.math   cimport fabs, fmin, isinf, INFINITY
+ * from libc.math   cimport fmin, isinf, INFINITY
  */
   __pyx_t_2 = __pyx_f_5numpy_import_array(); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 7, __pyx_L1_error)
 
-  /* "PathSearch.pyx":83
+  /* "PathSearch.pyx":82
  * #  out: Output vector
  * #--------------------------------------------------------------------------------
  * cpdef void FindDist(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[:] Y, DOUBLE_t[:] W,             # <<<<<<<<<<<<<<
- *                     CHAR_t[:] S, DOUBLE_t[:] B, DOUBLE_t[:] X, int d, double vMax,
- *                     double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                     DOUBLE_t[:] X, int d, double vMax, double eps0, double eps1,
+ *                     double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_10PathSearch_5__pyx_fuse_0FindDist, 0, __pyx_n_s_pyx_fuse_0FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_10PathSearch_5__pyx_fuse_0FindDist, 0, __pyx_n_s_pyx_fuse_0FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_BOOL_t, __pyx_t_3) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_BOOL_t, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_10PathSearch_7__pyx_fuse_1FindDist, 0, __pyx_n_s_pyx_fuse_1FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_10PathSearch_7__pyx_fuse_1FindDist, 0, __pyx_n_s_pyx_fuse_1FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_CHAR_t, __pyx_t_3) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_CHAR_t, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_10PathSearch_9__pyx_fuse_2FindDist, 0, __pyx_n_s_pyx_fuse_2FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_10PathSearch_9__pyx_fuse_2FindDist, 0, __pyx_n_s_pyx_fuse_2FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_DOUBLE_t, __pyx_t_3) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_DOUBLE_t, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_10PathSearch_11__pyx_fuse_3FindDist, 0, __pyx_n_s_pyx_fuse_3FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_10PathSearch_11__pyx_fuse_3FindDist, 0, __pyx_n_s_pyx_fuse_3FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_INT_t, __pyx_t_3) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_INT_t, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_mdef_10PathSearch_1FindDist, 0, __pyx_n_s_FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = __pyx_FusedFunction_New(&__pyx_mdef_10PathSearch_1FindDist, 0, __pyx_n_s_FindDist, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_empty_tuple);
   ((__pyx_FusedFunctionObject *) __pyx_t_3)->__signatures__ = __pyx_t_1;
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FindDist, __pyx_t_3) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FindDist, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "PathSearch.pyx":204
+  /* "PathSearch.pyx":200
  * # Same as above but all arrays are contiguous
  * #--------------------------------------------------------------------------------
  * cpdef void FindDistCg(DAT_TYPE_t[::1] A, INT_t m, DOUBLE_t[::1] Y, DOUBLE_t[::1] W,             # <<<<<<<<<<<<<<
- *                       CHAR_t[::1] S, DOUBLE_t[::1] B, DOUBLE_t[::1] X, int d, double vMax,
- *                       double eps0, double eps1, double eps2, DOUBLE_t[::1] out,
+ *                       DOUBLE_t[::1] X, int d, double vMax, double eps0, double eps1,
+ *                       double eps2, DOUBLE_t[::1] out, DOUBLE_t[::1] BVae,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_10PathSearch_15__pyx_fuse_0FindDistCg, 0, __pyx_n_s_pyx_fuse_0FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_10PathSearch_15__pyx_fuse_0FindDistCg, 0, __pyx_n_s_pyx_fuse_0FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_BOOL_t, __pyx_t_1) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_BOOL_t, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_10PathSearch_17__pyx_fuse_1FindDistCg, 0, __pyx_n_s_pyx_fuse_1FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_10PathSearch_17__pyx_fuse_1FindDistCg, 0, __pyx_n_s_pyx_fuse_1FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_CHAR_t, __pyx_t_1) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_CHAR_t, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_10PathSearch_19__pyx_fuse_2FindDistCg, 0, __pyx_n_s_pyx_fuse_2FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_10PathSearch_19__pyx_fuse_2FindDistCg, 0, __pyx_n_s_pyx_fuse_2FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_DOUBLE_t, __pyx_t_1) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_DOUBLE_t, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_10PathSearch_21__pyx_fuse_3FindDistCg, 0, __pyx_n_s_pyx_fuse_3FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_10PathSearch_21__pyx_fuse_3FindDistCg, 0, __pyx_n_s_pyx_fuse_3FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_INT_t, __pyx_t_1) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_INT_t, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_mdef_10PathSearch_3FindDistCg, 0, __pyx_n_s_FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_mdef_10PathSearch_3FindDistCg, 0, __pyx_n_s_FindDistCg, NULL, __pyx_n_s_PathSearch, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
   ((__pyx_FusedFunctionObject *) __pyx_t_1)->__signatures__ = __pyx_t_3;
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FindDistCg, __pyx_t_1) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FindDistCg, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "PathSearch.pyx":1
@@ -34989,29 +34836,6 @@ __pyx_fail:
     retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, 0,
                                                  PyBUF_RECORDS_RO | writable_flag, 1,
                                                  &__Pyx_TypeInfo_nn___pyx_t_10PathSearch_DOUBLE_t, stack,
-                                                 &result, obj);
-    if (unlikely(retcode == -1))
-        goto __pyx_fail;
-    return result;
-__pyx_fail:
-    result.memview = NULL;
-    result.data = NULL;
-    return result;
-}
-
-/* ObjectToMemviewSlice */
-  static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_10PathSearch_CHAR_t(PyObject *obj, int writable_flag) {
-    __Pyx_memviewslice result = { 0, 0, { 0 }, { 0 }, { 0 } };
-    __Pyx_BufFmt_StackElem stack[1];
-    int axes_specs[] = { (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_STRIDED) };
-    int retcode;
-    if (obj == Py_None) {
-        result.memview = (struct __pyx_memoryview_obj *) Py_None;
-        return result;
-    }
-    retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, 0,
-                                                 PyBUF_RECORDS_RO | writable_flag, 1,
-                                                 &__Pyx_TypeInfo_nn___pyx_t_10PathSearch_CHAR_t, stack,
                                                  &result, obj);
     if (unlikely(retcode == -1))
         goto __pyx_fail;

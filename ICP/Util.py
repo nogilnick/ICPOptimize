@@ -34,7 +34,7 @@ def ColCorr(A, Y, W=None, c=1):
    Yd      = Yc.std()
    ccf     = np.empty(n + (c != 0))
    for i in range(A.shape[1]):
-      Ai = GetCol(A, i)
+      Ai     = ToArray(GetCol(A, i))
       ccf[i] = np.dot(Ai - Ai.mean(), Yc) / (Yd * Ai.std())
    if c != 0:                              # Handle constant separately
       ccf[n] = c * np.dot(2. * (Y > 0) - 1., W)
@@ -167,6 +167,19 @@ def MakeWeights(W, m):
    return np.full(m, 1 / m) if W is None else (W / W.sum())
 
 #--------------------------------------------------------------------------------
+# Desc: Multiplies x and y handling sparse matrices
+#--------------------------------------------------------------------------------
+#    x: Input array
+#    y: Input vector/array
+#--------------------------------------------------------------------------------
+#  RET: x (updated as per y)
+#--------------------------------------------------------------------------------
+def Mult(x, y):
+   if issparse(y):
+      return y.multiply(x.reshape(y.shape))
+   return np.multiply(x, y)
+
+#--------------------------------------------------------------------------------
 # Desc: Handle sparse arrays where flat arrays are expected
 #--------------------------------------------------------------------------------
 #    X: The vector/array
@@ -191,3 +204,18 @@ def ToColOrder(A):
    elif isinstance(A, np.ndarray) and (not A.data.f_contiguous):
       A = np.asfortranarray(A)
    return A
+
+#--------------------------------------------------------------------------------
+# Desc: Weighted dot product
+#--------------------------------------------------------------------------------
+#    X: Vector
+#    Y: Vector
+#    W: Weight vector
+#--------------------------------------------------------------------------------
+#  RET: X^T @ diag(W) @ Y
+#--------------------------------------------------------------------------------
+def WDot(X, Y, W):
+   v = W @ Mult(X, Y)
+   if isinstance(v, float):
+      return v
+   return v[0]
