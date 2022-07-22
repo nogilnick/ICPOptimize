@@ -4,7 +4,7 @@ from   .Rules        import (ConsolidateRules, EvaluateRules, ExtractCurve, Rule
                              RuleOrder)
 import numpy         as     np
 from   scipy.special import expit
-from   .Solver       import EPS, CnstPath, GetObjFx, HINGE, LSTSQ, ICPSolveConst, RuleErr
+from   .Solver       import ABSER, EPS, CnstPath, GetObjFx, HINGE, LSTSQ, ICPSolveConst, RuleErr
 from   .Util         import ColCorr, GetCol, MakeWeights, ToArray
 
 # Default tree model parameters
@@ -461,7 +461,7 @@ class ICPLinearClassifier(ICPBaseClassifier):
 #--------------------------------------------------------------------------------
 class ICPLinearRegressor(ICPBase):
 
-   def __init__(self, lr=0.5, norm=True, maxIter=3000, ig=None, bs=1.6e7, tol=-5e-7,
+   def __init__(self, lr=0.5, norm=True, maxIter=3000, ig=None, bs=1.6e7, tol=-5e-7, p='l2',
                 maxFeat=0, CFx=CnstPath, c=1, clip=1e-10, cnst=None, nJump=0, nThrd=1,
                 cOrd='n', v=0):
       self.lr      = lr
@@ -470,6 +470,7 @@ class ICPLinearRegressor(ICPBase):
       self.ig      = ig
       self.bs      = bs
       self.tol     = tol
+      self.p       = p
       self.maxFeat = maxFeat
       self.cnst    = cnst
       self.CFx     = CFx
@@ -492,18 +493,20 @@ class ICPLinearRegressor(ICPBase):
       fMin, fMax, CO, bAr, aAr = Constrain(A, Y, W=W, fg=fg, c=self.c, cOrd=self.cOrd,
           b=self.ig, bs=self.bs, t='corr') if self.cnst is None else self.cnst
 
+      obj = ABSER if self.p.endswith('1') else LSTSQ
+
       # Obtain solution
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
          A, Y, W, fMin=fMin, fMax=fMax, fg=fg, maxIter=self.maxIter,
          b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         obj=LSTSQ, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
+         obj=obj, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
          nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
       self.feature_importances_ = np.abs(self.CV)
 
       # Error function
-      _, self.errFx = GetObjFx(LSTSQ)
+      _, self.errFx = GetObjFx(obj)
 
       return self
 

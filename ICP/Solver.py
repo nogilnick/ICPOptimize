@@ -2,7 +2,7 @@ from   .ActiveSet    import ActiveSet
 from   .ClosurePool  import ClosurePool, DummyPool
 from    math         import isinf, sqrt
 import  numpy        as     np
-from   .PathSearch   import FindDist, FindDistCg
+from   .PathSearch   import FindDistAbs, FindDistAbsCg, FindDist, FindDistCg
 from    random       import random, gauss, randint
 from    scipy.sparse import issparse
 from   .Util         import Add, ChunkedColNorm, ToColOrder, MakeWeights, GetCol, WDot
@@ -14,6 +14,7 @@ DEL      = 1e-8    # the starting position, then further line search is abandone
 # Error modes
 HINGE = 0          # Hinge loss error
 LSTSQ = 1          # Least squares
+ABSER = 2          # Absolute error
 
 #--------------------------------------------------------------------------------
 #    Desc: Feature index and direction to column number
@@ -60,7 +61,6 @@ def ColumnGradients(Ai, Y, W, S, B, d):
                     Ai.multiply((DSi.multiply(S) > 0).multiply(B > 0)))
    return grad   # Error change in direction from this point
 
-
 #--------------------------------------------------------------------------------
 #    Desc: Path constraint function
 #--------------------------------------------------------------------------------
@@ -91,6 +91,18 @@ def CnstPath(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
    fBnd = (fMax[f] - CV[f]) if d > 0 else (CV[f] - fMin[f])
    # Min of order boundary, feasibility boundary, and normed dMax retry distance
    return min(oBnd, fBnd, dMax / CN[f])
+
+#--------------------------------------------------------------------------------
+#     Desc: Error Function for Absolute Loss
+#--------------------------------------------------------------------------------
+#        X: Solution vector
+#        Y: Target values
+#        W: Sample weights
+#--------------------------------------------------------------------------------
+#      RET: Hinge error
+#--------------------------------------------------------------------------------
+def ErrAbs(X, Y, W):
+   return np.dot(np.abs(Y - X), W)
 
 #--------------------------------------------------------------------------------
 #     Desc: Error Function for Hinge Loss
@@ -128,6 +140,8 @@ def GetObjFx(obj):
       return SearchHinge, ErrHinge
    elif obj == LSTSQ:
       return SearchLstSq, ErrLstSq
+   elif obj == ABSER:
+      return SearchAbsEr, ErrAbs
 
 #--------------------------------------------------------------------------------
 #     Desc: Iterative Constrained Pathways Optimizer
@@ -413,6 +427,51 @@ def RuleErr(A, Y, W=None, b=None, d=1, bs=1.6e7, c=1):
 #       Y: Target values (boolean, 0/1, or -1/+1)
 #       W: Sample weights
 #       c: Constant value
+#--------------------------------------------------------------------------------
+#     RET: Function that provides (best error along path, best distance to move)
+#--------------------------------------------------------------------------------
+def SearchAbsEr(A, Y, W, c, eps0, *args, **kwargs):
+   m, n = A.shape
+   # Pre-allocate temporary vectors for search
+   Ac   = np.empty(m, dtype=A.dtype)
+   CW   = np.empty(m + 1)
+   BV   = np.empty(m + 1)
+   BVsi = np.empty(m + 1, np.intp)
+
+   rvs  = np.empty(3)
+
+   # Search closure
+   def Fx(X, vMax, f, d):
+      if f < n:
+         Af = GetCol(A, f)
+      else:                                  # Constant column == n
+         Ac.fill(c)
+         Af = Ac
+
+      if issparse(Af):
+         r  = Af.indices         # Only non-zero elements impact update
+         v  = Af.data            # N.b. that "data" may contain 0s if e.g. the
+         nf = v.shape[0]         # sparse-vector is multiplied by 0. If .data is used
+         Ac[:nf] = v             # then .indices should be used instead of .nonzero()
+
+         FindDistAbs(Ac, nf, Y[r], W[r], X[r], d, vMax, eps0, rvs, CW, BV, BVsi)
+      elif isinstance(Af, np.ndarray) and Af.data.contiguous:
+         FindDistAbsCg(Af, m, Y, W, X, d, vMax, eps0, rvs, CW, BV, BVsi)
+      else:    # Dense non-contiguous; copy to contiguous array
+         Ac[:] = Af
+         FindDistAbsCg(Ac, m, Y, W, X, d, vMax, eps0, rvs, CW, BV, BVsi)
+      return rvs
+
+   return Fx
+
+
+#--------------------------------------------------------------------------------
+#    Desc: Closure wrapping path search functions along with temp buffers
+#--------------------------------------------------------------------------------
+#       A: Data matrix
+#       Y: Target values (boolean, 0/1, or -1/+1)
+#       W: Sample weights
+#       c: Constant value
 #    eps0: Movement must improve error by at least this much to count
 #    eps1: If gradient ever becomes larger than this value, stop searching
 #    eps2: If gradient is larger than eps1 and have moved at least eps2 from start; break
@@ -424,17 +483,15 @@ def SearchHinge(A, Y, W, c, eps0, eps1, eps2, *args, **kwargs):
    # Pre-allocate temporary vectors for search
    BVae = np.empty(m + 1)
    AWae = np.empty(m)
-   AEsi = np.empty(m, np.intp)
+   AEsi = np.empty(m + 1, np.intp)
    BVse = np.empty(m + 1)
    AWse = np.empty(m)
-   SEsi = np.empty(m, np.intp)
+   SEsi = np.empty(m + 1, np.intp)
 
-   tmp = np.empty(m)
    Ac  = np.empty(m, dtype=A.dtype)
    rvs = np.empty(3)
 
    # Search closure
-   #def Fx(B, X, vMax, f, d):
    def Fx(X, vMax, f, d):
       if f < n:
          Af = GetCol(A, f)
@@ -449,14 +506,14 @@ def SearchHinge(A, Y, W, c, eps0, eps1, eps2, *args, **kwargs):
          Ac[:nf] = v             # then .indices should be used instead of .nonzero()
 
          FindDist(Ac, nf, Y[r], W[r], X[r], d, vMax, eps0, eps1, eps2,
-                  rvs, BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+                  rvs, BVae, AWae, AEsi, BVse, AWse, SEsi)
       elif isinstance(Af, np.ndarray) and Af.data.contiguous:
          FindDistCg(Af, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+                    BVae, AWae, AEsi, BVse, AWse, SEsi)
       else:    # Dense non-contiguous; copy to contiguous array
          Ac[:] = Af
          FindDistCg(Ac, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi, tmp)
+                    BVae, AWae, AEsi, BVse, AWse, SEsi)
       return rvs
 
    return Fx
@@ -477,7 +534,6 @@ def SearchLstSq(A, Y, W, c, *args, **kwargs):
    Ac = np.empty(m, dtype=A.dtype)
 
    # Search closure
-   #def Fx(B, X, vMax, f, d):
    def Fx(X, vMax, f, d):
       if f < n:
          C = GetCol(A, f)
