@@ -2,7 +2,7 @@ from   .ActiveSet    import ActiveSet
 from   .ClosurePool  import ClosurePool, DummyPool
 from    math         import isinf, sqrt
 import  numpy        as     np
-from   .PathSearch   import FindDistAbs, FindDistAbsCg, FindDist, FindDistCg
+from   .PathSearch   import PatherAbs, PatherHinge
 from    random       import random, gauss, randint
 from    scipy.sparse import issparse
 from   .Util         import Add, ChunkedColNorm, ToColOrder, MakeWeights, GetCol, WDot
@@ -237,12 +237,12 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
 
    sRes = np.empty((nd, 3))                     # Keeps track of dir performance
 
-   hotSet = ActiveSet(nd)                       # Initialize active "hot" set with
+   hotSet = ActiveSet(nd, 0)                    # Initialize active "hot" set with
    hotSet.update(CO[:round(pch * nd)])          # highest scoring columns
 
-   notSet = ActiveSet(nd)                       # Cool set initialized with rest
+   notSet = ActiveSet(nd, 1)                    # Cool set initialized with rest
    notSet.update(CO[round(pch * nd):])
-   runSet = ActiveSet(nd)                       # Temporary set
+   runSet = ActiveSet(nd, 3)                    # Temporary set
 
    err = errFx(X, Y, W)                         # Initialize error value
 
@@ -340,6 +340,8 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
       mar  = bErr if isinf(mar) else (0.05 * bErr + 0.95 * mar)
       err += bErr
 
+      # assert(np.isclose(err, errFx(X, Y, W)))
+
    # Clip very small coef to exactly zero
    for i in range(len(CV)):
       if -clip < CV[i] < clip:
@@ -432,13 +434,8 @@ def RuleErr(A, Y, W=None, b=None, d=1, bs=1.6e7, c=1):
 #--------------------------------------------------------------------------------
 def SearchAbsEr(A, Y, W, c, eps0, *args, **kwargs):
    m, n = A.shape
-   # Pre-allocate temporary vectors for search
    Ac   = np.empty(m, dtype=A.dtype)
-   CW   = np.empty(m + 1)
-   BV   = np.empty(m + 1)
-   BVsi = np.empty(m + 1, np.intp)
-
-   rvs  = np.empty(3)
+   PT   = PatherAbs(m, eps0)
 
    # Search closure
    def Fx(X, vMax, f, d):
@@ -454,16 +451,15 @@ def SearchAbsEr(A, Y, W, c, eps0, *args, **kwargs):
          nf = v.shape[0]         # sparse-vector is multiplied by 0. If .data is used
          Ac[:nf] = v             # then .indices should be used instead of .nonzero()
 
-         FindDistAbs(Ac, nf, Y[r], W[r], X[r], d, vMax, eps0, rvs, CW, BV, BVsi)
+         PT.FindDist(Ac, nf, Y[r], W[r], X[r], d, vMax)
       elif isinstance(Af, np.ndarray) and Af.data.contiguous:
-         FindDistAbsCg(Af, m, Y, W, X, d, vMax, eps0, rvs, CW, BV, BVsi)
+         PT.FindDistCg(Af, Y, W, X, d, vMax)
       else:    # Dense non-contiguous; copy to contiguous array
          Ac[:] = Af
-         FindDistAbsCg(Ac, m, Y, W, X, d, vMax, eps0, rvs, CW, BV, BVsi)
-      return rvs
+         PT.FindDistCg(Ac, Y, W, X, d, vMax)
+      return PT.GetResults()
 
    return Fx
-
 
 #--------------------------------------------------------------------------------
 #    Desc: Closure wrapping path search functions along with temp buffers
@@ -480,16 +476,8 @@ def SearchAbsEr(A, Y, W, c, eps0, *args, **kwargs):
 #--------------------------------------------------------------------------------
 def SearchHinge(A, Y, W, c, eps0, eps1, eps2, *args, **kwargs):
    m, n = A.shape
-   # Pre-allocate temporary vectors for search
-   BVae = np.empty(m + 1)
-   AWae = np.empty(m)
-   AEsi = np.empty(m + 1, np.intp)
-   BVse = np.empty(m + 1)
-   AWse = np.empty(m)
-   SEsi = np.empty(m + 1, np.intp)
-
-   Ac  = np.empty(m, dtype=A.dtype)
-   rvs = np.empty(3)
+   Ac   = np.empty(m, dtype=A.dtype)
+   PT   = PatherHinge(m, eps0, eps1, eps2)
 
    # Search closure
    def Fx(X, vMax, f, d):
@@ -505,16 +493,13 @@ def SearchHinge(A, Y, W, c, eps0, eps1, eps2, *args, **kwargs):
          nf = v.shape[0]         # sparse-vector is multiplied by 0. If .data is used
          Ac[:nf] = v             # then .indices should be used instead of .nonzero()
 
-         FindDist(Ac, nf, Y[r], W[r], X[r], d, vMax, eps0, eps1, eps2,
-                  rvs, BVae, AWae, AEsi, BVse, AWse, SEsi)
+         PT.FindDist(Ac, nf, Y[r], W[r], X[r], d, vMax)
       elif isinstance(Af, np.ndarray) and Af.data.contiguous:
-         FindDistCg(Af, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi)
+         PT.FindDistCg(Af, Y, W, X, d, vMax)
       else:    # Dense non-contiguous; copy to contiguous array
          Ac[:] = Af
-         FindDistCg(Ac, m, Y, W, X, d, vMax, eps0, eps1, eps2, rvs,
-                    BVae, AWae, AEsi, BVse, AWse, SEsi)
-      return rvs
+         PT.FindDistCg(Ac, Y, W, X, d, vMax)
+      return PT.GetResults()
 
    return Fx
 

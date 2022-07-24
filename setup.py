@@ -1,3 +1,4 @@
+from   Cython.Build        import cythonize
 import os
 from   setuptools          import setup, Extension
 from   subprocess          import check_output
@@ -20,17 +21,27 @@ except:  # Try cl flags
 with open('README.md') as F:
    desc = F.read()
 
-module = Extension(
-   'ICP.PathSearch',
-   include_dirs=[incdir, np.get_include()],
-   libraries=[],
-   library_dirs=[],
-   sources=[os.path.join('ICP', 'PathSearch.c')],
-   extra_compile_args=compileFlags)
+ext_mod = cythonize([
+   Extension(
+      'ICP.PathSearch',
+      include_dirs=[incdir, np.get_include()],
+      libraries=[],
+      library_dirs=[],
+      sources=[os.path.join('ICP', 'PathSearch.pyx')],
+      extra_compile_args=compileFlags),
+   
+   Extension(
+      'ICP.ActiveSet',
+      include_dirs=[incdir],
+      libraries=[],
+      library_dirs=[],
+      sources=[os.path.join('ICP', 'ActiveSet.pyx')],
+      extra_compile_args=compileFlags)
+   ])
 
 setup(
    name='ICPOptimize',
-   version='2.3',
+   version='2.4',
    description='Python 3 Implementation of ICP and ICPRE',
    author='Nicholas T. Smith',
    author_email='nicholastsmithblog@gmail.com',
@@ -38,7 +49,7 @@ setup(
    long_description_content_type="text/markdown",
    long_description=desc,
    packages=['ICP'],
-   ext_modules=[module],
+   ext_modules=ext_mod,
    keywords=["optimization", "optimizer", "linear", "ICP", "ICPRE"],
    classifiers=[
       'Intended Audience :: Education',
