@@ -2,6 +2,7 @@ from   .Binning      import KBDisc
 from   .Rules        import (ConsolidateRules, EvaluateRules, ExtractCurve, RuleStr,
                              OP_LE, OP_GT, RuleStrings, GetRegionPoints, RuleSign,
                              RuleOrder)
+from   math          import inf
 import numpy         as     np
 from   scipy.special import expit
 from   .Solver       import ABSER, EPS, CnstPath, GetObjFx, HINGE, LSTSQ, ICPSolveConst, RuleErr
@@ -35,8 +36,8 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None, bs=1.6e7, 
    # Evaluate columns for contraining and ordering
    rs = ColCorr(RM, Y, W, c=c) if t == 'corr' else RuleSign(RM, Y, W, bs=bs, c=c)
 
-   fMin = np.where(rs > 0,    0., -np.inf)         # Rule sign constraints lower bounds
-   fMax = np.where(rs > 0, np.inf,     0.)         # Rule sign constraints upper bounds
+   fMin = np.where(rs > 0,  0., -inf)              # Rule sign constraints lower bounds
+   fMax = np.where(rs > 0, inf,   0.)              # Rule sign constraints upper bounds
 
    M    = np.where(Y > 0, mrg, -mrg)               # Sort rules by their gradient
    b    = np.dot(W, M) if b is None else b         # Initial guess / bias
@@ -45,8 +46,8 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None, bs=1.6e7, 
    CO   = np.c_[ren, rep].argsort(axis=None)       # Even indices: d=-1, Odd: d=+1
 
    if c != 0:                                      # Use an intercept
-      fMin[-1] = -np.inf                           # Intercept is unconstrained
-      fMax[-1] =  np.inf
+      fMin[-1] = -inf                              # Intercept is unconstrained
+      fMax[-1] =  inf
 
    # Make order constraints on coefficients by univariate rule performance
    fg  = np.arange(n + (c != 0)) if fg is None else fg  # Default each col to unique group
@@ -161,7 +162,50 @@ def GetModelParams(tm, tmPar):
 #--------------------------------------------------------------------------------
 #    Iterative Constrained Pathways Base Estimator
 #--------------------------------------------------------------------------------
+#      lr: Learning rate
+#      L1: L1 constraint; |x|_1 <= l1
+#      L2: L2 constraint; |x|_2 <= l2
+#    norm: Normalize lr by column norms (T/F)
+# maxIter: Maximum number of solver iterations
+#     mrg: Target classification margin (for hinge loss)
+#      ig: Initial guess (weighted average margin target if None)
+#     tol: Moving average error reduction tolerance
+#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
+# maxFeat: Maximum number of original features that can be included in model
+#    cnst: Tuple for explicit specification of problem constraints
+#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
+#       c: Use constant (0/1)
+#    clip: Clip coefs with magnitude less than this to exactly 0
+#      nj: Number of times to try and jump out of stall
+#      mj: Approximate magnitude of random jump to attempt to exit stall
+#   nThrd: Number of threads to search for paths (should be <= nPath)
+#      bs: Block size for calculating dot products (lower values use less memory)
+#       v: Verbosity (0: off; 1: low; 2: high)
+#--------------------------------------------------------------------------------
 class ICPBase:
+
+   def __init__(self, lr=1.0, L1=inf, L2=inf, norm=True, maxIter=3000, mrg=1.0, ig=None,
+                tol=-5e-7, cOrd='n', maxFeat=0, cnst=None, CFx=CnstPath, c=1, clip=1e-10,
+                nj=0, mj=1e-5, nThrd=1, bs=1.6e7, v=0):
+      self.lr      = lr
+      self.L1      = L1
+      self.L2      = L2
+      self.norm    = norm
+      self.maxIter = maxIter
+      self.mrg     = mrg
+      self.ig      = ig
+      self.tol     = tol
+      self.maxFeat = maxFeat
+      self.cnst    = cnst
+      self.CFx     = CFx
+      self.c       = c
+      self.clip    = clip
+      self.nj      = nj
+      self.mj      = mj
+      self.nThrd   = nThrd
+      self.cOrd    = cOrd
+      self.bs      = bs
+      self.v       = v
 
    def __repr__(self):
       return '{}({})'.format(self.__class__.__name__, len(self))
@@ -214,50 +258,18 @@ class ICPBaseClassifier(ICPBase):
 #           3. Solve a sign constrained hinge loss problem
 #           4. Split potentially overlapping rules into non-overlapping rules
 #--------------------------------------------------------------------------------
-#      lr: Learning rate
-#    norm: Normalize lr by column norms (T/F)
-# maxIter: Maximum number of solver iterations
-#     mrg: Target classification margin
-#      ig: Initial guess (weighted average margin target if None)
 #      tm: Tree model constructor
 #   tmPar: Extra parameters for tree model
-#      bs: Block size for calculating dot products (lower values use less memory)
 #    ESFx: Extract split functions
-#     tol: Moving average error reduction tolerance
-# maxFeat: Maximum number of original features that can be included in model
-#    cnst: Tuple for explicit specification of problem constraints
-#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
-#       c: Use constant (0/1)
-#    clip: Clip coefs with magnitude less than this to exactly 0
-#   nJump: Number of times to try and jump out of stall
-#   nThrd: Number of threads to search for paths (should be <= nPath)
-#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
-#       v: Verbosity (0: off; 1: low; 2: high)
+#  kwargs: See base class
 #--------------------------------------------------------------------------------
 class ICPRuleEnsemble(ICPBaseClassifier):
 
-   def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, tm='gbc',
-                tmPar=None, bs=1.6e7, ESFx=ExtractSplits, tol=-5e-7, maxFeat=0, cnst=None,
-                CFx=CnstPath, c=1, clip=1e-10, nJump=0, nThrd=1, cOrd='n', v=0):
-      self.lr      = lr
-      self.norm    = norm
-      self.maxIter = maxIter
-      self.mrg     = mrg
-      self.ig      = ig
-      self.ESFx    = ESFx
-      self.tm      = tm
-      self.tmPar   = tmPar
-      self.bs      = bs
-      self.tol     = tol
-      self.maxFeat = maxFeat
-      self.cnst    = cnst
-      self.CFx     = CFx
-      self.c       = c
-      self.clip    = clip
-      self.nJump   = nJump
-      self.nThrd   = nThrd
-      self.cOrd    = cOrd
-      self.v       = v
+   def __init__(self, tm='gbc', tmPar=None, ESFx=ExtractSplits, **kwargs):
+      super().__init__(**kwargs)
+      self.ESFx   = ESFx
+      self.tm     = tm
+      self.tmPar  = tmPar
 
    # Given a data matrix and list of feature names, explain prediction for each sample
    def Explain(self, A, FN=None, ffmt='{:.5f}'):
@@ -310,10 +322,10 @@ class ICPRuleEnsemble(ICPBaseClassifier):
 
       # Obtain solution
       CV, b, self.err, self.nIter = ICPSolveConst(
-         RM, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
-         b=self.ig, c=self.c, CO=CO, obj=HINGE, tol=self.tol, CFx=self.CFx,
-         maxGroup=self.maxFeat, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr,
-         nJump=self.nJump, nThrd=self.nThrd, clip=self.clip, v=self.v)
+         RM, Y, W, L1=self.L1, L2=self.L2, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
+         maxIter=self.maxIter, b=self.ig, c=self.c, CO=CO, obj=HINGE, tol=self.tol,
+         CFx=self.CFx, maxGroup=self.maxFeat, dMax=self.lr, norm=self.norm, bAr=bAr,
+         aAr=aAr, nj=self.nj, mj=self.mj, nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       nzi     = CV.nonzero()[0]                       # Identify non-zero coefs
       self.FA = fg[nzi].copy()                        # Rule feature index array
@@ -369,44 +381,12 @@ class ICPRuleEnsemble(ICPBaseClassifier):
 #           1. Identify the "intuitive" direction of each column
 #           2. Solve a sign constrained hinge loss problem
 #--------------------------------------------------------------------------------
-#      lr: Learning rate
-#    norm: Normalize lr by column norms (T/F)
-# maxIter: Maximum number of solver iterations
-#     mrg: Target classification margin
-#      ig: Initial guess (weighted average margin target if None)
-#      bs: Block size for calculating dot products (lower values use less memory)
-#     tol: Moving average error reduction tolerance
-# maxFeat: Maximum number of original features that can be included in model
-#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
-#       c: Use constant (0/1)
-#    clip: Clip coefs with magnitude less than this to exactly 0
-#    cnst: Tuple for explicit specification of problem constraints
-#   nJump: Number of times to try and jump out of stall
-#   nThrd: Number of threads to search for paths (should be <= nPath)
-#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
-#       v: Verbosity (0: off; 1: low; 2: high)
+#  kwargs: See base class
 #--------------------------------------------------------------------------------
 class ICPLinearClassifier(ICPBaseClassifier):
 
-   def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, bs=1.6e7,
-                tol=-5e-7, maxFeat=0, CFx=CnstPath, c=1, clip=1e-10, cnst=None, nJump=0,
-                nThrd=1, cOrd='n', v=0):
-      self.lr      = lr
-      self.norm    = norm
-      self.maxIter = maxIter
-      self.mrg     = mrg
-      self.ig      = ig
-      self.bs      = bs
-      self.tol     = tol
-      self.maxFeat = maxFeat
-      self.cnst    = cnst
-      self.CFx     = CFx
-      self.c       = c
-      self.clip    = clip
-      self.nJump   = nJump
-      self.nThrd   = nThrd
-      self.cOrd    = cOrd
-      self.v       = v
+   def __init__(self, **kwargs):
+      super().__init__(**kwargs)
 
    # Fit the model on data matrix A, target values Y, and sample weights W
    def fit(self, A, Y, W=None):
@@ -424,10 +404,10 @@ class ICPLinearClassifier(ICPBaseClassifier):
 
       # Obtain solution
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
-         A, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
-         b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
-         nThrd=self.nThrd, clip=self.clip, v=self.v)
+         A, Y, W, L1=self.L1, L2=self.L2, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
+         maxIter=self.maxIter, b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx,
+         maxGroup=self.maxFeat, obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr,
+         nj=self.nj, mj=self.mj, nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
       self.feature_importances_ = np.abs(self.CV)
@@ -443,43 +423,14 @@ class ICPLinearClassifier(ICPBaseClassifier):
 #           1. Identify the "intuitive" direction of each column
 #           2. Solve a sign constrained least-squares problem
 #--------------------------------------------------------------------------------
-#      lr: Learning rate
-#    norm: Normalize lr by column norms (T/F)
-# maxIter: Maximum number of solver iterations
-#      ig: Initial guess (weighted average margin target if None)
-#      bs: Block size for calculating dot products (lower values use less memory)
-#     tol: Moving average error reduction tolerance
-# maxFeat: Maximum number of original features that can be included in model
-#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
-#       c: Use constant (0/1)
-#    clip: Clip coefs with magnitude less than this to exactly 0
-#    cnst: Tuple for explicit specification of problem constraints
-#   nJump: Number of times to try and jump out of stall
-#   nThrd: Number of threads to search for paths (should be <= nPath)
-#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
-#       v: Verbosity (0: off; 1: low; 2: high)
+#       p: Penalty mode ('l1' / 'l2')
+#  kwargs: See base class
 #--------------------------------------------------------------------------------
 class ICPLinearRegressor(ICPBase):
 
-   def __init__(self, lr=0.5, norm=True, maxIter=3000, ig=None, bs=1.6e7, tol=-5e-7, p='l2',
-                maxFeat=0, CFx=CnstPath, c=1, clip=1e-10, cnst=None, nJump=0, nThrd=1,
-                cOrd='n', v=0):
-      self.lr      = lr
-      self.norm    = norm
-      self.maxIter = maxIter
-      self.ig      = ig
-      self.bs      = bs
-      self.tol     = tol
-      self.p       = p
-      self.maxFeat = maxFeat
-      self.cnst    = cnst
-      self.CFx     = CFx
-      self.c       = c
-      self.clip    = clip
-      self.nJump   = nJump
-      self.nThrd   = nThrd
-      self.cOrd    = cOrd
-      self.v       = v
+   def __init__(self, p='l2', **kwargs):
+      super().__init__(**kwargs)
+      self.p = p
 
    # Fit the model on data matrix A, target values Y, and sample weights W
    def fit(self, A, Y, W=None):
@@ -497,9 +448,9 @@ class ICPLinearRegressor(ICPBase):
 
       # Obtain solution
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
-         A, Y, W, fMin=fMin, fMax=fMax, fg=fg, maxIter=self.maxIter,
+         A, Y, W, L1=self.L1, L2=self.L2, fMin=fMin, fMax=fMax, fg=fg, maxIter=self.maxIter,
          b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         obj=obj, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
+         obj=obj, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nj=self.nj, mj=self.mj,
          nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
@@ -517,47 +468,14 @@ class ICPLinearRegressor(ICPBase):
 #           2. Identify the "intuitive" direction of each feature
 #           3. Solve a sign constrained hinge loss problem
 #--------------------------------------------------------------------------------
-#      lr: Learning rate
-#    norm: Normalize lr by column norms (T/F)
-# maxIter: Maximum number of solver iterations
-#     mrg: Target classification margin
-#      ig: Initial guess (weighted average margin target if None)
-#   kbPar: Extra parameters for the binning transformer
-#      bs: Block size for calculating dot products (lower values use less memory)
-#    ESFx: Extract split functions
-#     tol: Moving average error reduction tolerance
-# maxFeat: Maximum number of original features that can be included in model
-#     CFx: Criteria function for abandoning path (Path abandoned if CFx true)
-#       c: Use constant (0/1)
-#    cnst: Tuple for explicit specification of problem constraints
-#    clip: Clip coefs with magnitude less than this to exactly 0
-#   nJump: Number of times to try and jump out of stall
-#   nThrd: Number of threads to search for paths (should be <= nPath)
-#    cOrd: Column order constraints mode (n: None, r: Relative, a: Absolute)
-#       v: Verbosity (0: off; 1: low; 2: high)
+#   kbPar: Parameters for KBDisc
+#  kwargs: See base class
 #--------------------------------------------------------------------------------
 class ICPBinningClassifier(ICPBaseClassifier):
 
-   def __init__(self, lr=0.5, norm=True, maxIter=3000, mrg=1.0, ig=None, kbPar=None,
-                bs=1.6e7, tol=-5e-7, maxFeat=0, CFx=CnstPath, c=1, cnst=None, clip=1e-10,
-                nThrd=1, cOrd='n', nJump=0, v=0):
-      self.lr      = lr
-      self.norm    = norm
-      self.maxIter = maxIter
-      self.mrg     = mrg
-      self.ig      = ig
-      self.kbPar   = dict(n_bins=12, const=True) if kbPar is None else kbPar
-      self.bs      = bs
-      self.tol     = tol
-      self.maxFeat = maxFeat
-      self.cnst    = cnst
-      self.CFx     = CFx
-      self.c       = c
-      self.clip    = clip
-      self.nJump   = nJump
-      self.nThrd   = nThrd
-      self.cOrd    = cOrd
-      self.v       = v
+   def __init__(self, kbPar=None, **kwargs):
+      super().__init__(**kwargs)
+      self.kbPar = dict(n_bins=12, const=True) if kbPar is None else kbPar
 
    # Given a data matrix and list of feature names, explain prediction for each sample
    def Explain(self, A, FN=None, ffmt='{:.5f}'):
@@ -611,7 +529,7 @@ class ICPBinningClassifier(ICPBaseClassifier):
       # List of bin boundaries for each feature
       self.TA = []
       for f in range(n):
-         self.TA.append(np.array([-np.inf, *self.KBD.bEdge[f], np.inf]))
+         self.TA.append(np.array([-inf, *self.KBD.bEdge[f], inf]))
 
       # Obtain problem constraints
       fMin, fMax, CO, bAr, aAr = Constrain(RM, Y, W=W, fg=fg, c=self.c, mrg=self.mrg,
@@ -619,10 +537,10 @@ class ICPBinningClassifier(ICPBaseClassifier):
 
       # Obtain solution
       self.CV, self.b, self.err, self.nIter = ICPSolveConst(
-         RM, Y, W, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg, maxIter=self.maxIter,
-         b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx, maxGroup=self.maxFeat,
-         obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr, nJump=self.nJump,
-         nThrd=self.nThrd, clip=self.clip, v=self.v)
+         RM, Y, W, L1=self.L1, L2=self.L2, fMin=fMin, fMax=fMax, fg=fg, mrg=self.mrg,
+         maxIter=self.maxIter, b=self.ig, c=self.c, CO=CO, tol=self.tol, CFx=self.CFx,
+         maxGroup=self.maxFeat, obj=HINGE, dMax=self.lr, norm=self.norm, bAr=bAr, aAr=aAr,
+         nj=self.nj, mj=self.mj, nThrd=self.nThrd, clip=self.clip, v=self.v)
 
       # Feature importance as sum of magnitude of rule coefficients using feature
       self.feature_importances_ = np.zeros(A.shape[1])

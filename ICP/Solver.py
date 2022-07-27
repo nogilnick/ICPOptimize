@@ -1,6 +1,6 @@
 from   .ActiveSet    import ActiveSet
 from   .ClosurePool  import ClosurePool, DummyPool
-from    math         import isinf, sqrt
+from    math         import isinf, inf, sqrt
 import  numpy        as     np
 from   .PathSearch   import PatherAbs, PatherHinge
 from    random       import random, gauss, randint
@@ -66,7 +66,6 @@ def ColumnGradients(Ai, Y, W, S, B, d):
 #--------------------------------------------------------------------------------
 #      CV: Coefficient vector
 #      CN: Column norms
-#       b: Intercept
 #     err: Current error
 #    fMin: Coefficient lower bounds
 #    fMax: Coefficient upper bounds
@@ -78,11 +77,11 @@ def ColumnGradients(Ai, Y, W, S, B, d):
 #--------------------------------------------------------------------------------
 #     RET: Return maximum feasible distance along path
 #--------------------------------------------------------------------------------
-def CnstPath(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax):
+def CnstPath(CV, CN, err, fMin, fMax, bAr, aAr, f, d, dMax):
    if CN[f] == 0:
       return 0
    # Order constraint; preserves relative order of coefficients
-   oBnd = np.inf
+   oBnd = inf
    if (aAr is not None) and (d > 0) and (aAr[f] != -1):
       oBnd = CV[aAr[f]] - CV[f]        # Coef approaching above boundary
    if (bAr is not None) and (d < 0) and (bAr[f] != -1):
@@ -149,6 +148,8 @@ def GetObjFx(obj):
 #        A: Data matrix
 #        Y: Target values (boolean, 0/1, or -1/+1)
 #        W: Sample weights
+#       L1: L1 constraint; |x|_1 <= l1
+#       L2: L2 constraint; |x|_2 <= l2
 #     fMin: Coefficient lower bounds
 #     fMax: Coefficient upper bounds
 #  maxIter: Maximum number of solver iterations
@@ -169,15 +170,17 @@ def GetObjFx(obj):
 #     clip: Clip coefs with magnitude less than this to exactly 0
 #      bAr: Below coefficient index constraints
 #      aAr: Above coefficient index constraints
-#    nJump: Number of times to try and jump out of stall
+#       nj: Number of times to try and jump out of stall
+#       mj: Approximate magnitude of random jump to attempt to exit stall
 #    nThrd: Number of threads to search for paths
 #        v: Verbose mode (0 off; 1 low; 2 high)
 #--------------------------------------------------------------------------------
 #      RET: Coefficients, intercept
 #--------------------------------------------------------------------------------
-def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, dMax=1.234,
-             norm=True, CO=None, fg=None, maxGroup=0, CFx=CnstPath, tol=-1e-5, obj=HINGE,
-             mOrd='F', clip=1e-9, bAr=None, aAr=None, nJump=0, nThrd=1, v=1):
+def ICPSolve(A, Y, W, L1=inf, L2=inf, fMin=None, fMax=None, maxIter=999, mrg=1.0, b=None,
+             c=0, dMax=1.234, norm=True, CO=None, fg=None, maxGroup=0, CFx=CnstPath,
+             tol=-1e-5, obj=HINGE, mOrd='F', clip=1e-9, bAr=None, aAr=None, nj=0, mj=1e-5,
+             nThrd=1, v=1):
    if mOrd is not None:
       A = ToColOrder(A)
 
@@ -189,35 +192,41 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
    W = MakeWeights(W, m)                        # Sample weights
 
    hc = int(c != 0)
-   CV = np.zeros(n + hc)                        # Coefficient vector
+   CV = np.zeros(n + hc)                        # Coefficient vector; add bias to end
+   if c != 0:                                   # Check if constant is allowed
+      CV[n] = np.dot(Y, W) if b is None else b  # Use mean response if not provided
+
    if fMin is not None:                         # Max value feature constraints
-      CV   = np.maximum(CV, fMin)
+      CV   = np.maximum(CV, fMin)               # Constrain current coef
    else:
-      fMin = np.full(n + hc, -np.inf)           # Unconstrained below
+      fMin = np.full(n + hc, -inf)              # Unconstrained below
 
    if fMax is not None:                         # Min value feature constraints
-      CV   = np.minimum(CV, fMax)
+      CV   = np.minimum(CV, fMax)               # Constrain current coef
    else:
-      fMax = np.full(n + hc,  np.inf)           # Unconstrained above
+      fMax = np.full(n + hc, inf)               # Unconstrained above
 
-   if b is None:
-      b = np.dot(Y, W)                          # Initial guess
-   if clip:
-      b  = 0. if (-clip < b < clip) else b      # Clip small values to 0.
-
-   X = np.full(m, b)                            # Current solution n.b. type depends on b
-   for i in CV.nonzero()[0]:
-      X += CV[i] * GetCol(A, i)
+   l1 = 0.0                                     # L1 norm of current solution
+   l2 = 0.0                                     # L2 norm of current solution
+   L2 = L2 * L2                                 # Use norm square for convenience
+   X  = np.zeros(m)                             # Current solution
+   for i in CV.nonzero()[0]:                    # CV[i] may be nonzero e.g. due to bias or
+      if i < n:                                 # constraints; make X a feasible solution
+         X  += CV[i] * GetCol(A, i)             # Update from coef
+         l1 += abs(CV[i])
+         l2 += CV[i] * CV[i]
+      else:
+         X += CV[i] * c                         # Update from bias
 
    feaSet = {}                                  # Used feature groups set
    for fgi in fg[CV != 0]:
       feaSet[fgi] = feaSet.get(fgi, 0) + 1
 
-   bFea = -1                                    # Pre-declare some variables here
-   u    =  0.0                                  # Current update
-   err  =  np.inf                               # Current error
-   mar  = -np.inf                               # Moving average of error reduction
-   j    =  False                                # Jump flag
+   f   = -1                                     # Pre-declare some variables here
+   u   =  0.0                                   # Current update
+   err =  inf                                   # Current error
+   mar = -inf                                   # Moving average of error reduction
+   j   =  False                                 # Jump flag
 
    nd  = (n + hc) << 1                          # 2 directions (+/-) for each column
    pch = 0.1
@@ -251,7 +260,7 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
 
       if v > 0:
          print('{:5d} {:10.7f} {:10.7f} [{:5d}] {:+8.5f} {:+8.5f} {:4d} {:s} {:s}'.format(
-                i, err, mar, bFea, CV[bFea], u, len(hotSet), '*'*(CV[bFea] == 0), 'j'*j))
+                i, err, mar, f, CV[f], u, len(hotSet), '*'*(CV[f] == 0), 'j'*j))
 
       # Check if error within tolerance
       if (mar > tol) or (i > maxIter):
@@ -275,17 +284,24 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
          f, d  = ColToFD(cp)
 
          # Find constraint along path
-         vMax = CFx(CV, CN, b, err, fMin, fMax, bAr, aAr, f, d, dMax)
+         vMax = CFx(CV, CN, err, fMin, fMax, bAr, aAr, f, d, dMax)
+
+         if (not isinf(L1)) and (f < n):        # Constraint from l1 norm
+            vMax = min(vMax, RegL1(CV[f], d, l1, L1))
+
+         if (not isinf(L2)) and (f < n):        # Constraint from l2 norm
+            vMax = min(vMax, RegL2(CV[f], d, l2, L2))
+
          if vMax <= 0:
             sRes[cp, :] = np.nan                # Mark this col for cold set
-            continue                            # This direction is constrained; skip
+            continue                            # This direction is at constraint; skip
 
          CP.Start(key=cp, args=(X, vMax, f, d))
 
       for key, rv in CP.GetAll():               # Join any running threads and get results
          sRes[key, :] = rv
 
-      bErr = np.inf
+      bErr = inf
       bCp  = 0
       while len(runSet) > 0:                    # Find best dir & refill hot/cold sets
          cp = runSet.pop()
@@ -294,60 +310,70 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
             bErr = cErr
             bCp  = cp
 
-         if (cErr < -EPS) and (cSla < EPS):
+         if (cErr < -EPS) and ((cSla < EPS) or (random() > 0.7)):
             hotSet.add(cp)                      # Add to hot set; column looks promising
          else:
             notSet.add(cp)                      # Cool set; column isn't helping now
 
-      j             = False                     # Jump flag
-      bFea, bDir    = ColToFD(bCp)              # Coefficient index and direction
+      j    = False                              # Jump flag
+      f, d = ColToFD(bCp)                       # Coefficient index and direction
       # Stall when err > EPS or (-EPS <= err <= EPS) and coef magnitude increases
-      if (bErr >= -EPS) and ((bErr > EPS) or not RedMag(CV[bFea], bDir)):
-         if nJump > 0:                          # Try to jump out of stall a
-            nJump -= 1                          # limited number of times
-            bFea   = f = randint(0, n - 1 + hc)
-            u      = gauss(0, 10 * abs(tol))    # Random normal preturbation
-            CV[f] += u
+      if (bErr >= -EPS) and ((bErr > EPS) or not RedMag(CV[f], d)):
+         if nj > 0:                             # Try to jump out of stall nj times
+            nj -= 1
+            f   = randint(0, n - 1 + hc)
+            u   = gauss(0, mj)                  # Random normal preturbation
+            d   = (u > 0) - (u < 0)             # Direction of update
+            u   = abs(u)                        # Force update positive
+
+            if (not isinf(L1)) and (f < n):     # Constraint from l1 norm
+               u = min(u, RegL1(CV[f], d, l1, L1))
+
+            if (not isinf(L2)) and (f < n):     # Constraint from l2 norm
+               u = min(u, RegL2(CV[f], d, l2, L2))
+
+            u *= d                              # Add sign back to update
             if f < n:                           # Preturb coef
                X   = Add(X, GetCol(A, f) * u)
+               l2 += 2 * u * CV[f] + u * u      # Update l2 norm
+               l1 += abs(CV[f]+u) - abs(CV[f])  # Update l1 norm
             else:                               # Preturb bias
                X  += u * c
+            CV[f] += u                          # Update coef
             j      = True                       # This update is a jump
             continue
          if v > 1: print('Algorithm Stalled: ({0}, {1}, {2})'.format(bErr, f, u))
          break                                  # Algorithm stalled; break
 
-      _, bDst, bSla = sRes[bCp]                 # Distance and slack; error from above
-      u             = bDir * bDst               # The current proposed coefficient update
-
+      u = d * sRes[bCp][1]                      # The current proposed coefficient update
       if maxGroup > 0:
-         if -clip < (CV[bFea] + u) < clip:
-            if fg[bFea] > 0:
-               feaSet[fg[bFea]] = cc = feaSet.get(fg[bFea], 0) - 1
+         if -clip < (CV[f] + u) < clip:
+            if fg[f] > 0:
+               feaSet[fg[f]] = cc = feaSet.get(fg[f], 0) - 1
                if cc <= 0:                      # Coef is now 0; remove from feature set
-                  del feaSet[fg[bFea]]          # All coef in group 0; delete group
-         elif CV[bFea] == 0:                    # This is a new non-zero coef
-            feaSet[fg[bFea]] = feaSet.get(fg[bFea], 0) + 1
+                  del feaSet[fg[f]]             # All coef in group 0; delete group
+         elif CV[f] == 0:                       # This is a new non-zero coef
+            feaSet[fg[f]] = feaSet.get(fg[f], 0) + 1
 
-      if bFea < n:                              # Update via coef
-         Cf = u * GetCol(A, bFea)               # Get column bFea
+      if f < n:                                 # Update via coef
+         Cf  = u * GetCol(A, f)                 # Get column f
+         l2 += 2 * u * CV[f] + u * u            # Update l2 norm
+         l1 += abs(CV[f] + u) - abs(CV[f])      # Update l1 norm
       else:                                     # Update via bias
-         Cf = u * c
+         Cf  = u * c
 
-      X         = Add(X, Cf)                    # Column update; handle sparse
-      CV[bFea] += u                             # Update coefficient vector
+      X      = Add(X, Cf)                       # Column update; handle sparse
+      CV[f] += u                                # Update coefficient vector
       # Moving average error reduction for stopping criteria
       mar  = bErr if isinf(mar) else (0.05 * bErr + 0.95 * mar)
       err += bErr
 
-      # assert(np.isclose(err, errFx(X, Y, W)))
-
    # Clip very small coef to exactly zero
    for i in range(len(CV)):
       if -clip < CV[i] < clip:
-         CV[i] = 0.
+         CV[i] = 0.0
 
-   return CV, b, err, i
+   return CV, err, i
 
 #--------------------------------------------------------------------------------
 #   Desc: Iterative Constrained Pathways Solver with constant columns
@@ -362,14 +388,14 @@ def ICPSolve(A, Y, W, fMin=None, fMax=None, maxIter=200, mrg=1.0, b=None, c=0, d
 #--------------------------------------------------------------------------------
 def ICPSolveConst(A, Y, W, c=1, **kwargs):
    _, n = A.shape
-   CV, b, err, i = ICPSolve(A, Y, W, c=c, **kwargs)
+   CV, err, i = ICPSolve(A, Y, W, c=c, **kwargs)
 
    if c == 0:
-      return CV, b, err, i
+      return CV, 0.0, err, i
 
    cCol = [n]
    # Combine bias from original solution with all const columns
-   b = b + CV[cCol].sum()
+   b = CV[cCol].sum()
 
    # Remove constant columns from coefficient vector
    cIdx = np.ones(n + 1, np.bool)
@@ -388,6 +414,38 @@ def ICPSolveConst(A, Y, W, c=1, **kwargs):
 #--------------------------------------------------------------------------------
 def RedMag(c, u):
    return ((c < 0) and (u > 0)) or ((c > 0) and (u < 0))
+
+#--------------------------------------------------------------------------------
+#   Desc: Compute constraint from l1 regularizaition
+#--------------------------------------------------------------------------------
+#      x: Coefficient
+#      d: Direction (+1/-1)
+#     l1: Current l1 value
+#     L1: L1 constrain (l1 <= L1)
+#--------------------------------------------------------------------------------
+#    RET: Maximum distance allowed in this direction s.t. l1<=L1
+#--------------------------------------------------------------------------------
+def RegL1(x, d, l1, L1):
+   # If sign(x) == d then can move up to (L1 - l1)>=0
+   # If sign(x) != d then can move (L1 - l1) + 2|x|
+   return (L1 - l1) + ((d > 0) ^ (x > -EPS)) * 2 * abs(x)
+
+#--------------------------------------------------------------------------------
+#   Desc: Compute constraint from l2 regularizaition
+#--------------------------------------------------------------------------------
+#      x: Coefficient
+#      d: Direction (+1/-1)
+#     l2: Current value squared (l2^2)
+#     L2: L2 constraint squared L2^2 (l2 <= L2)
+#--------------------------------------------------------------------------------
+#    RET: Maximum distance allowed in this direction s.t. l2<=L2
+#--------------------------------------------------------------------------------
+def RegL2(x, d, l2, L2):
+   # Solve l2^2-x^2+(x+u*d)^2 == L2^2 for u as max feasible distance
+   # x^2 + 2xdu + d^2u^2 = L2^2 - l2^2 + x^2
+   # u^2d^2 + 2xdu + l2^2 - L2^2 = 0
+   # Use quadratic formula a=u^2, b=2xd, c=l2^2-L2^2 and take only + sol
+   return -d * x + sqrt(L2 - l2 + x * x)
 
 #--------------------------------------------------------------------------------
 #   Desc: Get univariate rule error
