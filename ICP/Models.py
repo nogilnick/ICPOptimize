@@ -33,7 +33,7 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None, bs=1.6e7, 
    m, n = RM.shape
    W    = MakeWeights(W, m)
 
-   # Evaluate columns for contraining and ordering
+   # Evaluate columns for constraining and ordering
    rs = ColCorr(RM, Y, W, c=c) if t == 'corr' else RuleSign(RM, Y, W, bs=bs, c=c)
 
    fMin = np.where(rs > 0,  0., -inf)              # Rule sign constraints lower bounds
@@ -56,6 +56,28 @@ def Constrain(RM, Y, W=None, fg=None, c=1, mrg=1.0, cOrd='r', b=None, bs=1.6e7, 
       bAr, aAr = RuleOrder(fg, rs, m=cOrd)
 
    return fMin, fMax, CO, bAr, aAr
+
+#--------------------------------------------------------------------------------
+#   Desc: Construct interval only constraints
+#--------------------------------------------------------------------------------
+#      I: An interval or list of intervals to be applied to each column
+#      n: If >0, interval duplicated n times
+#      c: If >0, additional unconstrained column added for constant (n+1 total)
+#--------------------------------------------------------------------------------
+#    RET: Problem constraints
+#--------------------------------------------------------------------------------
+def ConstrainBounds(I, n=0, c=1):
+   k    = n + (c > 0)
+   fMin = np.empty(k, dtype=float)
+   fMax = np.empty(k, dtype=float)
+
+   fMin[:], fMax[:] = I if n > 0 else zip(*I)
+
+   if c > 0:
+      fMin[-1] = -inf
+      fMax[-1] =  inf
+
+   return fMin, fMax, None, None, None
 
 #--------------------------------------------------------------------------------
 #   Desc: Construct rule matrix
@@ -577,3 +599,4 @@ class ICPBinningClassifier(ICPBaseClassifier):
 
    def transform(self, A):
       return self.KBD.transform(A)
+

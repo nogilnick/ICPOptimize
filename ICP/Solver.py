@@ -369,9 +369,7 @@ def ICPSolve(A, Y, W, L1=inf, L2=inf, fMin=None, fMax=None, maxIter=999, mrg=1.0
       err += bErr
 
    # Clip very small coef to exactly zero
-   for i in range(len(CV)):
-      if -clip < CV[i] < clip:
-         CV[i] = 0.0
+   CV[(-clip < CV) & (CV < clip)] = 0.0
 
    return CV, err, i
 
@@ -608,3 +606,4 @@ def SignInt8(X, eps=EPS):
    R  = (X > EPS).astype(np.int8)
    R -= (X < -EPS).astype(np.int8)
    return R
+
