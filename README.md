@@ -9,7 +9,7 @@ This repository contains implementations of the Iterative Constrained Pathways (
 
 Further discussion about and motivation for the methods can be found on my blog:
 
-[nicholastsmith.wordpress.com/2021/05/18/the-iterative-constrained-pathways-optimizer/](https://nicholastsmith.wordpress.com/2021/05/18/the-iterative-constrained-pathways-optimizer/)
+[nogilnick.github.io/Posts/63.html](https://nogilnick.github.io/Posts/63.html)
 
 ## Features
 
@@ -54,4 +54,4 @@ YP  = ILR.predict(A)
 
 Further examples are available on the ICPExamples GitHub page:
 
-[https://github.com/nicholastoddsmith/ICPExamples](https://github.com/nicholastoddsmith/ICPExamples)
+[https://github.com/nogilnick/ICPExamples](https://github.com/nogilnick/ICPExamples)
